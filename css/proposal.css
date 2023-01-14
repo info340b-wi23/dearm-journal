@@ -2,12 +2,20 @@ html {
     background-color: #a897d9;
 }
 
-h1, h2, h3, p {
+h1, h3, p {
     color: white;
     font: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 3%;
     margin-right: 4%;
+}
+
+h2 {
+   color:#f5ebea;
+   font: bold; 
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   margin-left: 3%;
+   margin-right: 4%;
 }
 
 
