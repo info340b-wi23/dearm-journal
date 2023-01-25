@@ -61,3 +61,35 @@ button {
 footer {
     color: white;
 }
+
+.tabs {
+    display: flex;
+    float: left;
+    margin: 20px;
+    padding: 60px;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    justify-content: flex-start;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs label {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    background-color: #bfa7f5;
+   
+}
+
+.tabs label:last-child {
+    
+}
+
+.tabs input[type="radio"]:checked + label {
+    background-color: #bfa7f5;
+    border: 1px solid #fff;
+}
