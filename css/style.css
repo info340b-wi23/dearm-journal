@@ -196,3 +196,51 @@ h2 {
     font-size: 75px;
     color: #d5caf0;
 }
+
+
+main img {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#analyze {
+    font-size: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 37px;
+}
+
+#report-title {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.report-container{
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.report-side {
+    margin-left: 10%;
+}
+
+.sharing-side img {
+    width: 300px;
+    margin-right: 100px;
+}
+
+.sharing-side .material-icons {
+    color: white;
+}
+
+
+.report-icons {
+    padding-bottom: 20px;
+    align-self: right;
+}
