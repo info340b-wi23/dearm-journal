@@ -57,20 +57,34 @@ button {
 .home-image {
     width: 600px;
     padding-left: 95px;
+
+}
+
+footer {
+    color: #C6B9E7;
+}
+
+img.home-image {
+    width: 45%;
+    height: auto;
+    padding-left: 70px;
 }
 
 .attribute {
     display: none;
 }
 
-.flex-container {
+div.home-container section {
     display: flex;
-    flex-wrap: wrap;
     height: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-section {
+div.container-bio {
     flex-direction: column;
+    padding-right: 50px;
 }
 
 .material-icons:hover {
@@ -261,4 +275,36 @@ button, .entry, input, .dream-feeling, .analyze img{
 .website {
     margin-top: 10px;
     margin-left: 6px;
+}
+
+.tabs {
+    display: flex;
+    float: left;
+    margin: 20px;
+    padding: 60px;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    justify-content: flex-start;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs label {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    background-color: #bfa7f5;
+   
+}
+
+.tabs label:last-child {
+    
+}
+
+.tabs input[type="radio"]:checked + label {
+    background-color: #bfa7f5;
+    border: 1px solid #fff;
 }

@@ -16,11 +16,11 @@
     <body>
         <div class="container">
             <header>
+                <img id="logo" src="img/dream-catcher.png" aria-hidden="true">
                 <div class="website">
                     <h1>Dream </h1>
                     <h1>Journal </h1>
                 </div>
-                <img id="logo" src="img/logo.png" aria-hidden="true">
             </header>
     
             <div class="container-right">
@@ -31,31 +31,34 @@
                     <a href="#"><span class="material-icons" aria-label="Home">summarize</span></a>
                     <a href="#"><span class="material-icons" aria-label="Home">account_circle</span></a>
                 </nav>
-    
-                <button id="logout">Log Out</button>
+                <button id="logout"> Log Out</button>
             </div>
+
+        <div class="tabs">
+            <h1>Dream Community</h1>
+            <input type="radio" id="tabtrending" name="tabs" checked="checked">
+            <label for="tabtrending">Trending</label>
+           
         </div>
-        <main>
-            <div class="home-container">
-                <section>
-                    <img class="home-image" src="img/poetry-amico.png" alt="A woman writing on paper">
-                    <div class="container-bio">
-                        <p>
-                            <strong>Dream</strong> <em>/drēm/</em> 
-                        </p>
-                        <p class="definition">
-                            "a series of thoughts, images, and sensations occurring in a person's mind during sleep."
-                        </p>
-                        <button id="start">What occurred in your dream?</button>
-                    </div>
-                </section>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; Dream Journal 2023</p>
-            <div class="attribute">
-                <a href="https://storyset.com/creativity">Creativity illustrations by Storyset</a>
-            </div>
-        </footer>
-    </body>
-</html>
+        <div class="tabs">
+            <input type="radio" id="tabtop" name="tabs">
+            <label for="tabtop">Top</label>
+            
+        </div>
+        <div class="tabs">
+            <input type="radio" id="tabnew" name="tabs">
+            <label for="tabnew">New</label>
+            
+        </div>
+        
+            <main>
+    
+            </main>
+    
+            <footer>
+                <p>&copy; Dream Journal 2023</p>
+            </footer>
+    
+        </body>
+    </html>
+    
