@@ -4,17 +4,79 @@
         <meta charset="utf-8">
         <meta name="author" content="Daniella Tsing, Erica Zhang, Natty Samuel">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="This page let user write down their dreams">
+        <meta name="description" content="This page provide users a view of their recorded dreams in their journal">
         <title>Journal</title>
-        <link rel="stylesheet" href="css/style.css">
         <link rel="icon" type="image/png" href="../img/dream-catcher.png" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <header>
-            <img id="logo" src="img/dream-catcher.png" aria-hidden="true">
-            <h1>Dream Journal</h1>
-        </header>
+        <div class="container">
+            <header>
+                <img id="logo" src="img/dream-catcher.png" aria-hidden="true">
+                <div class="website">
+                    <h1>Dream </h1>
+                    <h1>Journal </h1>
+                </div>
+            </header>
+    
+            <div class="container-right">
+                <nav>
+                    <a href="#"><span class="material-icons" aria-label="Home">home</span></a>
+                    <a href="#"><span class="material-icons" aria-label="Home">forum</span></a>
+                    <a href="#"><span class="material-icons" aria-label="Home">menu_book</span></a>
+                    <a href="#"><span class="material-icons" aria-label="Home">summarize</span></a>
+                    <a href="#"><span class="material-icons" aria-label="Home">account_circle</span></a>
+                </nav>
+    
+                <button id="logout"> Log Out</button>
+            </div>
+        </div>
+            <div class="dream-entry-container">
+                <div class="enter-dream">
+                    <div class="each-input">
+                        <label for="Title">Title:</label> 
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div class="each-input">
+                        <label for="Content">Content:</label> 
+                        <input type="text" name="content" id="content">
+                    </div>
+                    <div class="each-input">
+                        <label for="Image Upload">Image Upload:</label> 
+                        <input type="image" name="image" id="image">
+                    </div>
+                </div>
+
+                <div class="enter-dream-feelings">
+                    <button class="dream-enter-btn">Cancel</button>
+                    <button class="dream-enter-btn">Submit</button>
+
+                    <div class="dream-feeling">
+                        <h2>Symbols</h2>
+                        <div class="symbols">
+                            <span class="material-icons symbol" aria-label="happy">sentiment_dissatisfied</span>
+                            <span class="material-icons symbol" aria-label="alright">sentiment_satisfied</span>
+                            <span class="material-icons symbol" aria-label="sad">sentiment_neutral</span>
+                        </div>
+                    </div>
+
+
+                    <div class="dream-feeling">
+                        <h2>% of Recognition</h2>
+                        <div class="symbols">
+                            <span class="material-icons symbol" aria-label="high">brightness_1</span>
+                            <span class="material-icons symbol" aria-label="medium">brightness_2</span>
+                            <span class="material-icons symbol" aria-label="low">brightness_3</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
         
         <main>
 
