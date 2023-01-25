@@ -29,12 +29,12 @@ nav a {
 .container {
     display: flex;
     justify-content: space-between;
-    background-color: #d5caf0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
 
 .container-right {
     display: flex;
-    grow: 0;
 }
 
 .material-icons {
@@ -50,14 +50,71 @@ button {
     background-color: white;
     box-shadow: black;
     border: none;
-    max-height: 30px;
     border-radius: 8px;
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     color: #bfa7f5;
+    
+}
+
+#logout {
+    max-height: 30px;
     margin-right: 7px;
     margin-left: 3px;
 }
 
 footer {
     color: white;
+}
+
+.material-icons:hover {
+    border-bottom: .3rem solid white;
+}
+
+#create-entry {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+.journal-view-container {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.entryContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    align-items: center;
+}
+
+
+.entry {
+    background-color: white;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
+    text-align: center;
+}
+
+div img {
+    height: 250px;
+    width: 250px;
+}
+
+.list-entry {
+    margin-left: 60px;
+    display: block;
+    width: 80%;
+    height: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.list-entry-container {
+    margin-top: 40px
 }
