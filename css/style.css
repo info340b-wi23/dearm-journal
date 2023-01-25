@@ -66,22 +66,23 @@ footer {
     color: #C6B9E7;
 }
 
-.home-image {
-    width: 600px;
-    padding-left: 95px;
+img.home-image {
+    width: 45%;
+    height: auto;
+    padding-left: 70px;
 }
 
 .attribute {
     display: none;
 }
 
-.flex-container {
+div.home-container {
     display: flex;
-    flex-wrap: wrap;
     height: 100%;
+    align-items: center;
 }
 
-section {
+div.container-bio {
     flex-direction: column;
 }
 
