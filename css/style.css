@@ -76,14 +76,17 @@ img.home-image {
     display: none;
 }
 
-div.home-container {
+div.home-container section {
     display: flex;
     height: 100%;
     align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 div.container-bio {
     flex-direction: column;
+    padding-right: 50px;
 }
 
 .material-icons:hover {
