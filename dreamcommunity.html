@@ -16,7 +16,7 @@
             <header>
                 <div class="website">
                     <h1>Dear.M </h1>
-                    <h1>Journal </h1>
+                    <h1>Community </h1>
                 </div>
                 <img class="logo" src="img/logo.png" aria-hidden="true">
             </header>
@@ -34,31 +34,92 @@
                 </nav>
                 <button class="logout">Log Out</button>
             </div>
+        </div>
 
-        <div class="tabs">
-            <h1>Dream Community</h1>
-            <input type="radio" id="tabtrending" name="tabs" checked="checked">
-            <label for="tabtrending">Trending</label>
-           
-        </div>
-        <div class="tabs">
-            <input type="radio" id="tabtop" name="tabs">
-            <label for="tabtop">Top</label>
+        <main>
             
-        </div>
-        <div class="tabs">
-            <input type="radio" id="tabnew" name="tabs">
-            <label for="tabnew">New</label>
-            
-        </div>
+            <section class="filter-search">
+                <button class="tab">Trending</button>
+                <button class="tab">Top</button>
+                <button class="tab">New</button>
+
+                <button class="search"><span class="material-icons" aria-label="search button">search</span></button>
+            </section>
+
+            <div class="view-create">
+                <div class="posts">
+                    <div class="post">
+                        <span class="material-icons" aria-label="Info">account_circle</span>
+                        <p class="user-name">User Name</p>
+                        <p class="post-text">
+                            In my dream, my cousins and I were eating strawberry filled cream cupcakes that were about as big as our heads and we ran out. For some reason we were in some kind of mountainous region and we ran out so we had to get more. 
+                        </p>
         
-            <main>
-    
-            </main>
-    
-            <footer>
-                <p>&copy; Dream Journal 2023</p>
-            </footer>
+                        <div class="post-icon">
+                            <span class="material-icons" aria-label="comment">chat</span>
+                            <span class="material-icons" aria-label="share">ios_share</span>
+                            <span class="material-icons" aria-label="save">bookmark</span>
+                        </div>
+                    
+                    </div>
+        
+                    <div class="post">
+                        <span class="material-icons" aria-label="Info">account_circle</span>
+                        <p class="user-name">User Name</p>
+                        <p class="post-text">
+                            In my dream, my cousins and I were eating strawberry filled cream cupcakes that were about as big as our heads and we ran out. For some reason we were in some kind of mountainous region and we ran out so we had to get more. 
+                        </p>
+        
+                        <div class="post-icon">
+                            <span class="material-icons" aria-label="comment">chat</span>
+                            <span class="material-icons" aria-label="share">ios_share</span>
+                            <span class="material-icons" aria-label="save">bookmark</span>
+                        </div>
+                    
+                    </div>
+        
+                    <div class="post">
+                        <span class="material-icons" aria-label="Info">account_circle</span>
+                        <p class="user-name">User Name</p>
+        
+                        <div class="post-content">
+                            <img src="img/starwberry_cupcake.png" alt="post-image">
+                            <p class="post-text">
+                                In my dream, my cousins and I were eating strawberry filled cream cupcakes that were about as big as our heads and we ran out. For some reason we were in some kind of mountainous region and we ran out so we had to get more. 
+                            </p>
+                        </div>
+                        
+                        <div class="post-icon">
+                            <span class="material-icons" aria-label="comment">chat</span>
+                            <span class="material-icons" aria-label="share">ios_share</span>
+                            <span class="material-icons" aria-label="save">bookmark</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <div class="create-post">
+                    <h2>Create Post</h2>
+                    <form>
+                        <label for="Content">Content:</label> 
+                        <input type="text" name="content" class="content-create">
+                        <label for="Image Upload">Image Upload:</label> 
+                        <input type="image" name="image" class="image-create">
+                    </form>
+
+                    <button class="post-btn">Post</button>
+                </div>
+            </div>
+
+            
+
+
+        </main>
+
+        <footer>
+            <p>&copy; Dream Journal 2023</p>
+        </footer>
     
         </body>
     </html>

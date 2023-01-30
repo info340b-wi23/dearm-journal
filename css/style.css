@@ -124,7 +124,7 @@ div img {
     text-align: center;
     margin-bottom: 20px;
     font-size: 17px;
-    background-color: #fff7e1;
+    background-color: #fff5d6;
 
 }
 
@@ -139,18 +139,18 @@ input {
     margin-bottom: 30px;
 }
 
-#title {
+.title {
     width: 50%;
     height: 35px;
 }
 
 
-#content {
+.content {
     width: 80%;
     height: 450px;
 }
 
-#image {
+.image {
     width: 50%;
     height: 100px;
 }
@@ -211,7 +211,7 @@ h2 {
     margin-right: auto;
 }
 
-.analyze {
+.analyze-btn {
     font-size: 22px;
     display: block;
     margin-left: auto;
@@ -239,7 +239,7 @@ h2 {
 }
  
 
-button, .entry, input, .dream-feeling, .analyze img{
+button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post{
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     border-radius: 8px;
 }
@@ -247,38 +247,6 @@ button, .entry, input, .dream-feeling, .analyze img{
 .website {
     margin-top: 10px;
     margin-left: 6px;
-}
-
-.tabs {
-    display: flex;
-    float: left;
-    margin: 20px;
-    padding: 60px;
-    align-items: center;
-    position: relative;
-    font-size: 16px;
-    justify-content: flex-start;
-}
-
-.tabs input[type="radio"] {
-    display: none;
-}
-
-.tabs label {
-    cursor: pointer;
-    padding: 10px 15px;
-    border: 1px solid #fff;
-    background-color: #bfa7f5;
-   
-}
-
-.tabs label:last-child {
-    
-}
-
-.tabs input[type="radio"]:checked + label {
-    background-color: #bfa7f5;
-    border: 1px solid #fff;
 }
 
 .report-icons {
@@ -290,6 +258,78 @@ button, .entry, input, .dream-feeling, .analyze img{
     height: 400px;
 }
 
+.tab {
+    color: 4C4C47;
+    box-shadow: none;
+    background-color: #FDFAF3;
+    font-size: 20px; 
+    margin-left: 30px;
+    text-decoration: underline;
+}
+
+.search {
+    margin-left: 200px;
+}
+
+.filter-search {
+    margin-bottom: 20px;
+}
+
+.post, .create-post{
+    background-color: #fff5d6;
+    width: 550px;
+    color: #4C4C47;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.post .material-icons {
+    margin-bottom: 20px;
+}
+
+.user-name {
+    display: inline;
+    margin-top: none;
+}
+
+.post-text {
+    margin-left: 30px;
+    width: 90%;
+}
+
+.post-icon {
+    margin-left: 70%;
+    margin-right: none;
+}
+
+.post-content {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.create-post {
+    width: 450px;
+    height: 480px;
+}
+
+.content-create {
+    width: 70%;
+    height: 150px;
+}
+
+.image-create {
+    width: 60%;
+}
+
+.post-btn {
+    width: 50px;
+    background-color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
 
 @media (min-width: 598px) {
     
@@ -323,6 +363,9 @@ button, .entry, input, .dream-feeling, .analyze img{
         display: block;
     }
     
+    .post {
+        width: 650px;
+    }
 }
 
 
@@ -334,18 +377,18 @@ button, .entry, input, .dream-feeling, .analyze img{
     }
 
         
-    #title {
+    .title {
         width: 500px;
         height: 35px;
     }
 
 
-    #content {
+    .content {
         width: 680px;
         height: 450px;
     }
 
-    #image {
+    .image {
         width: 350px;
         height: 100px;
 
@@ -353,5 +396,15 @@ button, .entry, input, .dream-feeling, .analyze img{
     .enter-dream-feelings {
         padding-left: none;
     }
+
+    .view-create {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .post {
+        width: 750px;
+    }
+
 }
 
