@@ -198,6 +198,7 @@ h1, h2, button, label, p {
 
 h2 {
     padding-left: 20px;
+    font-size: 20px;
     font-weight: normal;
 }
 
@@ -234,26 +235,6 @@ h2 {
     margin-top: 20px;
     height: 37px;
     width: 250px;
-}
-
-#report-title {
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-.report-container{
-    display:flex;
-    justify-content: space-between;
-
-}
-
-.report-side {
-    margin-left: 10%;
-}
-
-.sharing-side img {
-    width: 300px;
-    margin-right: 100px;
 }
 
 .sharing-side .material-icons {
@@ -307,4 +288,19 @@ button, .entry, input, .dream-feeling, .analyze img{
 .tabs input[type="radio"]:checked + label {
     background-color: #bfa7f5;
     border: 1px solid #fff;
+}
+
+.report-container {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.report-icons {
+    display: block;
+}
+
+.report-image {
+    width: 400px;
+    height: 400px;
 }
