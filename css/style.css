@@ -7,6 +7,10 @@ header {
     font-size: 10px;
 }
 
+.social-links {
+    display: none;
+}
+
 #logo {
     max-width: 50px;
     max-height: 50px;
@@ -17,14 +21,14 @@ h1 {
     margin: 0;
 }
 
-nav a {
+a {
     color: #4C4C47;
+    text-decoration: none;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
-    background-color: #FDFAF3;
     margin-bottom: 30px;
 }
 
@@ -46,10 +50,10 @@ button {
     background-color: #fff2cc;
     border: none;
     border-radius: 8px;
+    height: 30px;
 }
 
 #logout {
-    max-height: 30px;
     margin-right: 7px;
     margin-left: 3px;
 }
@@ -60,10 +64,6 @@ button {
 
 }
 
-footer {
-    color: #C6B9E7;
-}
-
 img.home-image {
     width: 45%;
     height: auto;
@@ -72,14 +72,6 @@ img.home-image {
 
 .attribute {
     display: none;
-}
-
-div.home-container section {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: center;
 }
 
 div.container-bio {
@@ -93,7 +85,6 @@ div.container-bio {
 
 #create-entry {
     font-size: 15px;
-    height: 40px;
     margin-left: 30px;
     width: 205px;
 }
@@ -149,20 +140,19 @@ input {
 }
 
 #title {
-    width: 600px;
+    width: 50%;
     height: 35px;
 }
 
 
 #content {
-    width: 880px;
+    width: 80%;
     height: 450px;
 }
 
 #image {
-    width: 550px;
+    width: 50%;
     height: 100px;
-
 }
 
 label {
@@ -170,7 +160,6 @@ label {
 }
 
 .dream-enter-btn {
-    height: 40px;
     width: 70px;
     margin-left: 10px;
     font-size: 15px
@@ -190,12 +179,6 @@ h1, h2, button, label, p {
     margin-top: 30px;
 }
 
-.dream-entry-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 h2 {
     padding-left: 20px;
     font-size: 20px;
@@ -203,6 +186,7 @@ h2 {
 }
 
 .enter-dream-feelings {
+    padding-left: 50px;
     padding-right: 70px;
 }
 
@@ -233,7 +217,6 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    height: 37px;
     width: 250px;
 }
 
@@ -243,8 +226,16 @@ h2 {
 
 
 .report-icons {
-    padding-bottom: 20px;
+    padding-top: 20px;
     align-self: right;
+}
+
+.report-image {
+    display: none;
+}
+
+.report-container {
+    padding-left: 50px;
 }
  
 
@@ -290,12 +281,6 @@ button, .entry, input, .dream-feeling, .analyze img{
     border: 1px solid #fff;
 }
 
-.report-container {
-    margin-top: 3%;
-    display: flex;
-    justify-content: space-around;
-}
-
 .report-icons {
     display: block;
 }
@@ -304,3 +289,69 @@ button, .entry, input, .dream-feeling, .analyze img{
     width: 400px;
     height: 400px;
 }
+
+
+@media (min-width: 598px) {
+    
+    .hamburger-menu {
+        display: none;
+    }
+
+    .social-links {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+
+    div.home-container section {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }  
+    
+
+    .report-container {
+        margin-top: 3%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .report-image {
+        display: block;
+    }
+    
+}
+
+
+@media (min-width: 992px) {
+
+    .dream-entry-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        
+    #title {
+        width: 500px;
+        height: 35px;
+    }
+
+
+    #content {
+        width: 680px;
+        height: 450px;
+    }
+
+    #image {
+        width: 350px;
+        height: 100px;
+
+    }
+    .enter-dream-feelings {
+        padding-left: none;
+    }
+}
+
