@@ -11,7 +11,7 @@ header {
     display: none;
 }
 
-#logo {
+.logo {
     max-width: 50px;
     max-height: 50px;
 }
@@ -53,7 +53,7 @@ button {
     height: 30px;
 }
 
-#logout {
+.logout {
     margin-right: 7px;
     margin-left: 3px;
 }
@@ -83,7 +83,7 @@ div.container-bio {
     border-bottom: .3rem solid white;
 }
 
-#create-entry {
+.create-entry {
     font-size: 15px;
     margin-left: 30px;
     width: 205px;
@@ -211,7 +211,7 @@ h2 {
     margin-right: auto;
 }
 
-#analyze {
+.analyze {
     font-size: 22px;
     display: block;
     margin-left: auto;
