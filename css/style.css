@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+.material-icons {
+    color: #4C4C47;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -259,7 +263,7 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 }
 
 .tab {
-    color: 4C4C47;
+    color: #4C4C47;
     box-shadow: none;
     background-color: #FDFAF3;
     font-size: 20px; 
@@ -278,7 +282,6 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 .post, .create-post{
     background-color: #fff5d6;
     width: 550px;
-    color: #4C4C47;
     margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
