@@ -240,6 +240,10 @@ h2 {
     margin-right: auto;
     margin-top: 20px;
     text-align: center;
+    text-decoration: none;
+}
+
+.analyze-btn:hover {
     text-decoration: underline;
 }
 
@@ -373,6 +377,7 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 .image-create {
     width: 60%;
     background-color: #F5F3EC;
+    height: 100px;
 }
 
 /* main content */
