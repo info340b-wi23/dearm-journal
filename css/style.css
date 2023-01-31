@@ -53,7 +53,7 @@ a {
 }
 
  /* navbar  */
-nav, button{
+nav, button {
     margin-top: 15px;
 }
 
@@ -102,9 +102,10 @@ div.container-bio {
 
 /* main content */
 .create-entry {
-    font-size: 15px;
+    font-size: 17px;
     margin-left: 30px;
-    width: 205px;
+    margin-top: 5px;
+    text-decoration: underline;
 }
 
 /* main content */
@@ -193,7 +194,7 @@ label {
 }
 
 /* body content */
-h1, h2, button, label, p {
+h1, h2, button, label, p, a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #4C4C47
 }
@@ -249,7 +250,8 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    width: 250px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /* main content */
@@ -277,7 +279,7 @@ h2 {
 }
  
 /* main content */
-button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post{
+button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     border-radius: 8px;
 }
