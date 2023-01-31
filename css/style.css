@@ -9,11 +9,6 @@ header {
     font-size: 10px;
 }
 
-/* navbar */
-.social-links {
-    display: none;
-}
-
 /* body header */
 .logo {
     max-width: 50px;
@@ -99,6 +94,9 @@ div.container-bio {
     font-size: 17px;
     margin-left: 30px;
     margin-top: 5px;
+}
+
+.create-entry:hover, .start:hover{
     text-decoration: underline;
 }
 
@@ -107,15 +105,6 @@ div.container-bio {
     display: flex;
     margin-left: 20px;
     margin-top: 20px;
-}
-
-/* main content */
-.entryContainer {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 30px;
-    align-items: center;
 }
 
 /* main content */
@@ -141,7 +130,7 @@ div img {
     text-align: center;
     margin-bottom: 20px;
     font-size: 17px;
-    background-color: #fff5d6;
+    background-color: white;
 
 }
 
@@ -289,14 +278,31 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     font-family: 'Raleway', sans-serif;
 }
 
+.report-icons {
+    display: block;
+}
+
+.report-image {
+    width: 400px;
+    height: 400px;
+}
+
+.entryContainer {
+    display: none;
+}
+
 /* main content */
-.tab {
+.tab, .start{
     color: #4C4C47;
     box-shadow: none;
-    background-color: #FDFAF3;
-    font-size: 20px; 
+    background-color: #F5F3EC;
+    font-size: 15px; 
     margin-left: 30px;
     text-decoration: underline;
+}
+
+.start {
+    text-decoration: none;
 }
 
 /* main content */
@@ -311,7 +317,7 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 
 /* main content */
 .post, .create-post{
-    background-color: #fff5d6;
+    background-color: white;
     width: 550px;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -358,17 +364,19 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 .content-create {
     width: 70%;
     height: 150px;
+    background-color: #F5F3EC;
 }
 
 /* main content */
 .image-create {
     width: 60%;
+    background-color: #F5F3EC;
 }
 
 /* main content */
 .post-btn {
     width: 50px;
-    background-color: white;
+    background-color: #F5F3EC;
     margin-left: 20px;
     margin-bottom: 20px;
     font-size: 15px;
@@ -376,14 +384,17 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 
 /* smaller phones */
 @media (min-width: 598px) {
-    /* body content */
-    .hamburger-menu {
+    .list-entry-container {
         display: none;
     }
-    
-    /* navbar */
-    .social-links {
-        display: block;
+
+    /* main content */
+    .entryContainer {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 30px;
+        align-items: center;
     }
 }
 
@@ -406,8 +417,9 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
         justify-content: space-around;
     }
 
-    /* main content */
-    .report-image {
+
+     /* main content */
+     .report-image {
         display: block;
     }
     
