@@ -71,12 +71,6 @@ button {
     margin-left: 3px;
 }
 
-/* blocked out
-.home-image {
-    width: 600px;
-    padding-left: 95px;
-} */
-
 /* main */
 img.home-image {
     width: 45%;
@@ -132,11 +126,11 @@ div.container-bio {
     text-align: center;
 }
 
-/* blocked out
+/* main content */
 div img {
     height: 250px;
     width: 250px;
-} */
+}
 
 /* main content */
 .list-entry {
@@ -197,6 +191,10 @@ label {
 h1, h2, button, label, p, a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #4C4C47
+}
+
+.website h1 {
+    font-family: 'Homemade Apple', cursive;
 }
 
 /* main content */
@@ -286,8 +284,9 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 
 /* header content */
 .website {
-    margin-top: 10px;
+    margin-top: 7px;
     margin-left: 6px;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* main content */
