@@ -9,11 +9,6 @@ header {
     font-size: 10px;
 }
 
-/* navbar */
-.social-links {
-    display: none;
-}
-
 /* body header */
 .logo {
     max-width: 50px;
@@ -132,11 +127,11 @@ div.container-bio {
     text-align: center;
 }
 
-/* blocked out
+
 div img {
     height: 250px;
     width: 250px;
-} */
+} 
 
 /* main content */
 .list-entry {
@@ -300,10 +295,10 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 }
 
 /* main content */
-.tab .start{
+.tab, .start{
     color: #4C4C47;
     box-shadow: none;
-    background-color: #FDFAF3;
+    background-color: #F5F3EC;
     font-size: 15px; 
     margin-left: 30px;
     text-decoration: underline;
@@ -386,15 +381,6 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 
 /* smaller phones */
 @media (min-width: 598px) {
-    /* body content */
-    .hamburger-menu {
-        display: none;
-    }
-    
-    /* navbar */
-    .social-links {
-        display: block;
-    }
 }
 
 /* tablet size */
@@ -416,8 +402,9 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
         justify-content: space-around;
     }
 
-    /* main content */
-    .report-image {
+
+     /* main content */
+     .report-image {
         display: block;
     }
     
