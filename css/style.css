@@ -182,6 +182,7 @@ h1, h2, button, label, p, a {
     color: #4C4C47
 }
 
+/* header content */
 .website h1 {
     font-family: 'Homemade Apple', cursive;
     font-size: 20px;
@@ -243,6 +244,7 @@ h2 {
     text-decoration: none;
 }
 
+/* main content */
 .analyze-btn:hover {
     text-decoration: underline;
 }
@@ -272,6 +274,11 @@ h2 {
 }
  
 /* main content */
+.report-container .symbols {
+    padding-top: 60px;
+}
+
+/* main content */
 button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     border-radius: 8px;
@@ -284,15 +291,18 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     font-family: 'Raleway', sans-serif;
 }
 
+/* main content */
 .report-icons {
     display: block;
 }
 
+/* main content */
 .report-image {
     width: 400px;
     height: 400px;
 }
 
+/* main content */
 .entryContainer {
     display: none;
 }
@@ -307,6 +317,7 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     text-decoration: underline;
 }
 
+/* main content */
 .start {
     text-decoration: none;
 }
