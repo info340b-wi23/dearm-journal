@@ -100,6 +100,9 @@ div.container-bio {
     font-size: 17px;
     margin-left: 30px;
     margin-top: 5px;
+}
+
+.create-entry:hover, .start:hover{
     text-decoration: underline;
 }
 
@@ -108,15 +111,6 @@ div.container-bio {
     display: flex;
     margin-left: 20px;
     margin-top: 20px;
-}
-
-/* main content */
-.entryContainer {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 30px;
-    align-items: center;
 }
 
 /* main content */
@@ -142,7 +136,7 @@ div img {
     text-align: center;
     margin-bottom: 20px;
     font-size: 17px;
-    background-color: #fff5d6;
+    background-color: white;
 
 }
 
@@ -294,6 +288,10 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     height: 400px;
 }
 
+.entryContainer {
+    display: none;
+}
+
 /* main content */
 .tab, .start{
     color: #4C4C47;
@@ -302,6 +300,10 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     font-size: 15px; 
     margin-left: 30px;
     text-decoration: underline;
+}
+
+.start {
+    text-decoration: none;
 }
 
 /* main content */
@@ -363,17 +365,19 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 .content-create {
     width: 70%;
     height: 150px;
+    background-color: #F5F3EC;
 }
 
 /* main content */
 .image-create {
     width: 60%;
+    background-color: #F5F3EC;
 }
 
 /* main content */
 .post-btn {
     width: 50px;
-    background-color: white;
+    background-color: #F5F3EC;
     margin-left: 20px;
     margin-bottom: 20px;
     font-size: 15px;
@@ -381,6 +385,18 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 
 /* smaller phones */
 @media (min-width: 598px) {
+    .list-entry-container {
+        display: none;
+    }
+
+    /* main content */
+    .entryContainer {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 30px;
+        align-items: center;
+    }
 }
 
 /* tablet size */
