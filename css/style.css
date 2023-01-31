@@ -1,55 +1,63 @@
+/* colors overall background page */
 html {
-    background-color: #FDFAF3;
+    background-color: #F5F3EC;
 }
 
+/* header */
 header {
     display: flex;
     font-size: 10px;
 }
 
+/* navbar */
 .social-links {
     display: none;
 }
 
+/* body header */
 .logo {
     max-width: 50px;
     max-height: 50px;
 }
 
+/* body header */
 h1 {
     font-size: 25px;
     margin: 0;
 }
 
+/* body header */
 a {
     color: #4C4C47;
     text-decoration: none;
 }
 
+/* body header */
 .material-icons {
     color: #4C4C47;
+    font-size: 30px;
+    margin-inline: 7.5px;
 }
 
+/* body */
 .container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
+/* body */
 .container-right {
     display: flex;
     flex-grow: 0;
 }
 
-.material-icons {
-    font-size: 30px;
-    margin-inline: 7.5px;
-}
-
+ /* navbar  */
 nav, button {
     margin-top: 15px;
 }
 
+/* body */
 button {
     background-color: #fff2cc;
     border: none;
@@ -57,36 +65,42 @@ button {
     height: 30px;
 }
 
+/* body */
 .logout {
     margin-right: 7px;
     margin-left: 3px;
 }
 
+/* blocked out
 .home-image {
     width: 600px;
     padding-left: 95px;
+} */
 
-}
-
+/* main */
 img.home-image {
     width: 45%;
     height: auto;
     padding-left: 70px;
 }
 
+/* footer */
 .attribute {
     display: none;
 }
 
+/* main content */
 div.container-bio {
     flex-direction: column;
     padding-right: 50px;
 }
 
+/* body header */
 .material-icons:hover {
     border-bottom: .3rem solid white;
 }
 
+/* main content */
 .create-entry {
     font-size: 17px;
     margin-left: 30px;
@@ -94,12 +108,14 @@ div.container-bio {
     text-decoration: underline;
 }
 
+/* main content */
 .journal-view-container {
     display: flex;
     margin-left: 20px;
     margin-top: 20px;
 }
 
+/* main content */
 .entryContainer {
     margin-top: 30px;
     display: flex;
@@ -108,7 +124,7 @@ div.container-bio {
     align-items: center;
 }
 
-
+/* main content */
 .entry {
     background-color: white;
     margin: .5rem;
@@ -116,11 +132,13 @@ div.container-bio {
     text-align: center;
 }
 
+/* blocked out
 div img {
     height: 250px;
     width: 250px;
-}
+} */
 
+/* main content */
 .list-entry {
     margin-left: 60px;
     display: block;
@@ -133,49 +151,55 @@ div img {
 
 }
 
+/* main content */
 .list-entry-container {
     margin-top: 40px
 }
 
-
+/* main content */
 input {
     display: block;
     margin-left: 40px;
     margin-bottom: 30px;
 }
 
+/* main content */
 .title {
     width: 50%;
     height: 35px;
 }
 
-
+/* main content */
 .content {
     width: 80%;
     height: 450px;
 }
 
+/* main content */
 .image {
     width: 50%;
     height: 100px;
 }
 
+/* main content */
 label {
     margin-left: 40px;
 }
 
+/* main content */
 .dream-enter-btn {
     width: 70px;
     margin-left: 10px;
     font-size: 15px
 }
 
+/* body content */
 h1, h2, button, label, p, a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #4C4C47
 }
 
-
+/* main content */
 .dream-feeling {
     background-color: white;
     height: 200px;
@@ -184,18 +208,20 @@ h1, h2, button, label, p, a {
     margin-top: 30px;
 }
 
+/* main content */
 h2 {
     padding-left: 20px;
     font-size: 20px;
     font-weight: normal;
 }
 
+/* main content */
 .enter-dream-feelings {
     padding-left: 50px;
     padding-right: 70px;
 }
 
-
+/* main content */
 .symbols {
     align-items: center;
     align-self: center;
@@ -203,12 +229,13 @@ h2 {
     padding-top: 30px;
 }
 
+/* main content */
 .symbols .material-icons {
     font-size: 75px;
     color: wheat;
 }
 
-
+/* main content */
 .analyze img {
     display: block;
     width: 50%;
@@ -216,6 +243,7 @@ h2 {
     margin-right: auto;
 }
 
+/* main content */
 .analyze-btn {
     font-size: 22px;
     display: block;
@@ -226,30 +254,37 @@ h2 {
     text-decoration: underline;
 }
 
+/* main content */
 .sharing-side .material-icons {
     color: white;
 }
 
-
+/* main content */
 .report-icons {
     padding-top: 20px;
     align-self: right;
+    display: block;
 }
 
+/* main content */
 .report-image {
     display: none;
+    width: 400px;
+    height: 400px;
 }
 
+/* main content */
 .report-container {
     padding-left: 50px;
 }
  
-
+/* main content */
 button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     border-radius: 8px;
 }
 
+/* header content */
 .website {
     margin-top: 10px;
     margin-left: 6px;
@@ -264,7 +299,8 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     height: 400px;
 }
 
-.tab, .start{
+/* main content */
+.tab .start{
     color: #4C4C47;
     box-shadow: none;
     background-color: #FDFAF3;
@@ -273,14 +309,17 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     text-decoration: underline;
 }
 
+/* main content */
 .search {
     margin-left: 200px;
 }
 
+/* main content */
 .filter-search {
     margin-bottom: 20px;
 }
 
+/* main content */
 .post, .create-post{
     background-color: white;
     width: 550px;
@@ -289,45 +328,54 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     margin-right: 20px;
 }
 
+/* main content */
 .post .material-icons {
     margin-bottom: 20px;
 }
 
+/* main content */
 .user-name {
     display: inline;
     margin-top: none;
 }
 
+/* main content */
 .post-text {
     margin-left: 30px;
     width: 90%;
 }
 
+/* main content */
 .post-icon {
     margin-left: 70%;
     margin-right: none;
 }
 
+/* main content */
 .post-content {
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
 }
 
+/* main content */
 .create-post {
     width: 450px;
     height: 480px;
 }
 
+/* main content */
 .content-create {
     width: 70%;
     height: 150px;
 }
 
+/* main content */
 .image-create {
     width: 60%;
 }
 
+/* main content */
 .post-btn {
     width: 50px;
     background-color: white;
@@ -336,19 +384,23 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     font-size: 15px;
 }
 
+/* smaller phones */
 @media (min-width: 598px) {
-    
+    /* body content */
     .hamburger-menu {
         display: none;
     }
-
+    
+    /* navbar */
     .social-links {
         display: block;
     }
 }
 
+/* tablet size */
 @media (min-width: 768px) {
 
+    /* body content */
     div.home-container section {
         display: flex;
         height: 100%;
@@ -357,56 +409,63 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
         justify-content: center;
     }  
     
-
+    /* main content */
     .report-container {
         margin-top: 3%;
         display: flex;
         justify-content: space-around;
     }
 
+    /* main content */
     .report-image {
         display: block;
     }
     
+    /* main content */
     .post {
         width: 650px;
     }
 }
 
-
+/* desktop size */
 @media (min-width: 992px) {
-
+    /* main content */
     .dream-entry-container {
         display: flex;
         justify-content: space-between;
     }
 
-        
+    /* main content */
     .title {
         width: 500px;
         height: 35px;
     }
 
-
+    /* main content */
     .content {
         width: 680px;
         height: 450px;
     }
 
+    /* main content */
     .image {
         width: 350px;
         height: 100px;
 
     }
+    
+    /* main content */
     .enter-dream-feelings {
         padding-left: none;
     }
 
+    /* main content */
     .view-create {
         display: flex;
         justify-content: space-around;
     }
 
+    /* main content */
     .post {
         width: 750px;
     }
