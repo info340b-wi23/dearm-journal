@@ -264,11 +264,11 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     height: 400px;
 }
 
-.tab {
+.tab, .start{
     color: #4C4C47;
     box-shadow: none;
     background-color: #FDFAF3;
-    font-size: 20px; 
+    font-size: 15px; 
     margin-left: 30px;
     text-decoration: underline;
 }
@@ -282,7 +282,7 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 }
 
 .post, .create-post{
-    background-color: #fff5d6;
+    background-color: white;
     width: 550px;
     margin-bottom: 10px;
     margin-left: 20px;
