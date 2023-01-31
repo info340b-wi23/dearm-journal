@@ -184,6 +184,8 @@ h1, h2, button, label, p, a {
 
 .website h1 {
     font-family: 'Homemade Apple', cursive;
+    font-size: 20px;
+    line-height: 1.3;
 }
 
 /* main content */
