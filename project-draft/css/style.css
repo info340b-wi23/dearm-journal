@@ -69,20 +69,39 @@ button {
 
 /* main */
 img.home-image {
-    width: 45%;
+    width: 50%;
     height: auto;
-    padding-left: 70px;
+    padding-left: 10px;
+}
+
+/* main */
+p strong .word-definiton {
+    font-size: 50px;
+    word-wrap: break-word;
 }
 
 /* footer */
-.attribute {
-    display: none;
+footer .attribute {
+    position: fixed;
+    bottom: 17px;
+    right: 0px;
+    font-family: 'Shantell Sans', cursive;
+}
+
+/* footer */
+.copyright {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    font-family: 'Shantell Sans', cursive;
 }
 
 /* main content */
 div.container-bio {
-    flex-direction: column;
     padding-right: 50px;
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
 }
 
 /* body header */
@@ -304,6 +323,11 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     display: none;
 }
 
+p.description, p.definition {
+    inline-size: 480px;
+    overflow-wrap: break-word;
+}
+
 /* main content */
 button:hover{
     color: #4C4C47;
@@ -408,6 +432,15 @@ button:hover{
     margin-bottom: 20px;
     font-size: 15px;
 }
+
+section .home-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}  
 
 /* smaller phones */
 @media (min-width: 598px) {
