@@ -205,7 +205,7 @@ h1, h2, button, label, p {
 /* header content */
 .website h1 {
     /* font-family: 'Homemade Apple', cursive; */
-    font-size: 38px;
+    font-size: 30px;
     line-height: 0.75;
     margin-top: 7px;
     margin-left: 6px;
@@ -342,8 +342,9 @@ button:hover{
 .analyzeTitle {
     margin-left: 100px;
     margin-bottom: 30px;
+    margin-top: 20px;
     font-family: 'Shantell Sans', cursive;
-    display: inline;
+    font-size: 30px;
 }
 
 
