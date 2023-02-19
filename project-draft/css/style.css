@@ -308,12 +308,12 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 }
 
 /* main content */
-.tab, .start{
+.tab:hover, .start:hover{
     color: #4C4C47;
-    box-shadow: none;
-    background-color: #F5F3EC;
+    /* box-shadow: none; */
+    /* background-color: #F5F3EC; */
     font-size: 15px; 
-    margin-left: 30px;
+    /* margin-left: 30px; */
     text-decoration: underline;
 }
 
@@ -402,9 +402,9 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 
 /* smaller phones */
 @media (min-width: 598px) {
-    .list-entry-container {
-        display: none;
-    }
+    /* .list-entry-container { */
+        /* display: none; */
+    /* } */
 
     /* main content */
     .entryContainer {
