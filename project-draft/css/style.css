@@ -318,6 +318,14 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 }
 
 /* main content */
+.analyzeTitle {
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 0px;
+    font-family: 'Homemade Apple', cursive;
+}
+
+/* main content */
 .start {
     text-decoration: none;
 }
