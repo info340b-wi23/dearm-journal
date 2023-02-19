@@ -15,6 +15,7 @@ header {
     max-height: 50px;
 }
 
+
 /* body header */
 h1 {
     font-size: 25px;
@@ -57,7 +58,7 @@ button {
     background-color: #fff2cc;
     border: none;
     border-radius: 8px;
-    height: 30px;
+    height: 35px;
 }
 
 /* body */
@@ -92,11 +93,10 @@ div.container-bio {
 /* main content */
 .create-entry {
     font-size: 17px;
-    margin-left: 30px;
     margin-top: 5px;
 }
 
-.create-entry:hover, .start:hover{
+button:hover{
     text-decoration: underline;
 }
 
@@ -177,7 +177,7 @@ label {
 }
 
 /* body content */
-h1, h2, button, label, p, a {
+h1, h2, button, label, p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #4C4C47
 }
@@ -308,7 +308,7 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 }
 
 /* main content */
-.tab:hover, .start:hover{
+button:hover{
     color: #4C4C47;
     /* box-shadow: none; */
     /* background-color: #F5F3EC; */
@@ -319,26 +319,30 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 
 /* main content */
 .analyzeTitle {
-    margin-top: 10px;
     margin-left: 100px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     font-family: 'Homemade Apple', cursive;
+    display: inline;
 }
 
-/* main content */
-.start {
-    text-decoration: none;
-}
 
 /* main content */
 .search {
-    margin-left: 200px;
+    margin-right: 300px;
+}
+
+.tab {
+    margin-left: 15px;
 }
 
 /* main content */
 .filter-search {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
+
+
 
 /* main content */
 .post, .create-post{
@@ -493,6 +497,10 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
         justify-content: space-around;
         flex-direction: row-reverse;
         
+    }
+
+    .search {
+        margin-right: 100px;
     }
 
     .create-post {
