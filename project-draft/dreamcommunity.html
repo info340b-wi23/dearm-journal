@@ -32,17 +32,29 @@
         </div>
 
         <main>
-            
-            <section class="filter-search">
-                <button class="tab">Trending</button>
-                <button class="tab">Top</button>
-                <button class="tab">New</button>
-                <button class="tab search">Search</button>
-            </section>
 
-            <div class="view-create">
+            <div class="view-create">                
+
+                <div class="create-post">
+                    <h2>Create Post</h2>
+                    <form>
+                        <label for="Content">Content:</label> 
+                        <input type="text" name="content" class="content-create">
+                        <label for="Image Upload">Image Upload:</label> 
+                        <input type="image" name="image" class="image-create">
+                    </form>
+
+                    <button class="post-btn">Post</button>
+                </div>
+
 
                 <div class="posts">
+                    <section class="filter-search">
+                        <button class="tab">Trending</button>
+                        <button class="tab">New</button>
+                        <button class="tab search">Search</button>
+                    </section>
+
                     <div class="post">
                         <span class="material-icons" aria-label="Info">account_circle</span>
                         <p class="user-name">Emma</p>
@@ -51,7 +63,7 @@
                         </p>
         
                         <div class="post-icon">
-                            <span class="material-icons" aria-label="comment">chat</span>
+                            <span class="material-icons" aria-label="comment">favorite</span>
                             <span class="material-icons" aria-label="share">ios_share</span>
                             <span class="material-icons" aria-label="save">bookmark</span>
                         </div>
@@ -66,7 +78,7 @@
                         </p>
         
                         <div class="post-icon">
-                            <span class="material-icons" aria-label="comment">chat</span>
+                            <span class="material-icons" aria-label="comment">favorite</span>
                             <span class="material-icons" aria-label="share">ios_share</span>
                             <span class="material-icons" aria-label="save">bookmark</span>
                         </div>
@@ -85,25 +97,11 @@
                         </div>
                         
                         <div class="post-icon">
-                            <span class="material-icons" aria-label="comment">chat</span>
+                            <span class="material-icons" aria-label="comment">favorite</span>
                             <span class="material-icons" aria-label="share">ios_share</span>
                             <span class="material-icons" aria-label="save">bookmark</span>
                         </div>
                     </div>
-                </div>
-                
-                
-
-                <div class="create-post">
-                    <h2>Create Post</h2>
-                    <form>
-                        <label for="Content">Content:</label> 
-                        <input type="text" name="content" class="content-create">
-                        <label for="Image Upload">Image Upload:</label> 
-                        <input type="image" name="image" class="image-create">
-                    </form>
-
-                    <button class="post-btn">Post</button>
                 </div>
             </div>
 

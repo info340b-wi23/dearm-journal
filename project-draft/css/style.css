@@ -86,7 +86,7 @@ div.container-bio {
 
 /* body header */
 .material-icons:hover {
-    border-bottom: .3rem solid white;
+    border-bottom: .2rem solid #4C4C47;
 }
 
 /* main content */
@@ -483,7 +483,14 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     .view-create {
         display: flex;
         justify-content: space-around;
+        flex-direction: row-reverse;
+        
     }
+
+    .create-post {
+        margin-top: 50px;
+    }
+    
 
     /* main content */
     .post {
