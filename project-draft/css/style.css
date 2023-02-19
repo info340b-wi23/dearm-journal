@@ -178,15 +178,19 @@ label {
 
 /* body content */
 h1, h2, button, label, p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Shantell Sans', cursive;
     color: #4C4C47
 }
 
 /* header content */
 .website h1 {
-    font-family: 'Homemade Apple', cursive;
-    font-size: 20px;
-    line-height: 1.3;
+    /* font-family: 'Homemade Apple', cursive; */
+    font-size: 38px;
+    line-height: 0.75;
+    margin-top: 7px;
+    margin-left: 6px;
+    font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
 }
 
 /* main content */
@@ -284,13 +288,6 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     border-radius: 8px;
 }
 
-/* header content */
-.website {
-    margin-top: 7px;
-    margin-left: 6px;
-    font-family: 'Raleway', sans-serif;
-}
-
 /* main content */
 .report-icons {
     display: block;
@@ -321,7 +318,7 @@ button:hover{
 .analyzeTitle {
     margin-left: 100px;
     margin-bottom: 30px;
-    font-family: 'Homemade Apple', cursive;
+    font-family: 'Shantell Sans', cursive;
     display: inline;
 }
 
