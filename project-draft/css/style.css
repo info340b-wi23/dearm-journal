@@ -110,20 +110,14 @@ div.container-bio {
 }
 
 /* main content */
-.create-entry {
+.journalButton {
     font-size: 17px;
     margin-top: 5px;
+    margin-left: 20px;
 }
 
 button:hover{
     text-decoration: underline;
-}
-
-/* main content */
-.journal-view-container {
-    display: flex;
-    margin-left: 20px;
-    margin-top: 20px;
 }
 
 /* main content */
@@ -338,15 +332,6 @@ button:hover{
     text-decoration: underline;
 }
 
-/* main content */
-.analyzeTitle {
-    margin-left: 100px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    font-family: 'Shantell Sans', cursive;
-    font-size: 30px;
-}
-
 
 /* main content */
 .search {
@@ -445,9 +430,9 @@ section .home-container {
 
 /* smaller phones */
 @media (min-width: 598px) {
-    /* .list-entry-container { */
-        /* display: none; */
-    /* } */
+    .list-entry-container {
+        display: none; 
+    }
 
     /* main content */
     .entryContainer {
