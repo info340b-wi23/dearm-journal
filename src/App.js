@@ -3,17 +3,31 @@ import { VscHome, VscCommentDiscussion, VscBook, VscAccount} from "react-icons/v
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
-
-
-
+import DREAM_ENTRYS from './data/drean_entry.json';
 
 export default function App(props) {
+
+    const [dreamArray, setDreamArray] = useState(DREAM_ENTRYS);
+
+    const addDream = (title, content, img, symbol, recognition) => {
+        const newDream = {
+          "title": title,
+          "content": content,
+          "img": img,
+          "symbol": symbol,
+          "recognition": recognition,
+        }
+        const newDreamAry = [...dreamArray, newDream];
+        setDreamArray(newDreamAry); 
+      }
+
+
 
     return(
         <div>
             <DearMHeader/>
-            <JournalView/>
-            <JournalWrite/>
+            <JournalView dreamAry={dreamArray}/>
+            <JournalWrite howToAddDream={addDream}/>
             <DreamAnalyze/>
 
         </div>

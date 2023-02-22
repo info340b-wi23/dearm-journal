@@ -5,12 +5,12 @@ import { SlHeart, SlShareAlt } from "react-icons/sl";
 
 export function DreamAnalyze(props) {
     return(
-        <div class="report-container">
-            <div class="report-content">
+        <div className="report-container">
+            <div className="report-content">
                 <h2>Over the past month...</h2>
                 <h2>"You felt these emotions over the past month"</h2>
-                <div class="dream-feeling">
-                    <div class="symbols">
+                <div className="dream-feeling">
+                    <div className="symbols">
                     <FaSmile className="material-icons symbol" aria-label="happy"/>
                             <FaMeh className="material-icons symbol" aria-label="meh"/>
                             <FaSadTear className="material-icons symbol" aria-label="sad"/>
@@ -18,8 +18,8 @@ export function DreamAnalyze(props) {
                 </div>
 
                 <h2>"You were most able to remember % of your dreams"</h2>
-                <div class="dream-feeling">
-                    <div class="symbols">
+                <div className="dream-feeling">
+                    <div className="symbols">
                     <WiMoonFull className="material-icons symbol" aria-label="high"/>
                             <WiMoonWaningCrescent1 className="material-icons symbol" aria-label="medium"/>
                             <WiMoonWaningCrescent4 className="material-icons symbol" aria-label="low"/>
@@ -27,11 +27,11 @@ export function DreamAnalyze(props) {
                 </div>
             </div>
             
-            <div class="report-sharing">
-                <img class="report-image" src="img/writing-amico.png" alt="A woman reading"/>
-                <div class="report-icons">
-                    <SlHeart class="material-icons symbol" aria-label="favorite"/>
-                    <SlShareAlt class="material-icons symbol" aria-label="share"/>
+            <div className="report-sharing">
+                <img className="report-image" src="img/writing-amico.png" alt="A woman reading"/>
+                <div className="report-icons">
+                    <SlHeart className="material-icons symbol" aria-label="favorite"/>
+                    <SlShareAlt className="material-icons symbol" aria-label="share"/>
                 </div>
             </div>
         
