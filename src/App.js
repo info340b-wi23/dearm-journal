@@ -21,6 +21,8 @@ export default function App(props) {
         setDreamArray(newDreamAry); 
       }
 
+      console.log(dreamArray);
+
 
 
     return(

@@ -6,7 +6,7 @@ export function JournalWrite(props) {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [img, setImg] = useState('img/dream_pic7.jpg'); // Joel mentioned we will covered later
+    const [img, setImg] = useState('img/dream_pic7.jpg'); 
     const [symbol, setSymbol] = useState('');
     const [recognition, setRecognition] = useState('');
 
@@ -19,11 +19,16 @@ export function JournalWrite(props) {
     }
 
     const handleSymbol = (event) => {
-        setSymbol(event.target.value);
+        setSymbol(event.target.name);
+        console.log(event);
+        console.log("clicked");
+        
     }
 
     const handleRecognition = (event) => {
-        setRecognition(event.target.value);
+        setRecognition(event.target.name);
+        console.log("clicked");
+        console.log(event);
     }
 
 
@@ -42,7 +47,7 @@ export function JournalWrite(props) {
                     <label htmlFor="Content">Content:</label> 
                     <input type="text" name="content" className="content" onChange={handleContent} value={content}/>
                     <label htmlFor="Image Upload">Image Upload:</label> 
-                    {/* <input type="image" name="image" className="image" /> Joel mentioned we will covered later */}
+                    <input type="image" name="image" className="image" /> 
                 </form>
 
                 <div className="enter-dream-feelings">
@@ -50,9 +55,13 @@ export function JournalWrite(props) {
                     <div className="dream-feeling">
                         <h2>Symbols</h2>
                         <div className="symbols">
-                            <FaSmile className="material-icons symbol" aria-label="happy" onClick={handleSymbol} value='happy'/>
-                            <FaMeh className="material-icons symbol" aria-label="meh" onClick={handleSymbol} value='meh'/>
-                            <FaSadTear className="material-icons symbol" aria-label="sad" onClick={handleSymbol} value='sad'/>
+                            {/* <button className="material-icons symbol" aria-label="happy" onClick={handleSymbol} name='happy'>
+                                <FaSmile/>
+                            </button> */}
+                            <FaSmile className="material-icons symbol" aria-label="happy" onClick={handleSymbol} name='happy'/>
+                            <FaMeh className="material-icons symbol" aria-label="meh" onClick={handleSymbol} name='meh'/>
+                            <FaSadTear className="material-icons symbol" aria-label="sad" onClick={handleSymbol} name='sad'/>
+                            {/*put all icon inside buttons and manage css*/}
                         </div>
                     </div>
 
@@ -60,9 +69,9 @@ export function JournalWrite(props) {
                     <div className="dream-feeling">
                         <h2>% of Recognition</h2>
                         <div className="symbols">
-                            <WiMoonFull className="material-icons symbol" aria-label="high" onClick={handleRecognition} value='high'/>
-                            <WiMoonWaningCrescent1 className="material-icons symbol" aria-label="medium" onClick={handleRecognition} value='medium'/>
-                            <WiMoonWaningCrescent4 className="material-icons symbol" aria-label="low" onClick={handleRecognition} value='low'/>
+                            <WiMoonFull className="material-icons symbol" aria-label="high" onClick={handleRecognition} name='high'/>
+                            <WiMoonWaningCrescent1 className="material-icons symbol" aria-label="medium" onClick={handleRecognition} name='medium'/>
+                            <WiMoonWaningCrescent4 className="material-icons symbol" aria-label="low" onClick={handleRecognition} name='low'/>
                         </div>
                     </div>
 
