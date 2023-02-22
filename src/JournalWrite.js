@@ -6,7 +6,7 @@ export function JournalWrite(props) {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [img, setImg] = useState('img/dream_pic7.jpg'); 
+    const [img, setImg] = useState('img/dream_pic7.jpg');  // joel mentioned we will cover this later
     const [symbol, setSymbol] = useState('');
     const [recognition, setRecognition] = useState('');
 
