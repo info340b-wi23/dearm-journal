@@ -2,27 +2,20 @@ import React, { useState } from 'react';
 import { VscHome, VscCommentDiscussion, VscBook, VscAccount} from "react-icons/vsc";
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
+import { JournalView } from './JournalView.js';
 
 
 
 
 export default function App(props) {
-    // const [pageToShow, setPageToshow] = useState(<DearMHeader/>);
-    // function handleClick(event) {
-    //     setPageToshow(event.page);
-    // }
-
-    // return(
-    //     <div>
-    //         <DearMHeader page={handleClick}/>
-    //         {console.log(event.page)}
-    //     </div>
-    // )
 
     return(
         <div>
             <DearMHeader/>
+            <JournalView/>
+            <JournalWrite/>
             <DreamAnalyze/>
+
         </div>
     )
 
