@@ -1,14 +1,31 @@
 import React from 'react';
 
 export function DreamCommunity() {
+    const [content, setContent] = useState('');
+    const [img, setImg] = useState('img/dream_pic7.jpg'); // will be covered later
+    const [isLiked, setIsLiked] = useState(false);
+
+    const handleContent = (event) => {
+        setContent(event.target.value);
+    }
+
+    const handleLiked = function(event) {
+        setIsLiked(!isLiked);
+    }
+
+    let favoriteButtonColor = "white";
+    if (isLiked) {
+        favoriteButtonColor = "red";
+    }
+    
     return (
         <main>
             <div className="view-create">                
                 <div className="create-post">
                     <h2>Create Post</h2>
-                    <form>
+                    <form className="create-post">
                         <label for="Content">Content:</label> 
-                        <input type="text" name="content" className="content-create">
+                        <input type="text" name="content" className="content-create" onChange={handleContent} value={content}>
                         <label for="Image Upload">Image Upload:</label> 
                         <input type="image" name="image" className="image-create">
                     </form>
