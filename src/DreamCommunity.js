@@ -13,7 +13,7 @@ export function DreamCommunity() {
                         <input type="image" name="image" className="image-create">
                     </form>
 
-                    <button clclassNameass="post-btn">Post</button>
+                    <button className="post-btn">Post</button>
                 </div>
 
 
