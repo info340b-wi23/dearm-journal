@@ -70,7 +70,8 @@ function MinDreamEntry(props) {
     const recognition = props.recognition;
   
     return (
-        <button className="list-entry">{title}</button>
+        <button className="list-entry">{title}</button> // put button into div and only manage css display
     )
 }
+
 
