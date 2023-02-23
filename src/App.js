@@ -33,6 +33,7 @@ export default function App(props) {
             <JournalView dreamAry={dreamArray}/>
             <JournalWrite howToAddDream={addDream}/>
             <DreamAnalyze/>
+            
 
         </div>
     )

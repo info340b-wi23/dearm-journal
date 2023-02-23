@@ -8,9 +8,9 @@ export function DreamCommunity() {
                     <h2>Create Post</h2>
                     <form>
                         <label for="Content">Content:</label> 
-                        <input type="text" name="content" className="content-create">
+                        <input type="text" name="content" className="content-create"/>
                         <label for="Image Upload">Image Upload:</label> 
-                        <input type="image" name="image" className="image-create">
+                        <input type="image" name="image" className="image-create"/>
                     </form>
 
                     <button className="post-btn">Post</button>
@@ -76,5 +76,5 @@ export function DreamCommunity() {
                 </div>
             </div>
         </main>
-    );
+    )
 }
