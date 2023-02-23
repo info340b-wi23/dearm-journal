@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Homepage(props) {
+export function Homepage() {
     return (
        <div>
             <main>
