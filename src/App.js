@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { VscHome, VscCommentDiscussion, VscBook, VscAccount} from "react-icons/vsc";
+import { Homepage } from './Homepage.js';
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
@@ -26,6 +27,7 @@ export default function App(props) {
     return(
         <div>
             <DearMHeader/>
+            <Homepage />
             <JournalView dreamAry={dreamArray}/>
             <JournalWrite howToAddDream={addDream}/>
             <DreamAnalyze/>
