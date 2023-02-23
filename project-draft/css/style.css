@@ -464,6 +464,22 @@ section .home-container {
     margin-left: 15px; 
     display: inline-block;
 }
+/* .Status-Bio {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 680px;
+height: 450px;
+}
+
+.enter-status { 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%; 
+} */
+
 
 /* smaller phones */
 @media (min-width: 598px) {
@@ -566,5 +582,26 @@ section .home-container {
         width: 750px;
     }
 
+    .Status-Bio {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 680px;
+        height: 350px;
+        }
+        
+    .enter-status { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* You can adjust the width to your liking */
+        }
+        .enter-status input {
+            width: 100%;
+            height: 200px; /* You can adjust the height to your liking */
+            font-size: 16px; /* You can adjust the font size to your liking */
+            padding: 10px; /* You can adjust the padding to your liking */
+        }
 }
 
