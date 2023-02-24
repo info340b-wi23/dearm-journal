@@ -4,7 +4,7 @@ import { Homepage } from './Homepage.js';
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
-import DREAM_ENTRYS from './data/drean_entry.json';
+import DREAM_ENTRYS from '../data/dream_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './profile.js'; 
 
@@ -24,7 +24,7 @@ export default function App(props) {
         setDreamArray(newDreamAry); 
       }
 
-      console.log(dreamArray);
+    //   console.log(dreamArray);
 
 
 
