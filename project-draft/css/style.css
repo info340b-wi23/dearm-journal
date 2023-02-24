@@ -24,7 +24,7 @@ h1 {
 
 /* body header */
 a {
-    color: #191919;
+    color: #4C4C47;
     text-decoration: none;
 }
 
@@ -53,7 +53,6 @@ a {
  /* navbar  */
 nav, button {
     margin-top: 15px;
-    margin-bottom: 10px;
 }
 
 /* body */
@@ -121,7 +120,6 @@ div.container-bio {
 
 button:hover{
     text-decoration: underline;
-    
 }
 
 /* main content */
@@ -288,9 +286,7 @@ h2 {
 /* main content */
 button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
-    /* border-radius: 8px; */
-    color: #0b0b0b;
-    border-bottom: 2px solid black;
+    border-radius: 8px;
 }
 
 /* main content */
@@ -311,9 +307,9 @@ p.description, p.definition {
 
 /* main content */
 button:hover{
-    /* color: #4C4C47; */
+    color: #4C4C47;
     /* box-shadow: none; */
-     background-color: #aa7512; 
+    /* background-color: #F5F3EC; */
     font-size: 15px; 
     /* margin-left: 30px; */
     text-decoration: underline;
@@ -333,32 +329,15 @@ button:hover{
 
 .filter-search {
     display: flex;
-    justify-content: center;
     margin-top: 20px;
   }
   
   .filter-search div {
     display: flex;
-    align-items: center;
     border-radius: 4px;
   }
   
-  .filter-search button {
-    border: none;
-    border-bottom: 2px solid black;
-    /* background-color: transparent; */
-    color: black;
-    cursor: pointer;
-    padding: 10px 15px;
-    margin-right: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
   
-  .filter-search button:hover {
-    background-color: #aa7512;
-  }
-
 
 /* main content */
 .post, .create-post{
@@ -439,17 +418,16 @@ section .home-container {
 /* profile picture */
 .profile-picture {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.profile-text {
-    margin-left: 15px; 
+.enter-profile {
     display: inline-block;
-    margin-top: -50px;
 }
+
 
 
   /* main content */
@@ -579,19 +557,10 @@ div img {
         justify-content: center;
         align-items: center; 
         width: 680px;
-        height: 250px;
-         padding-left: 30px; 
-        /* padding-bottom: 300px; */
-        }
-
-        .enter-profile {
-        display: block;
-        padding-top: 50px;
-        padding-right: 130px;
-        width: 100%;
+        height: 350px;
         }
         
-       .enter-status { 
+    .enter-status { 
         display: flex;
         flex-direction: column;
         align-items: center;

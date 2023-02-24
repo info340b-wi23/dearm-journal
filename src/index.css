@@ -399,14 +399,13 @@ section .home-container {
 /* profile picture */
 .profile-picture {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.profile-text {
-    margin-left: 15px; 
+.enter-profile {
     display: inline-block;
 }
 
