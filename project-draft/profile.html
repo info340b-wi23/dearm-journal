@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <script src="../src/profile.js"></script>
     </head>
 
     <body>
@@ -56,14 +57,14 @@
 
                 <div class="dream-profile-container">
                    
-
-                    <div class = "Status-Bio">
-                        <form class = "enter-status">
-                            <label for = "Status-Bio">Status/Bio:</label>
-                            <input type="text" name="status-bio" class="status-bio">
-                        </form>
-                        
-                    </div>
+                    <section id="createlist" class="style">
+                        <h2>Please put your status Below</h2>
+                        <input id="input-text" type="text" style="height: 100px; width: 300px;">
+                        <button id="add-button">Add</button>
+                        <button id="remove">Clear</button>
+                        <h2>Here is your status below</h2>
+                        <section id="userlist"></section>
+                        </section>
 
                     <div class="enter-dream-feelings">
                         <p>How are you currently feeling?</p>
