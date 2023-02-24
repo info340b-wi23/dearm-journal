@@ -3,48 +3,48 @@
         "title": "Time Travel",
         "Content": "",
         "img": "img/dream_pic1.jpg",
-        "rymbol": "Happy",
-        "recognition": "low"
+        "feeling": "Happy",
+        "dreamType": "low"
     },
 
     {
         "title": "Teleport to a new world",
         "Content": "",
         "img": "img/dream_pic2.jpg",
-        "symbol": "Sad",
-        "recognition": "high"
+        "feeling": "Sad",
+        "dreamType": "high"
     }, 
 
     {
         "title": "Talk to long lost relatives",
         "Content": "",
         "img": "img/dream_pic3.jpg",
-        "symbol": "Sad",
-        "recognition": "high"
+        "feeling": "Sad",
+        "dreamType": "high"
     }, 
 
     {
         "title": "Became an acrobat",
         "Content": "",
         "img": "img/dream_pic4.jpg",
-        "symbol": "Sad",
-        "recognition": "high"
+        "feeling": "Sad",
+        "dreamType": "high"
     },
 
     {
         "title": "Became an animal",
         "Content": "",
         "img": "img/dream_pic5.jpg",
-        "symbol": "Sad",
-        "recognition": "high"
+        "feeling": "Sad",
+        "dreamType": "high"
     }, 
 
     {
         "title": "Living on another planet",
         "Content": "",
         "img": "img/dream_pic6.jpg",
-        "symbol": "Sad",
-        "recognition": "high"
+        "feeling": "Sad",
+        "dreamType": "high"
     }
 
 ]

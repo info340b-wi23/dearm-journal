@@ -9,6 +9,8 @@ export function JournalWrite(props) {
     const [img, setImg] = useState('img/dream_pic7.jpg');  // joel mentioned we will cover this later
     const [symbol, setSymbol] = useState('');
     const [recognition, setRecognition] = useState('');
+    const [feelingClicked, setFeelingClicked] = useState(false);
+    const [typeClicked, setTypeClicked] = useState(false);
 
     const handleTitile = (event) => {
         setTitle(event.target.value);
@@ -18,17 +20,14 @@ export function JournalWrite(props) {
         setContent(event.target.value);
     }
 
-    const handleSymbol = (event) => {
+    const handleFeeling = (event) => {
         setSymbol(event.target.name);
-        console.log(event);
-        console.log("clicked");
-        
+        setFeelingClicked(feelingClicked);
     }
 
-    const handleRecognition = (event) => {
+    const handleType = (event) => {
         setRecognition(event.target.name);
-        console.log("clicked");
-        console.log(event);
+        setTypeClicked(typeClicked);
     }
 
 
@@ -36,6 +35,15 @@ export function JournalWrite(props) {
         setTitle('');
         setContent('');
         props.howToAddDream(title,content, img, symbol, recognition);
+    }
+
+    let textDecoration = "none";
+    if(feelingClicked) {
+        textDecoration = "underline"; //filled in
+    }
+
+    if(typeClicked) {
+        textDecoration = "underline"; //filled in
     }
 
    
@@ -51,32 +59,27 @@ export function JournalWrite(props) {
                 </form>
 
                 <div className="enter-dream-feelings">
+
+
+                    <h2>Feelings</h2>
+                        <button className="dream-but" onClick={handleFeeling} name='happy'>Happy</button>
+                        <button className="dream-but" onClick={handleFeeling} name='natural'>Natural</button>
+                        <button className="dream-but" onClick={handleFeeling} name='sad'>Sad</button>
+                        <button className="dream-but" onClick={handleFeeling} name='angry'>Angry</button>
+                        <button className="dream-but" onClick={handleFeeling} name='scared'>Scared</button>
+
+                    <h2>Dream Type</h2>
+                        <button className="dream-but" onClick={handleType} name='normalDream'>Normal Dream</button>
+                        <button className="dream-but" onClick={handleType} name='dayDream'>Daydream</button>
+                        <button className="dream-but" onClick={handleType} name='nightmare'>Nightmare</button>
+                        <button className="dream-but" onClick={handleType} name='lucid'>Lucid</button>
+
+
+                    <div className="buttons">
+                        <button className="dream-enter-btn">Cancel</button>
+                        <button className="dream-enter-btn" onClick={handleSubmit}>Submit</button>
+                    </div>
                     
-                    <div className="dream-feeling">
-                        <h2>Symbols</h2>
-                        <div className="symbols">
-                            {/* <button className="material-icons symbol" aria-label="happy" onClick={handleSymbol} name='happy'>
-                                <FaSmile/>
-                            </button> */}
-                            <FaSmile className="material-icons symbol" aria-label="happy" onClick={handleSymbol} name='happy'/>
-                            <FaMeh className="material-icons symbol" aria-label="meh" onClick={handleSymbol} name='meh'/>
-                            <FaSadTear className="material-icons symbol" aria-label="sad" onClick={handleSymbol} name='sad'/>
-                            {/*put all icon inside buttons and manage css*/}
-                        </div>
-                    </div>
-
-
-                    <div className="dream-feeling">
-                        <h2>% of Recognition</h2>
-                        <div className="symbols">
-                            <WiMoonFull className="material-icons symbol" aria-label="high" onClick={handleRecognition} name='high'/>
-                            <WiMoonWaningCrescent1 className="material-icons symbol" aria-label="medium" onClick={handleRecognition} name='medium'/>
-                            <WiMoonWaningCrescent4 className="material-icons symbol" aria-label="low" onClick={handleRecognition} name='low'/>
-                        </div>
-                    </div>
-
-                    <button className="dream-enter-btn">Cancel</button>
-                    <button className="dream-enter-btn" onClick={handleSubmit}>Submit</button>
 
                 </div>
 

@@ -40,12 +40,18 @@ a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    align-items: center;
+   
 }
 
 /* body */
 .container-right {
     display: flex;
     flex-grow: 0;
+}
+
+.buttons {
+    margin-top: 30px;
 }
 
  /* navbar  */
@@ -78,6 +84,10 @@ img.home-image {
 p strong .word-definiton {
     font-size: 50px;
     word-wrap: break-word;
+}
+
+.enter-dream-feelings {
+    padding-top: 100px;
 }
 
 /* footer */
@@ -118,38 +128,6 @@ div.container-bio {
 
 button:hover{
     text-decoration: underline;
-}
-
-/* main content */
-.entry {
-    background-color: white;
-    margin: .5rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* main content */
-div img {
-    height: 250px;
-    width: 250px;
-}
-
-/* main content */
-.list-entry {
-    margin-left: 60px;
-    display: block;
-    width: 80%;
-    height: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 17px;
-    background-color: white;
-
-}
-
-/* main content */
-.list-entry-container {
-    margin-top: 40px
 }
 
 /* main content */
@@ -207,15 +185,6 @@ h1, h2, button, label, p {
 }
 
 /* main content */
-.dream-feeling {
-    background-color: white;
-    height: 200px;
-    width: 300px;
-    font-size: 12px;
-    margin-top: 30px;
-}
-
-/* main content */
 h2 {
     padding-left: 20px;
     font-size: 20px;
@@ -228,13 +197,6 @@ h2 {
     padding-right: 70px;
 }
 
-/* main content */
-.symbols {
-    align-items: center;
-    align-self: center;
-    padding-left: 15px;
-    padding-top: 30px;
-}
 
 /* main content */
 .symbols .material-icons {
@@ -285,6 +247,10 @@ h2 {
     height: 400px;
 }
 
+.dream-but {
+    margin-left: 20px;
+}
+
 /* main content */
 .report-container {
     padding-left: 50px;
@@ -296,7 +262,7 @@ h2 {
 }
 
 /* main content */
-button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post {
+button, .entry, input, .analyze img, .post, .post-content img, .create-post {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     border-radius: 8px;
 }
@@ -310,11 +276,6 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
 .report-image {
     width: 400px;
     height: 400px;
-}
-
-/* main content */
-.entryContainer {
-    display: none;
 }
 
 p.description, p.definition {
@@ -343,12 +304,34 @@ button:hover{
 }
 
 /* main content */
-.filter-search {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-}
 
+.filter-search {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .filter-search div {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+  }
+  
+  .filter-search button {
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .filter-search button:hover {
+    background-color: #6f6f6f;
+  }
 
 
 /* main content */
@@ -427,14 +410,57 @@ section .home-container {
     justify-content: center;
     flex-direction: row;
 }  
+/* profile picture */
+.profile-picture {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-text {
+    margin-left: 15px; 
+    display: inline-block;
+}
+
+div img {
+    height: 250px;
+    width: 250px;
+}
+
+/* main content */
+.entry img {
+    display: none;
+}
+
+/* main content */
+.entry {
+    display: block;
+    background-color: white;
+    margin: .5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container-but {
+    background-color: white;
+    box-shadow: none;
+    border-radius: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: fit-content;
+    width: fit-content;
+
+}
 
 /* smaller phones */
 @media (min-width: 598px) {
-    .list-entry-container {
-        display: none; 
+    .entry img {
+        display: block;
     }
 
-    /* main content */
+      /* main content */
     .entryContainer {
         margin-top: 30px;
         display: flex;
@@ -442,6 +468,7 @@ section .home-container {
         margin-left: 30px;
         align-items: center;
     }
+
 }
 
 /* tablet size */

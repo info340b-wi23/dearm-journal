@@ -11,13 +11,13 @@ export default function App(props) {
 
     const [dreamArray, setDreamArray] = useState(DREAM_ENTRYS);
 
-    const addDream = (title, content, img, symbol, recognition) => {
+    const addDream = (title, content, img, feeling, dreamType) => {
         const newDream = {
           "title": title,
           "content": content,
           "img": img,
-          "symbol": symbol,
-          "recognition": recognition,
+          "feeling": feeling,
+          "dreamType": dreamType,
         }
         const newDreamAry = [...dreamArray, newDream];
         setDreamArray(newDreamAry); 

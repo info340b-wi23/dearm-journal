@@ -10,24 +10,11 @@ export function JournalView(props) {
         title={dream.title}
         content={dream.content}
         img={dream.img}
-        symbol={dream.symbol}
-        recognition={dream.recognition}/>
+        feeling={dream.feeling}
+        dreamType={dream.dreamType}/>
 
         return dreamObj;
     });
-
-    const minViewDreamAry = props.dreamAry.map((dream) => {
-        const dreamObj = <MinDreamEntry
-        title={dream.title}
-        content={dream.content}
-        img={dream.img}
-        symbol={dream.symbol}
-        recognition={dream.recognition}/>
-
-        return dreamObj;
-    });
-
-
 
     return(
         <main>
@@ -39,10 +26,6 @@ export function JournalView(props) {
                 {fullDreamAry}
             </div>
 
-            <div className="list-entry-container">
-                {minViewDreamAry}
-            </div>
-
         </main>
     )
 }
@@ -51,26 +34,14 @@ function FullDreamEntry(props) {
     const title = props.title;
     const content = props.content;
     const img = props.img;
-    const symbol = props.symbol;
-    const recognition = props.recognition;
+    const feeling = props.feeling;
+    const dreamType = props.dreamType;
   
     return (
         <div className="entry">
-            <img src={props.img} alt={"dream of" + props.title}/>
-            <p>{title}</p>
+            <img src={props.img} alt={"dream of" + props.title}/> 
+            <p>{title}</p>  
         </div>
-    )
-}
-
-function MinDreamEntry(props) {
-    const title = props.title;
-    const content = props.content;
-    const img = props.img;
-    const symbol = props.symbol;
-    const recognition = props.recognition;
-  
-    return (
-        <button className="list-entry">{title}</button> // put button into div and only manage css display
     )
 }
 

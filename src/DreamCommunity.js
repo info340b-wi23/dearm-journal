@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export function DreamCommunity() {
     const [content, setContent] = useState('');

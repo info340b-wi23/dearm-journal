@@ -123,21 +123,7 @@ button:hover{
 }
 
 /* main content */
-.entry {
-    background-color: white;
-    margin: .5rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* main content */
-div img {
-    height: 250px;
-    width: 250px;
-}
-
-/* main content */
-.list-entry {
+/* .list-entry {
     margin-left: 60px;
     display: block;
     width: 80%;
@@ -147,12 +133,12 @@ div img {
     font-size: 17px;
     background-color: white;
 
-}
+} */
 
-/* main content */
+/* main content
 .list-entry-container {
     margin-top: 40px
-}
+} */
 
 /* main content */
 input {
@@ -314,11 +300,6 @@ button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .
     height: 400px;
 }
 
-/* main content */
-.entryContainer {
-    display: none;
-}
-
 p.description, p.definition {
     inline-size: 480px;
     overflow-wrap: break-word;
@@ -465,19 +446,41 @@ section .home-container {
     display: inline-block;
 }
 
+
+  /* main content */
+.entryContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    align-items: center;
+}
+
+div img {
+    height: 250px;
+    width: 250px;
+}
+
+/* main content */
+.entry img {
+    display: none;
+}
+
+/* main content */
+.entry {
+    display: block;
+    background-color: white;
+    margin: .5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
 /* smaller phones */
 @media (min-width: 598px) {
-    .list-entry-container {
-        display: none; 
-    }
-
-    /* main content */
-    .entryContainer {
-        margin-top: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 30px;
-        align-items: center;
+    .entry img {
+        display: block;
     }
 }
 
