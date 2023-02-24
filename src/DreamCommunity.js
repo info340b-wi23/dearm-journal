@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
+import { FaHeart, FaComment, FaShareSquare, FaUserCircle} from "react-icons/fa";
 
 export function DreamCommunity() {
     const [content, setContent] = useState('');
-    const [img, setImg] = useState('img/dream_pic7.jpg'); // will be covered later
-    const [isLiked, setIsLiked] = useState(false);
+    // const [img, setImg] = useState('img/dream_pic7.jpg'); // will be covered later
+    // const [isLiked, setIsLiked] = useState(false);
+    const [symbol, setSymbol] = useState('');
 
     const handleContent = (event) => {
         setContent(event.target.value);
     }
 
-    const handleLiked = function(event) {
-        setIsLiked(!isLiked);
-    }
+    // considered bootstrap for the post icons
+    // const handleLiked = function(event) {
+    //     setIsLiked(!isLiked);
+    // }
 
-    let favoriteButtonColor = "white";
-    if (isLiked) {
-        favoriteButtonColor = "red";
+    // let favoriteButtonColor = "white";
+    // if (isLiked) {
+    //     favoriteButtonColor = "red";
+    // }
+
+    const handleSymbol = (event) => {
+        setSymbol(event.target.name);
+        console.log(event);
+        console.log("clicked");
+        
     }
     
     return (
@@ -25,9 +35,9 @@ export function DreamCommunity() {
                     <h2>Create Post</h2>
                     <form className="create-post">
                         <label for="Content">Content:</label> 
-                        <input type="text" name="content" className="content-create" onChange={handleContent} value={content}/>
+                        <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
                         <label for="Image Upload">Image Upload:</label> 
-                        <input type="image" name="image" className="image-create"/>
+                        <input type="image" name="image" className="image-create" alt="image submitted" />
                     </form>
 
                     <button className="post-btn">Post</button>
@@ -44,37 +54,37 @@ export function DreamCommunity() {
                     </section>
 
                     <div className="post">
-                        <span className="material-icons" aria-label="Info">account_circle</span>
+                        <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
                         <p className="user-name">Emma</p>
                         <p className="post-text">
                             I have had this recurring dream of being underwater and this has appeared in many different forms on many nights.
                         </p>
         
                         <div className="post-icon">
-                            <span className="material-icons" aria-label="comment">favorite</span>
-                            <span className="material-icons" aria-label="share">ios_share</span>
-                            <span className="material-icons" aria-label="save">bookmark</span>
+                            <FaComment className="material-icons" aria-label="comment" onClick={handleSymbol} name="comment"/>
+                            <FaShareSquare className="material-icons" aria-label="share" onClick={handleSymbol} name="share"/>
+                            <FaHeart className="material-icons" aria-label="save" onClick={handleSymbol} name="save"/>
                         </div>
                     
                     </div>
         
                     <div className="post">
-                        <span className="material-icons" aria-label="Info">account_circle</span>
+                        <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
                         <p className="user-name">Jessica</p>
                         <p className="post-text">  
                             Last night I dreamt that the world was coming to an end. I looked this up on various sites and generally it is interpreted as the dreamer being under a great amount of stress. I'm putting this question to you because a) I don't feel under a great amount of stress and b) it wasn't a stressful dream.  
                         </p>
         
                         <div className="post-icon">
-                            <span className="material-icons" aria-label="comment">favorite</span>
-                            <span className="material-icons" aria-label="share">ios_share</span>
-                            <span className="material-icons" aria-label="save">bookmark</span>
+                            <FaComment className="material-icons" aria-label="comment" onClick={handleSymbol} name="comment"/>
+                            <FaShareSquare className="material-icons" aria-label="share" onClick={handleSymbol} name="share"/>
+                            <FaHeart className="material-icons" aria-label="save" onClick={handleSymbol} name="save"/>
                         </div>
                     
                     </div>
         
                     <div className="post">
-                        <span className="material-icons" aria-label="Info">account_circle</span>
+                        <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
                         <p className="user-name">Brian</p>
         
                         <div className="post-content">
@@ -85,9 +95,9 @@ export function DreamCommunity() {
                         </div>
                         
                         <div className="post-icon">
-                            <span className="material-icons" aria-label="comment">favorite</span>
-                            <span className="material-icons" aria-label="share">ios_share</span>
-                            <span className="material-icons" aria-label="save">bookmark</span>
+                            <FaComment className="material-icons" aria-label="comment" onClick={handleSymbol} name="comment"/>
+                            <FaShareSquare className="material-icons" aria-label="share" onClick={handleSymbol} name="share"/>
+                            <FaHeart className="material-icons" aria-label="save" onClick={handleSymbol} name="save"/>
                         </div>
                     </div>
                 </div>

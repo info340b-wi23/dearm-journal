@@ -12,7 +12,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     </head>
 
     <body>
@@ -51,6 +50,36 @@
                         <button class="tab search"><a href="journalView.html">Dream Reports</a></button> 
                     </div>
                 </section>
+
+                <div class="dream-profile-container">
+                    <form class="enter-profile">
+                        <label for="Name">Name:</label> 
+                        <input type="text" name="name" class="name">
+                        <label for="Username">Username:</label> 
+                        <input type="text" name="username" class="username">
+                        <!-- <label for="Image Upload">Image Upload:</label>  -->
+                        <!-- <input type="image" name="image" class="image"> -->
+                    </form>
+
+                    <div class = "Status-Bio">
+                        <form class = "enter-status">
+                            <label for = "Status-Bio">Status/Bio:</label>
+                            <input type="text" name="status-bio" class="status-bio">
+                        </form>
+                        
+                    </div>
+
+                    <div class="enter-dream-feelings">
+                        <p>How are you currently feeling?</p>
+                        <div class="dream-feeling">
+                            <!-- <p>How are you currently feeling?</p> -->
+                            <h2>Symbols</h2>
+                            <div class="symbols">
+                                <span class="material-icons symbol" aria-label="happy">sentiment_dissatisfied</span>
+                                <span class="material-icons symbol" aria-label="alright">sentiment_satisfied</span>
+                                <span class="material-icons symbol" aria-label="sad">sentiment_neutral</span>
+                            </div>
+                        </div>
         </main>
         <footer>
             <p>&copy; Dream Journal 2023</p>
