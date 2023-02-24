@@ -91,7 +91,9 @@ export function DreamCommunity(props) {
                                 <img src="img/strawberry_cupcake.png" alt="strawberry cupcake"/>
                                 <p className="post-text">
                                     In my dream, my cousins and I were eating strawberry filled cream cupcakes that were about as big as our heads and we ran out. For some reason we were in some kind of mountainous region and we ran out so we had to get more. 
-                                </p>
+                                </p> 
+                                {/* font */}
+                                {/* flex box */}
                             </div>
                             
                             <div className="post-icon">
