@@ -1,31 +1,47 @@
-'use strict';
+import React, { useState } from 'react';
+import { FaMeh, FaSmile, FaSadTear} from "react-icons/fa";
 
-(function () {
-    window.addEventListener("load", init);
-  
-    function init() {
-      let addButton = document.getElementById("add-button");
-      addButton.addEventListener("click", () => {
-        add();
-      });
-      let removeItem = document.querySelector("#remove");
-      removeItem.addEventListener("click", remove);
-    }
+export function Profile(props) {
+    return (
+        <main>
+            <div className="p-info">
+                <img className="profile-picture" src="img/avatar.png"/>
+                <form className="enter-profile">
+                    <label htmlFor="Name">Name:</label> 
+                    <input type="text" name="name" className="name"/>
+                    <label htmlFor="Username">Username:</label> 
+                    <input type="text" name="username" className="username"/>
+                </form>
+                <section className="filter-search">
+                    <div>
+                        <button className="tab">Overview</button>
+                        <button className="tab"><a href="dreamcommunity.html">Saved</a></button>
+                        <button className="tab search"><a href="journalView.html">Dream Reports</a></button> 
+                    </div>
+                </section>
 
-    function add() {
-      let list = document.getElementById("userlist");
-      let inputText = document.getElementById("input-text");
-      let orderedList = document.createElement("li");
-      orderedList.textContent = inputText.value;
-      list.appendChild(orderedList);
-      console.log(inputText);
-      inputText.value = "";
-      console.log(orderedList);
-    }
-  
-    function remove() {
-      let toDelete = document.getElementById("userlist");
-      toDelete.innerHTML = "";
-    }
+                <div className="dream-profile-container">
+                
+                    <section id="createlist" className="style">
+                        <h2>Please put your status Below</h2>
+                        <input type="status" name="status" className="status"/>
+                        <button className='profile-but'>Add</button>
+                        <button className='profile-but'>Clear</button>
+                    </section>
 
-  })();
+                    <div className='cur-feeling'>
+                        <p>How are you currently feeling?</p>
+                        <div className="dream-feeling">
+                            <div className="symbols">
+                                <FaSmile className="material-icons symbol" aria-label="happy"/>
+                                    <FaMeh className="material-icons symbol" aria-label="meh"/>
+                                    <FaSadTear className="material-icons symbol" aria-label="sad"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div> 
+    </main>
+    )
+    
+}

@@ -6,6 +6,7 @@ import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
 import DREAM_ENTRYS from './data/drean_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
+import { Profile } from './profile.js'; 
 
 export default function App(props) {
 
@@ -29,13 +30,14 @@ export default function App(props) {
 
     return(
         <div>
+            <Profile/>
             <DearMHeader/>
             <Homepage />
             <JournalView dreamAry={dreamArray}/>
             <JournalWrite howToAddDream={addDream}/>
             <DreamAnalyze/>
             <DreamCommunity/>
-
+           
 
         </div>
     )

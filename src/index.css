@@ -90,6 +90,14 @@ p strong .word-definiton {
     word-wrap: break-word;
 }
 
+.dream-feeling {
+    background-color: white;
+    height: 150px;
+    width: 300px;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
 .enter-dream-feelings {
     padding-top: 100px;
 }
@@ -251,18 +259,35 @@ h2 {
     height: 400px;
 }
 
+.dream-profile-container {
+    display: flex;
+}
+
+.cur-feeling {
+    margin-left: 40px;
+}
+
 .dream-but {
     margin-left: 20px;
 }
 
+.status {
+    width: 200px;
+    height: 100px;
+}
  
 /* main content */
 .report-container .symbols {
     padding-top: 60px;
 }
 
+.symbols {
+    padding-top: 30px;
+    padding-left: 18px;
+}
+
 /* main content */
-button, .entry, input, .analyze img, .post, .post-content img, .create-post {
+button, .entry, input, .analyze img, .post, .post-content img, .create-post, .dream-feeling {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     border-radius: 8px;
 }
@@ -281,6 +306,10 @@ button, .entry, input, .analyze img, .post, .post-content img, .create-post {
 p.description, p.definition {
     inline-size: 480px;
     overflow-wrap: break-word;
+}
+
+.profile-but {
+    margin-left: 20px;
 }
 
 /* main content */

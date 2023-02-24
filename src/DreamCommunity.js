@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaHeart, FaComment, FaShareSquare, FaUserCircle} from "react-icons/fa";
 
-export function DreamCommunity() {
+export function DreamCommunity(props) {
     const [content, setContent] = useState('');
     // const [img, setImg] = useState('img/dream_pic7.jpg'); // will be covered later
     // const [isLiked, setIsLiked] = useState(false);
