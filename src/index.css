@@ -251,10 +251,6 @@ h2 {
     margin-left: 20px;
 }
 
-/* main content */
-.report-container {
-    padding-left: 50px;
-}
  
 /* main content */
 .report-container .symbols {
@@ -305,42 +301,32 @@ button:hover{
 
 /* main content */
 
+	
+
+/* main content */
+.search {
+    margin-right: 300px;
+}
+
+.tab {
+    margin-left: 15px;
+}
+
+/* main content */
 .filter-search {
+    margin-bottom: 20px;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .filter-search div {
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-  }
-  
-  .filter-search button {
-    border: none;
-    border-bottom: 2px solid black;
-    background-color: transparent;
-    color: black;
-    cursor: pointer;
-    padding: 10px 15px;
-    margin-right: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .filter-search button:hover {
-    background-color: #6f6f6f;
-  }
+    justify-content: space-between;
+}
 
 
 /* main content */
 .post, .create-post{
     background-color: white;
     width: 550px;
-    margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 /* main content */

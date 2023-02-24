@@ -7,25 +7,24 @@ export function DreamAnalyze(props) {
     return(
         <div className="report-container">
             <div className="report-content">
-                <h2>Over the past month...</h2>
-                <h2>"You felt these emotions over the past month"</h2>
-                <div className="dream-feeling">
-                    <div className="symbols">
-                    <FaSmile className="material-icons symbol" aria-label="happy"/>
-                            <FaMeh className="material-icons symbol" aria-label="meh"/>
-                            <FaSadTear className="material-icons symbol" aria-label="sad"/>
-                    </div>
-                </div>
+                <h1>Here is your current dream stats:</h1>
+                <h2>Feelings</h2>
+                    <p>Happy: 30%</p>
+                    <p>Natural: 20%</p>
+                    <p>Sad: 10%</p>
+                    <p>Angry: 20%</p>
+                    <p>Scared: 30%</p>
 
-                <h2>"You were most able to remember % of your dreams"</h2>
-                <div className="dream-feeling">
-                    <div className="symbols">
-                    <WiMoonFull className="material-icons symbol" aria-label="high"/>
-                            <WiMoonWaningCrescent1 className="material-icons symbol" aria-label="medium"/>
-                            <WiMoonWaningCrescent4 className="material-icons symbol" aria-label="low"/>
-                    </div>
-                </div>
+                <h2>Dream Type</h2>
+                    <p>Normal Dream: 40%</p>
+                    <p>Daydream: 10%</p>
+                    <p>Nightmare: 40%</p>
+                    <p>Lucid: 10%</p>
             </div>
+
+
+
+            
             
             <div className="report-sharing">
                 <img className="report-image" src="img/writing-amico.png" alt="A woman reading"/>

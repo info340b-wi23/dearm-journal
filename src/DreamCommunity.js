@@ -31,7 +31,7 @@ export function DreamCommunity() {
     return (
         <main>
             <div className="view-create">                
-                <div className="create-post">
+                <div>
                     <h2>Create Post</h2>
                     <form className="create-post">
                         <label for="Content">Content:</label> 
@@ -42,7 +42,6 @@ export function DreamCommunity() {
 
                     <button className="post-btn">Post</button>
                 </div>
-
 
                 <div className="posts">
                     <section className="filter-search">
