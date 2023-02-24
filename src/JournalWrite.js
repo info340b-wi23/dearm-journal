@@ -9,8 +9,7 @@ export function JournalWrite(props) {
     const [img, setImg] = useState('img/dream_pic7.jpg');  // joel mentioned we will cover this later
     const [symbol, setSymbol] = useState('');
     const [recognition, setRecognition] = useState('');
-    const [feelingClicked, setFeelingClicked] = useState(false);
-    const [typeClicked, setTypeClicked] = useState(false);
+
 
     const handleTitile = (event) => {
         setTitle(event.target.value);
@@ -22,12 +21,10 @@ export function JournalWrite(props) {
 
     const handleFeeling = (event) => {
         setSymbol(event.target.name);
-        setFeelingClicked(feelingClicked);
     }
 
     const handleType = (event) => {
         setRecognition(event.target.name);
-        setTypeClicked(typeClicked);
     }
 
 
@@ -37,16 +34,6 @@ export function JournalWrite(props) {
         props.howToAddDream(title,content, img, symbol, recognition);
     }
 
-    let textDecoration = "none";
-    if(feelingClicked) {
-        textDecoration = "underline"; //filled in
-    }
-
-    if(typeClicked) {
-        textDecoration = "underline"; //filled in
-    }
-
-   
     return(
         <div className="dream-entry-container">
                 <form className="enter-dream">
@@ -61,11 +48,11 @@ export function JournalWrite(props) {
                 <div className="enter-dream-feelings">
 
 
-                    <h2>Feelings</h2>
+                    <h2>Feelings</h2> 
                         <button className="dream-but" onClick={handleFeeling} name='happy'>Happy</button>
                         <button className="dream-but" onClick={handleFeeling} name='natural'>Natural</button>
-                        <button className="dream-but" onClick={handleFeeling} name='sad'>Sad</button>
-                        <button className="dream-but" onClick={handleFeeling} name='angry'>Angry</button>
+                        <button className="dream-but" onClick={handleFeeling} name='sad' >Sad</button>
+                        <button className="dream-but" onClick={handleFeeling} name='angry' >Angry</button>
                         <button className="dream-but" onClick={handleFeeling} name='scared'>Scared</button>
 
                     <h2>Dream Type</h2>
