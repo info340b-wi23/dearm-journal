@@ -24,7 +24,7 @@ h1 {
 
 /* body header */
 a {
-    color: #4C4C47;
+    color: #191919;
     text-decoration: none;
 }
 
@@ -53,6 +53,7 @@ a {
  /* navbar  */
 nav, button {
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 /* body */
@@ -287,7 +288,9 @@ h2 {
 /* main content */
 button, .entry, input, .dream-feeling, .analyze img, .post, .post-content img, .create-post {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    color: #0b0b0b;
+    border-bottom: 2px solid black;
 }
 
 /* main content */
@@ -308,9 +311,9 @@ p.description, p.definition {
 
 /* main content */
 button:hover{
-    color: #4C4C47;
+    /* color: #4C4C47; */
     /* box-shadow: none; */
-    /* background-color: #F5F3EC; */
+     background-color: #aa7512; 
     font-size: 15px; 
     /* margin-left: 30px; */
     text-decoration: underline;
@@ -343,7 +346,7 @@ button:hover{
   .filter-search button {
     border: none;
     border-bottom: 2px solid black;
-    background-color: transparent;
+    /* background-color: transparent; */
     color: black;
     cursor: pointer;
     padding: 10px 15px;
@@ -353,7 +356,7 @@ button:hover{
   }
   
   .filter-search button:hover {
-    background-color: #e4a214;
+    background-color: #aa7512;
   }
 
 
@@ -445,6 +448,7 @@ section .home-container {
 .profile-text {
     margin-left: 15px; 
     display: inline-block;
+    margin-top: -50px;
 }
 
 
@@ -575,10 +579,19 @@ div img {
         justify-content: center;
         align-items: center; 
         width: 680px;
-        height: 350px;
+        height: 250px;
+         padding-left: 30px; 
+        /* padding-bottom: 300px; */
+        }
+
+        .enter-profile {
+        display: block;
+        padding-top: 50px;
+        padding-right: 130px;
+        width: 100%;
         }
         
-    .enter-status { 
+       .enter-status { 
         display: flex;
         flex-direction: column;
         align-items: center;
