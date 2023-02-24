@@ -30,8 +30,8 @@ export default function App(props) {
 
     return(
         <div>
-            <Profile/>
             <DearMHeader/>
+            <Profile/>
             <Homepage />
             <JournalView dreamAry={dreamArray}/>
             <JournalWrite howToAddDream={addDream}/>
