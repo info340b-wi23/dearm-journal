@@ -7,6 +7,7 @@ import { JournalView } from './JournalView.js';
 import DREAM_ENTRYS from '../data/dream_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './profile.js'; 
+import DREAM_POST from '../data/dream-post.json';
 
 export default function App(props) {
 
@@ -24,8 +25,19 @@ export default function App(props) {
         setDreamArray(newDreamAry); 
       }
 
-    //   console.log(dreamArray);
+      const [dreamPost, setDreamPost] = useState(DREAM_POST);
 
+      const addPost = (name, content, img, imgAlt, like) => {
+          const newPost = {
+            "name": name,
+            "content": content,
+            "img": img,
+            "imgAlt": imgAlt,
+            "like": like,
+          }
+          const newDreamPost = [...dreamPost, newPost];
+          setDreamPost(newDreamPost); 
+        }
 
 
     return(
@@ -36,7 +48,7 @@ export default function App(props) {
             <JournalView dreamAry={dreamArray}/>
             <JournalWrite howToAddDream={addDream}/>
             <DreamAnalyze/>
-            <DreamCommunity/>
+            <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost}/>
            
 
         </div>

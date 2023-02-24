@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Emma",
+        "content": "I have had this recurring dream of being underwater and this has appeared in many different forms on many nights.",
+        "img": "img/post_img1.jpg",
+        "imgAlt": "ocean",
+        "like": 0
+    }, 
+    {
+        "name": "Jessica",
+        "content": "Last night I dreamt that the world was coming to an end. I looked this up on various sites and generally it is interpreted as the dreamer being under a great amount of stress. I'm putting this question to you because a. I don't feel under a great amount of stress and b. it wasn't a stressful dream.",
+        "img": "img/post_img2.jpeg",
+        "imgAlt": "world ending",
+        "like": 0
+    },
+    {
+        "name": "Brian",
+        "content": "In my dream, my cousins and I were eating strawberry filled cream cupcakes that were about as big as our heads and we ran out. For some reason we were in some kind of mountainous region and we ran out so we had to get more.",
+        "img": "img/strawberry_cupcake.png",
+        "imgAlt": "strawberry cupcake",
+        "like": 0
+    }
+
+]
