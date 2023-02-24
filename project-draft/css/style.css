@@ -120,6 +120,7 @@ div.container-bio {
 
 button:hover{
     text-decoration: underline;
+    
 }
 
 /* main content */
@@ -352,7 +353,7 @@ button:hover{
   }
   
   .filter-search button:hover {
-    background-color: #6f6f6f;
+    background-color: #e4a214;
   }
 
 
