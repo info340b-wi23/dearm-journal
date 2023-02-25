@@ -190,14 +190,12 @@ label {
 
 /* body content */
 h1, h2, button, label, p {
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-family: 'Shantell Sans', cursive;
     color: #4C4C47
 }
 
 /* header content */
 .website h1 {
-    /* font-family: 'Homemade Apple', cursive; */
     font-size: 30px;
     line-height: 0.75;
     margin-top: 7px;
@@ -324,10 +322,7 @@ p.description, p.definition {
 /* main content */
 button:hover{
     color: #4C4C47;
-    /* box-shadow: none; */
-    /* background-color: #F5F3EC; */
     font-size: 15px; 
-    /* margin-left: 30px; */
     text-decoration: underline;
 }
 
@@ -340,10 +335,6 @@ button:hover{
 .tab {
     margin-left: 15px;
 }
-
-/* main content */
-
-	
 
 /* main content */
 .search {
@@ -360,7 +351,6 @@ button:hover{
     display: flex;
     justify-content: space-between;
 }
-
 
 /* main content */
 .post, .create-post{
@@ -437,6 +427,7 @@ section .home-container {
     justify-content: center;
     flex-direction: row;
 }  
+
 /* profile picture */
 .profile-picture {
     display: inline-block;
@@ -486,7 +477,7 @@ div img {
         display: block;
     }
 
-      /* main content */
+    /* main content */
     .entryContainer {
         margin-top: 30px;
         display: flex;
@@ -515,7 +506,6 @@ div img {
         display: flex;
         justify-content: space-around;
     }
-
 
      /* main content */
      .report-image {
@@ -552,7 +542,6 @@ div img {
     .image {
         width: 350px;
         height: 100px;
-
     }
     
     /* main content */
@@ -565,7 +554,6 @@ div img {
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
-        
     }
 
     .search {
@@ -575,14 +563,10 @@ div img {
     .create-post {
         margin-top: 50px;
     }
-    
 
     /* main content */
     .post {
         width: 750px;
     }
-
-    
-
 }
 
