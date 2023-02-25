@@ -368,9 +368,9 @@ p.description, p.definition {
 }
 
 /* main content */
-.post, .create-post{
+.post, .create-post {
     background-color: white;
-    width: 34.375rem;
+    width: 40rem;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
     margin-bottom: 0.625rem;
@@ -720,11 +720,6 @@ div img {
         margin-top: 1.5rem;
     }
 
-    /* dream community post box size */
-    .post {
-        width: 40rem;
-    }
-
     /* body header */
     .logo {
         max-width: 5.625rem;
@@ -789,6 +784,11 @@ div img {
         width: 30rem;
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+    
+    /* community posts */
+    .post {
+        width: 70rem;
     }
 }
 
