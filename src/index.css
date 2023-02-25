@@ -18,6 +18,12 @@ header {
     max-height: 50px;
 }
 
+.like {
+    display: inline;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
 
 /* body header */
 h1 {

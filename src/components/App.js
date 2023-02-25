@@ -27,18 +27,17 @@ export default function App(props) {
 
       const [dreamPost, setDreamPost] = useState(DREAM_POST);
 
-      const addPost = (name, content, img, imgAlt, like) => {
+      const addPost = (name, content, img, imgAlt) => {
           const newPost = {
             "name": name,
             "content": content,
             "img": img,
-            "imgAlt": imgAlt,
-            "like": like,
+            "imgAlt": imgAlt
           }
           const newDreamPost = [...dreamPost, newPost];
           setDreamPost(newDreamPost); 
         }
-
+    console.log(dreamPost);
 
     return(
         <div>

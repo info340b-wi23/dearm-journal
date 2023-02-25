@@ -2,24 +2,17 @@ import React, { useState } from 'react';
 import { FaHeart, FaComment, FaShareSquare, FaUserCircle} from "react-icons/fa";
 
 export function DreamCommunity(props) {
+    const[name, setName] = useState('user');
     const [content, setContent] = useState('');
-    // const [img, setImg] = useState('img/dream_pic7.jpg'); // will be covered later
-    // const [isLiked, setIsLiked] = useState(false);
+    const [imgAlt, setImgAlt] = useState('a farmer');
+    const [img, setImg] = useState('img/post_img_def.jpg'); // will be covered later
+    
    
     const handleContent = (event) => {
         setContent(event.target.value);
     }
 
-    // considered bootstrap for the post icons
-    // const handleLiked = function(event) {
-    //     setIsLiked(!isLiked);
-    // }
-
-    // let favoriteButtonColor = "white";
-    // if (isLiked) {
-    //     favoriteButtonColor = "red";
-    // }
-
+    
     const dreamPosts = props.dreamPost.map((post) => {
         const postObj = <PostItem
         name ={post.name}
@@ -27,10 +20,17 @@ export function DreamCommunity(props) {
         img={post.img}
         imgAlt={post.imgAlt}
         like={post.like}
-        key={post.name}/>
+        key={post.content}/>
 
         return postObj;
     });
+    
+
+
+    const handleSubmit = (event) => {
+        setContent('');
+        props.howToAddPost(name, content, img, imgAlt);
+    }
 
     
     return (
@@ -45,7 +45,7 @@ export function DreamCommunity(props) {
                         <input type="image" name="image" className="image-create" alt="image submitted" />
                     </form>
 
-                    <button className="post-btn">Post</button>
+                    <button className="post-btn" onClick={handleSubmit}>Post</button>
                 </div>
 
                 <div className="posts">
@@ -70,19 +70,17 @@ export function DreamCommunity(props) {
 
 function PostItem(props) {
 
+
     const name = props.name;
     const content = props.content;
     const img = props.img;
     const imgAlt = props.imgAlt;
-    const like = props.like;
-    const [symbol, setSymbol] = useState('');
-    
-    const handleSymbol = (event) => {
-        setSymbol(event.target.name);
-        console.log(event);
-        console.log("clicked");
-        
+    const [like, setLike] = useState(0);
+
+    const handleLike = (event) => {
+        setLike(like + 1);
     }
+
 
     return (
         <div className="post">
@@ -95,9 +93,10 @@ function PostItem(props) {
             </div>
 
             <div className="post-icon">
-                <FaComment className="material-icons" aria-label="comment" onClick={handleSymbol} name="comment"/>
-                <FaShareSquare className="material-icons" aria-label="share" onClick={handleSymbol} name="share"/>
-                <FaHeart className="material-icons" aria-label="save" onClick={handleSymbol} name="save"/>
+                <FaComment className="material-icons" aria-label="comment" name="comment"/>
+                <FaShareSquare className="material-icons" aria-label="share"  name="share"/>
+                <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
+                <p className='like'>{like}</p>
             </div>
         </div>
     )
