@@ -6,7 +6,11 @@ import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
 import DREAM_ENTRYS from './data/drean_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
-
+import { Profile } from './Profile.js';
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import "./css/index.css";
+import "./css/proposal.css";
+import "./css/style.css";
 export default function App(props) {
 
     const [dreamArray, setDreamArray] = useState(DREAM_ENTRYS);
@@ -30,13 +34,13 @@ export default function App(props) {
     return(
         <div>
             <DearMHeader/>
-            <Homepage />
-            <JournalView dreamAry={dreamArray}/>
-            <JournalWrite howToAddDream={addDream}/>
-            <DreamAnalyze/>
-            <DreamCommunity/>
-
-
+            <Routes>
+                <Route path ="/" element={<Homepage />}></Route>
+                <Route path ="/journal" element={<JournalView dreamAry={dreamArray}/>}></Route>
+                <Route path ="/dream" element={<DreamAnalyze/>}></Route>
+                <Route path ="/dreamCommunity" element={<DreamCommunity/>}></Route>
+                <Route path ="/profile" element={<Profile />}></Route>
+            </Routes>
         </div>
     )
 
@@ -57,10 +61,10 @@ function DearMHeader(props){
 
             <div className="container-right">
                 <nav>
-                    <a href="index.html"><VscHome className="material-icons" aria-label="home"/></a>
-                    <a href=""><VscCommentDiscussion className="material-icons" aria-label="community"/></a>
-                    <a href="journalView.html"><VscBook className="material-icons" aria-label="Journal"/></a>
-                    <a href="profile.html"><VscAccount className="material-icons" aria-label="account"/></a>
+                    <a href="/"><VscHome className="material-icons" aria-label="home"/></a>
+                    <a href="/dreamCommunity"><VscCommentDiscussion className="material-icons" aria-label="community"/></a>
+                    <a href="/journal"><VscBook className="material-icons" aria-label="Journal"/></a>
+                    <a href="/profile"><VscAccount className="material-icons" aria-label="account"/></a>
                 </nav>
             </div>
         </div>
