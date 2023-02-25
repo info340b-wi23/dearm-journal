@@ -19,7 +19,7 @@ header {
     padding-left: 0.313rem;
 }
 
-
+/* main content */
 .like {
     display: inline;
     padding-bottom: 1.25rem;
@@ -48,6 +48,7 @@ a {
    
 }
 
+/* main content */
 .dreamPosts {
     display: flex;
     flex-wrap: wrap;
@@ -96,6 +97,7 @@ p strong .word-definiton {
     word-wrap: break-word;
 }
 
+/* main content */
 .dream-feeling {
     background-color: white;
     height: 9.375rem;
@@ -104,6 +106,7 @@ p strong .word-definiton {
     margin-top: 1.875rem;
 }
 
+/* main content */
 .enter-dream-feelings {
     padding-top: 6.25rem;
 }
@@ -298,18 +301,22 @@ h2 {
     height: 25rem;
 }
 
+/* profile page */
 .dream-profile-container {
     display: flex;
 }
 
+/* profile feeling */
 .cur-feeling {
     margin-left: 2.5rem;
 }
 
+/* main content */
 .dream-but {
     margin-left: 1.25rem;
 }
 
+/* profile status */
 .status {
     width: 12.5rem;
     height: 6.25rem;
@@ -320,6 +327,7 @@ h2 {
     padding-top: 3.75rem;
 }
 
+/* main content */
 .symbols {
     padding-top: 1.875rem;
     padding-left: 1.125rem;
@@ -470,6 +478,7 @@ div img {
     text-align: center;
 }
 
+/* main content */
 .container-but {
     background-color: white;
     box-shadow: none;
@@ -489,6 +498,7 @@ div img {
         padding-left: 0.188rem;
     }
 
+    /* journal image */
     .entry img {
         display: block;
     }
