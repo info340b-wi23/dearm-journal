@@ -19,6 +19,7 @@ header {
     padding-left: 0.313rem;
 }
 
+
 .like {
     display: inline;
     padding-bottom: 1.25rem;
@@ -73,7 +74,7 @@ button {
     background-color: #fff2cc;
     border: none;
     border-radius: 0.5rem;
-    height: 2.188rem;
+    height: 1.725rem;
 }
 
 /* body */
@@ -84,7 +85,7 @@ button {
 
 /* main */
 img.home-image {
-    width: 50%;
+    width: 30rem;
     height: auto;
     padding-left: 0.625rem;
 }
@@ -185,20 +186,37 @@ label {
 .dream-enter-btn {
     width: 4.375rem;
     margin-left: 0.625rem;
-    font-size: 0.938rem
+    font-size: 0.938r em
 }
 
-/* body content */
-button, label, p {
+  /* body content */
+  button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
     font-family: 'Shantell Sans', cursive;
     color: #4C4C47;
-    font-size: 0.063rem;
+    font-size: 1.4rem;
+}
+
+/* dream community post icon */
+.user-name.material-icons {
+    color: #4C4C47;
+    font-size: 2.8rem;
+    margin-inline: 0.469rem;
+}
+
+/* dream community post icons */
+.post-icon .material-icons {
+    font-size: 1.8rem;
+}
+
+ /* dream stats */
+.report-content p {
+    font-size: 1.5rem;
 }
 
 /* header content */
 .website h1 {
     font-size: 3rem;
-    line-height: 0.75rem;
+    line-height: 2.5rem;
     margin-top: 0.438rem;
     margin-left: 0.375rem;
     font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
@@ -209,7 +227,16 @@ button, label, p {
 /* main content */
 h2 {
     padding-left: 1.25rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: normal;
+    font-family: 'Shantell Sans', cursive;
+    color: #4C4C47;
+}
+
+/* main content */
+.report-container h1 {
+    padding-left: 1.25rem;
+    font-size: 1.2rem;
     font-weight: normal;
     font-family: 'Shantell Sans', cursive;
     color: #4C4C47;
@@ -500,7 +527,7 @@ div img {
     /* main content */
     h2 {
         padding-left: 1.25rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: normal;
         font-family: 'Shantell Sans', cursive;
         color: #4C4C47;
