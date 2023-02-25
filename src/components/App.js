@@ -48,8 +48,7 @@ export default function App(props) {
             <JournalWrite howToAddDream={addDream}/>
             <DreamAnalyze/>
             <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost}/>
-           
-
+    
         </div>
     )
 

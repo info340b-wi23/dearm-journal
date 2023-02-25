@@ -12,21 +12,17 @@ export function DreamCommunity(props) {
         setContent(event.target.value);
     }
 
-    
     const dreamPosts = props.dreamPost.map((post) => {
         const postObj = <PostItem
         name ={post.name}
         content={post.content}
         img={post.img}
         imgAlt={post.imgAlt}
-        like={post.like}
         key={post.content}/>
 
         return postObj;
     });
     
-
-
     const handleSubmit = (event) => {
         setContent('');
         props.howToAddPost(name, content, img, imgAlt);
