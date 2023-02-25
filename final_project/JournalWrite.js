@@ -9,7 +9,8 @@ export function JournalWrite(props) {
     const [img, setImg] = useState('img/dream_pic7.jpg');  // joel mentioned we will cover this later
     const [symbol, setSymbol] = useState('');
     const [recognition, setRecognition] = useState('');
-
+    const [feeling, setFeeling] = useState('');
+    const [dreamType, setDreamtype] = useState('');
 
     const handleTitile = (event) => {
         setTitle(event.target.value);
@@ -21,17 +22,29 @@ export function JournalWrite(props) {
 
     const handleFeeling = (event) => {
         setSymbol(event.target.name);
+        setFeeling(event.target.name);
     }
 
     const handleType = (event) => {
         setRecognition(event.target.name);
+        setDreamtype(event.target.name);
     }
 
 
     const handleSubmit = (event) => {
         setTitle('');
         setContent('');
+        setFeeling('');
+        setDreamtype('');
         props.howToAddDream(title,content, img, symbol, recognition);
+    }
+
+    
+    const handleCancel = (event) => {
+        setTitle('');
+        setContent('');
+        setFeeling('');
+        setDreamtype('');
     }
 
     return(
@@ -48,22 +61,21 @@ export function JournalWrite(props) {
                 <div className="enter-dream-feelings">
 
 
-                    <h2>Feelings</h2> 
+                    <h2>Feelings: {feeling}</h2> 
                         <button className="dream-but" onClick={handleFeeling} name='happy'>Happy</button>
                         <button className="dream-but" onClick={handleFeeling} name='natural'>Natural</button>
                         <button className="dream-but" onClick={handleFeeling} name='sad' >Sad</button>
                         <button className="dream-but" onClick={handleFeeling} name='angry' >Angry</button>
                         <button className="dream-but" onClick={handleFeeling} name='scared'>Scared</button>
 
-                    <h2>Dream Type</h2>
+                    <h2>Dream Type: {dreamType}</h2>
                         <button className="dream-but" onClick={handleType} name='normalDream'>Normal Dream</button>
                         <button className="dream-but" onClick={handleType} name='dayDream'>Daydream</button>
                         <button className="dream-but" onClick={handleType} name='nightmare'>Nightmare</button>
                         <button className="dream-but" onClick={handleType} name='lucid'>Lucid</button>
 
-
                     <div className="buttons">
-                        <button className="dream-enter-btn">Cancel</button>
+                        <button className="dream-enter-btn" onClick={handleCancel}>Cancel</button>
                         <button className="dream-enter-btn" onClick={handleSubmit}>Submit</button>
                     </div>
                     

@@ -4,13 +4,15 @@ import { Homepage } from './Homepage.js';
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
-import DREAM_ENTRYS from './data/drean_entry.json';
+import DREAM_ENTRYS from './data/dream_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './Profile.js';
 import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import "./css/index.css";
 import "./css/proposal.css";
 import "./css/style.css";
+import DREAM_POST from "./data/dream-post.json";
+
 export default function App(props) {
 
     const [dreamArray, setDreamArray] = useState(DREAM_ENTRYS);
@@ -27,9 +29,19 @@ export default function App(props) {
         setDreamArray(newDreamAry); 
       }
 
-      console.log(dreamArray);
+      const [dreamPost, setDreamPost] = useState(DREAM_POST);
 
-
+      const addPost = (name, content, img, imgAlt) => {
+          const newPost = {
+            "name": name,
+            "content": content,
+            "img": img,
+            "imgAlt": imgAlt
+          }
+          const newDreamPost = [...dreamPost, newPost];
+          setDreamPost(newDreamPost); 
+        }
+    console.log(dreamPost);
 
     return(
         <div>
@@ -41,6 +53,8 @@ export default function App(props) {
                 <Route path ="/dreamCommunity" element={<DreamCommunity/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
             </Routes>
+           
+    
         </div>
     )
 

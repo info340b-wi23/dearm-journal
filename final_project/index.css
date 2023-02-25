@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+
 /* colors overall background page */
 html {
     background-color: #F5F3EC;
@@ -13,6 +16,12 @@ header {
 .logo {
     max-width: 50px;
     max-height: 50px;
+}
+
+.like {
+    display: inline;
+    padding-bottom: 20px;
+    font-size: 20px;
 }
 
 
@@ -42,6 +51,10 @@ a {
     margin-bottom: 30px;
     align-items: center;
    
+}
+.dreamPosts {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* body */
@@ -84,6 +97,14 @@ img.home-image {
 p strong .word-definiton {
     font-size: 50px;
     word-wrap: break-word;
+}
+
+.dream-feeling {
+    background-color: white;
+    height: 150px;
+    width: 300px;
+    font-size: 12px;
+    margin-top: 30px;
 }
 
 .enter-dream-feelings {
@@ -247,18 +268,35 @@ h2 {
     height: 400px;
 }
 
+.dream-profile-container {
+    display: flex;
+}
+
+.cur-feeling {
+    margin-left: 40px;
+}
+
 .dream-but {
     margin-left: 20px;
 }
 
+.status {
+    width: 200px;
+    height: 100px;
+}
  
 /* main content */
 .report-container .symbols {
     padding-top: 60px;
 }
 
+.symbols {
+    padding-top: 30px;
+    padding-left: 18px;
+}
+
 /* main content */
-button, .entry, input, .analyze img, .post, .post-content img, .create-post {
+button, .entry, input, .analyze img, .post, .post-content img, .create-post, .dream-feeling {
     box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
     border-radius: 8px;
 }
@@ -277,6 +315,10 @@ button, .entry, input, .analyze img, .post, .post-content img, .create-post {
 p.description, p.definition {
     inline-size: 480px;
     overflow-wrap: break-word;
+}
+
+.profile-but {
+    margin-left: 20px;
 }
 
 /* main content */
@@ -354,7 +396,6 @@ button:hover{
 
 /* main content */
 .post-content {
-    display: flex;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -541,28 +582,7 @@ div img {
         width: 750px;
     }
 
-
-    .Status-Bio {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        width: 680px;
-        height: 350px;
-        }
-        
-    .enter-status { 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%; 
-        }
-        .enter-status input {
-            width: 100%;
-            height: 200px; 
-            font-size: 16px; 
-            padding: 10px; 
-        }
+    
 
 }
 
