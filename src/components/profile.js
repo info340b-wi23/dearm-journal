@@ -30,7 +30,7 @@ export function Profile(props) {
                     </section>
 
                     <div className='cur-feeling'>
-                        <p>How are you currently feeling?</p>
+                        <h2>How are you currently feeling?</h2>
                         <div className="dream-feeling">
                             <div className="symbols">
                                 <FaSmile className="material-icons symbol" aria-label="happy"/>

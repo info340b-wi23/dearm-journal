@@ -12,23 +12,23 @@
         "Content": "",
         "img": "img/dream_pic2.jpg",
         "feeling": "Sad",
-        "dreamType": "Normal Dream"
+        "dreamType": "high"
     }, 
 
     {
         "title": "Talk to long lost relatives",
         "Content": "",
         "img": "img/dream_pic3.jpg",
-        "feeling": "Angry",
-        "dreamType": "Nightmare"
+        "feeling": "Sad",
+        "dreamType": "high"
     }, 
 
     {
         "title": "Became an acrobat",
         "Content": "",
         "img": "img/dream_pic4.jpg",
-        "feeling": "Natural",
-        "dreamType": "Nightmare"
+        "feeling": "Sad",
+        "dreamType": "high"
     },
 
     {
@@ -36,7 +36,7 @@
         "Content": "",
         "img": "img/dream_pic5.jpg",
         "feeling": "Sad",
-        "dreamType": "Daydream"
+        "dreamType": "high"
     }, 
 
     {

@@ -9,26 +9,20 @@ html {
 /* header */
 header {
     display: flex;
-    font-size: 10px;
+    font-size: 0.625rem;
 }
 
 /* body header */
 .logo {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 3.75rem;
+    max-height: 3.75rem;
+    padding-left: 0.313rem;
 }
 
 .like {
     display: inline;
-    padding-bottom: 20px;
-    font-size: 20px;
-}
-
-
-/* body header */
-h1 {
-    font-size: 25px;
-    margin: 0;
+    padding-bottom: 1.25rem;
+    font-size: 1.25rem;
 }
 
 /* body header */
@@ -40,18 +34,19 @@ a {
 /* body header */
 .material-icons {
     color: #4C4C47;
-    font-size: 30px;
-    margin-inline: 7.5px;
+    font-size: 1.875rem;
+    margin-inline: 0.469rem;
 }
 
 /* body */
 .container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     align-items: center;
    
 }
+
 .dreamPosts {
     display: flex;
     flex-wrap: wrap;
@@ -63,163 +58,173 @@ a {
     flex-grow: 0;
 }
 
+ /* main */
 .buttons {
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
  /* navbar  */
 nav, button {
-    margin-top: 15px;
+    margin-top: 0.938rem;
 }
 
 /* body */
 button {
     background-color: #fff2cc;
     border: none;
-    border-radius: 8px;
-    height: 35px;
+    border-radius: 0.5rem;
+    height: 2.188rem;
 }
 
 /* body */
 .logout {
-    margin-right: 7px;
-    margin-left: 3px;
+    margin-right: 0.438rem;
+    margin-left: 1.875rem;
 }
 
 /* main */
 img.home-image {
     width: 50%;
     height: auto;
-    padding-left: 10px;
+    padding-left: 0.625rem;
 }
 
 /* main */
 p strong .word-definiton {
-    font-size: 50px;
+    font-size: 3.125rem;
     word-wrap: break-word;
 }
 
 .dream-feeling {
     background-color: white;
-    height: 150px;
-    width: 300px;
-    font-size: 12px;
-    margin-top: 30px;
+    height: 9.375rem;
+    width: 18.75rem;
+    font-size: 0.75rem;
+    margin-top: 1.875rem;
 }
 
 .enter-dream-feelings {
-    padding-top: 100px;
+    padding-top: 6.25rem;
 }
 
 /* footer */
 footer .attribute {
     position: fixed;
-    bottom: 17px;
-    right: 0px;
+    bottom: 1.063;
+    right: 0;
     font-family: 'Shantell Sans', cursive;
 }
 
 /* footer */
 .copyright {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     font-family: 'Shantell Sans', cursive;
 }
 
 /* main content */
 div.container-bio {
-    padding-right: 50px;
+    padding-right: 3.125rem;
     display: inline-block;
-    padding-left: 30px;
+    padding-left: 1.875rem;
     position: relative;
 }
 
 /* body header */
 .material-icons:hover {
+    padding-bottom: 0.063rem;
     border-bottom: .2rem solid #4C4C47;
 }
 
 /* main content */
 .journalButton {
-    font-size: 17px;
-    margin-top: 5px;
-    margin-left: 20px;
+    font-size: 1.063rem;
+    margin-top: 0.313rem;
+    margin-left: 1.25rem;
 }
 
+/* div button content */
 button:hover{
     text-decoration: underline;
+    color: #4C4C47;
+    font-size: 0.938; 
 }
 
 /* main content */
 input {
     display: block;
-    margin-left: 40px;
-    margin-bottom: 30px;
+    margin-left: 2.5rem;
+    margin-bottom: 1.875rem;
 }
 
 /* main content */
 .title {
     width: 50%;
-    height: 35px;
+    height: 2.188rem;
 }
 
 /* main content */
 .content {
     width: 80%;
-    height: 450px;
+    height: 28.125rem;
 }
 
 /* main content */
 .image {
     width: 50%;
-    height: 100px;
+    height: 6.25rem;
 }
 
 /* main content */
 label {
-    margin-left: 40px;
+    margin-left: 2.5rem;
 }
 
 /* main content */
 .dream-enter-btn {
-    width: 70px;
-    margin-left: 10px;
-    font-size: 15px
+    width: 4.375rem;
+    margin-left: 0.625rem;
+    font-size: 0.938rem
 }
 
 /* body content */
-h1, h2, button, label, p {
+button, label, p {
     font-family: 'Shantell Sans', cursive;
-    color: #4C4C47
+    color: #4C4C47;
+    font-size: 0.063rem;
 }
 
 /* header content */
 .website h1 {
-    font-size: 30px;
-    line-height: 0.75;
-    margin-top: 7px;
-    margin-left: 6px;
+    font-size: 3rem;
+    line-height: 0.75rem;
+    margin-top: 0.438rem;
+    margin-left: 0.375rem;
     font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
+    margin: 0;
+    color: #4C4C47;
 }
 
 /* main content */
 h2 {
-    padding-left: 20px;
-    font-size: 20px;
+    padding-left: 1.25rem;
+    font-size: 2rem;
     font-weight: normal;
+    font-family: 'Shantell Sans', cursive;
+    color: #4C4C47;
 }
 
 /* main content */
 .enter-dream-feelings {
-    padding-left: 50px;
-    padding-right: 70px;
+    padding-left: 3.125rem;
+    padding-right: 4.375rem;
 }
 
 
 /* main content */
 .symbols .material-icons {
-    font-size: 75px;
+    font-size: 4.688rem;
     color: wheat;
 }
 
@@ -233,11 +238,11 @@ h2 {
 
 /* main content */
 .analyze-btn {
-    font-size: 22px;
+    font-size: 1.375rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     text-align: center;
     text-decoration: none;
 }
@@ -254,7 +259,7 @@ h2 {
 
 /* main content */
 .report-icons {
-    padding-top: 20px;
+    padding-top: 1.25rem;
     align-self: right;
     display: block;
 }
@@ -262,8 +267,8 @@ h2 {
 /* main content */
 .report-image {
     display: none;
-    width: 400px;
-    height: 400px;
+    width: 25rem;
+    height: 25rem;
 }
 
 .dream-profile-container {
@@ -271,83 +276,58 @@ h2 {
 }
 
 .cur-feeling {
-    margin-left: 40px;
+    margin-left: 2.5rem;
 }
 
 .dream-but {
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .status {
-    width: 200px;
-    height: 100px;
+    width: 12.5rem;
+    height: 6.25rem;
 }
  
 /* main content */
 .report-container .symbols {
-    padding-top: 60px;
+    padding-top: 3.75rem;
 }
 
 .symbols {
-    padding-top: 30px;
-    padding-left: 18px;
+    padding-top: 1.875rem;
+    padding-left: 1.125rem;
 }
 
 /* main content */
 button, .entry, input, .analyze img, .post, .post-content img, .create-post, .dream-feeling {
-    box-shadow: 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
-    border-radius: 8px;
+    box-shadow: 0.063rem 0.188rem rgba(0,0,0,0.16), 0.063rem 0.188rem rgba(0,0,0,0.23);
+    border-radius: 0.5rem;
 }
 
-/* main content */
-.report-icons {
-    display: block;
-}
-
-/* main content */
-.report-image {
-    width: 400px;
-    height: 400px;
-}
-
+/* homepage main content */
 p.description, p.definition {
-    inline-size: 480px;
+    inline-size: 30rem;
     overflow-wrap: break-word;
 }
 
+/* profile status */
 .profile-but {
-    margin-left: 20px;
-}
-
-/* main content */
-button:hover{
-    color: #4C4C47;
-    font-size: 15px; 
-    text-decoration: underline;
-}
-
-
-/* main content */
-.search {
-    margin-right: 300px;
-}
-
-.tab {
-    margin-left: 15px;
+    margin-left: 1.25rem;
 }
 
 /* main content */
 .search {
-    margin-right: 300px;
+    margin-right: 18.75rem;
 }
 
+/* main content */
 .tab {
-    margin-left: 15px;
+    margin-left: 0.938rem;
 }
 
 /* main content */
 .filter-search {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     display: flex;
     justify-content: space-between;
 }
@@ -355,15 +335,15 @@ button:hover{
 /* main content */
 .post, .create-post{
     background-color: white;
-    width: 550px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    width: 34.375rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-bottom: 0.625rem;
 }
 
 /* main content */
 .post .material-icons {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 /* main content */
@@ -374,7 +354,7 @@ button:hover{
 
 /* main content */
 .post-text {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     width: 90%;
 }
 
@@ -386,20 +366,20 @@ button:hover{
 
 /* main content */
 .post-content {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
 }
 
 /* main content */
 .create-post {
-    width: 450px;
-    height: 480px;
+    width: 28.125rem;
+    height: 28.125rem;
 }
 
 /* main content */
 .content-create {
-    width: 70%;
-    height: 150px;
+    width: 81%;
+    height: 9.375rem;
     background-color: #F5F3EC;
 }
 
@@ -407,17 +387,18 @@ button:hover{
 .image-create {
     width: 60%;
     background-color: #F5F3EC;
-    height: 100px;
+    height: 6.25rem;
 }
 
 /* main content */
 .post-btn {
-    width: 50px;
+    width: 3.125rem;
     background-color: #F5F3EC;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    font-size: 15px;
+    margin-left: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.938rem;
 }
+
 
 section .home-container {
     display: flex;
@@ -431,19 +412,21 @@ section .home-container {
 /* profile picture */
 .profile-picture {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     object-fit: cover;
 }
 
+/* profile form */
 .enter-profile {
     display: inline-block;
 }
 
+/* journal write image */
 div img {
-    height: 250px;
-    width: 250px;
+    height: 15.625rem;
+    width: 15.625rem;
 }
 
 /* main content */
@@ -456,7 +439,7 @@ div img {
     display: block;
     background-color: white;
     margin: .5rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     text-align: center;
 }
 
@@ -464,26 +447,101 @@ div img {
     background-color: white;
     box-shadow: none;
     border-radius: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     height: fit-content;
     width: fit-content;
-
 }
 
 /* smaller phones */
 @media (min-width: 598px) {
+    /* body header */
+    .logo {
+        max-width: 3.5rem;
+        max-height: 3.5rem;
+        padding-left: 0.188rem;
+    }
+
     .entry img {
         display: block;
     }
 
     /* main content */
     .entryContainer {
-        margin-top: 30px;
+        margin-top: 1.875rem;
         display: flex;
         flex-wrap: wrap;
-        margin-left: 30px;
+        margin-left: 1.875rem;
         align-items: center;
+    }
+   
+    /* dream community post box size */
+    .post {
+        width: 44.625rem;
+    }
+
+    /* body content */
+    button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+        font-size: 1rem;
+    }
+
+    /* header content */
+    .website h1 {
+        font-size: 2.5rem;
+        margin-top: 0.438rem;
+        margin-left: 0.375rem;
+        font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
+        line-height: 1.5rem;
+        color: #4C4C47;
+    }
+
+    /* main content */
+    h2 {
+        padding-left: 1.25rem;
+        font-size: 1rem;
+        font-weight: normal;
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+    }
+
+    /* main content */
+    .report-container h1 {
+        padding-left: 1.25rem;
+        font-size: 1.2rem;
+        font-weight: normal;
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+    }
+
+    /* dream community post icon */
+    .user-name.material-icons {
+        color: #4C4C47;
+        font-size: 2.1rem;
+        margin-inline: 0.469rem;
+    }
+
+    /* dream community post icons */
+    .post-icon .material-icons {
+        font-size: 1.4rem;
+    }
+
+    /* dream stats */
+    .report-content p {
+        font-size: 1rem;
+    }
+
+    /* community create post */
+    form.create-post {
+        width: 34.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    /* dream community search button */
+    .search {
+        margin-right: 1.25rem;
     }
 
 }
@@ -512,9 +570,68 @@ div img {
         display: block;
     }
     
-    /* main content */
+    /* dream community post box size */
     .post {
-        width: 650px;
+        width: 44.625rem;
+    }
+
+     /* body header */
+     .logo {
+        max-width: 4.375rem;
+        max-height: 4.375rem;
+        padding-left: 0.188rem;
+    }
+
+    /* body content */
+    button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+        font-size: 1.1rem;
+    }
+
+    /* header content */
+    .website h1 {
+        font-size: 2.75rem;
+        margin-top: 0.438rem;
+        margin-left: 0.375rem;
+        font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
+        line-height: 2.2rem;
+        color: #4C4C47;
+    }
+
+    /* main content */
+    h2 {
+        padding-left: 1.25rem;
+        font-size: 1.6rem;
+        font-weight: normal;
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+    }
+
+    /* main content */
+    .report-container h1 {
+        padding-left: 1.25rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+    }
+
+    /* dream community post icon */
+    .user-name.material-icons {
+        color: #4C4C47;
+        font-size: 2.1rem;
+        margin-inline: 0.469rem;
+    }
+
+    /* dream community post icons */
+    .post-icon .material-icons {
+        font-size: 1.5rem;
+    }
+
+    /* dream stats */
+    .report-content p {
+        font-size: 1.1rem;
     }
 }
 
@@ -528,20 +645,20 @@ div img {
 
     /* main content */
     .title {
-        width: 500px;
-        height: 35px;
+        width: 31.25rem;
+        height: 2.188rem;
     }
 
     /* main content */
     .content {
-        width: 680px;
-        height: 450px;
+        width: 42.5rem;
+        height: 28.125rem;
     }
 
     /* main content */
     .image {
-        width: 350px;
-        height: 100px;
+        width: 21.875rem;
+        height: 6.25rem;
     }
     
     /* main content */
@@ -556,17 +673,85 @@ div img {
         flex-direction: row-reverse;
     }
 
+    /* dream community search button */
     .search {
-        margin-right: 100px;
+        margin-right: 1.25rem;
     }
 
+    /* dream community create post */
     .create-post {
-        margin-top: 50px;
+        margin-top: 1.5rem;
+    }
+
+    /* dream community post box size */
+    .post {
+        width: 40rem;
+    }
+
+    /* body header */
+    .logo {
+        max-width: 5.625rem;
+        max-height: 5.625rem;
+        padding-left: 0.313rem;
+    }
+
+    /* body content */
+    button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+        font-size: 1.1rem;
+    }
+
+    /* header content */
+    .website h1 {
+        font-size: 3rem;
+        margin-top: 0.438rem;
+        margin-left: 0.375rem;
+        font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
+        line-height: 2.4rem;
+        color: #4C4C47;
     }
 
     /* main content */
-    .post {
-        width: 750px;
+    h2 {
+        padding-left: 1.25rem;
+        font-size: 1.875rem;
+        font-weight: normal;
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+    }
+
+    /* main content */
+    .report-container h1 {
+        padding-left: 1.25rem;
+        font-size: 2.1rem;
+        font-weight: normal;
+        font-family: 'Shantell Sans', cursive;
+        color: #4C4C47;
+    }
+
+    /* body header */
+    .material-icons {
+        color: #4C4C47;
+        font-size: 2.5rem;
+        margin-inline: 0.469rem;
+    }
+
+    /* dream community post icons */
+    .post-icon .material-icons {
+        font-size: 1.9rem;
+    }
+
+    /* dream stats */
+    .report-content p {
+        font-size: 1.2rem;
+    }
+
+    /* community create post */
+    form.create-post {
+        width: 30rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
