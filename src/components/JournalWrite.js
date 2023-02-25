@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { FaMeh, FaSmile, FaSadTear } from "react-icons/fa";
-import { WiMoonFull, WiMoonWaningCrescent1, WiMoonWaningCrescent4 } from "react-icons/wi";
 
 export function JournalWrite(props) {
 
@@ -30,7 +28,6 @@ export function JournalWrite(props) {
         setDreamtype(event.target.name);
     }
 
-
     const handleSubmit = (event) => {
         setTitle('');
         setContent('');
@@ -38,7 +35,6 @@ export function JournalWrite(props) {
         setDreamtype('');
         props.howToAddDream(title,content, img, symbol, recognition);
     }
-
     
     const handleCancel = (event) => {
         setTitle('');
@@ -59,8 +55,6 @@ export function JournalWrite(props) {
                 </form>
 
                 <div className="enter-dream-feelings">
-
-
                     <h2>Feelings: {feeling}</h2> 
                         <button className="dream-but" onClick={handleFeeling} name='happy'>Happy</button>
                         <button className="dream-but" onClick={handleFeeling} name='natural'>Natural</button>
@@ -78,11 +72,7 @@ export function JournalWrite(props) {
                         <button className="dream-enter-btn" onClick={handleCancel}>Cancel</button>
                         <button className="dream-enter-btn" onClick={handleSubmit}>Submit</button>
                     </div>
-                    
-
                 </div>
-
-
             </div>
     )
 }

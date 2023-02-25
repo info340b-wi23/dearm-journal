@@ -37,8 +37,6 @@ export default function App(props) {
           const newDreamPost = [...dreamPost, newPost];
           setDreamPost(newDreamPost); 
         }
-    console.log(dreamPost);
-
     return(
         <div>
             <DearMHeader/>
@@ -48,7 +46,6 @@ export default function App(props) {
             <JournalWrite howToAddDream={addDream}/>
             <DreamAnalyze/>
             <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost}/>
-    
         </div>
     )
 
@@ -56,7 +53,6 @@ export default function App(props) {
 
 
 function DearMHeader(props){
-
     return(
         <div className="container">
             <header>

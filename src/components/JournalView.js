@@ -1,10 +1,7 @@
 import React from 'react';
 
-
-
 export function JournalView(props) {
 
-    console.log(props.dreamArray);
     const fullDreamAry = props.dreamAry.map((dream) => {
         const dreamObj = <FullDreamEntry
         title={dream.title}
@@ -19,14 +16,12 @@ export function JournalView(props) {
 
     return(
         <main>
-
             <button className="journalButton"><a href="journalWrite.html">Create a new dream entry</a></button>
             <button className="journalButton"><a href="reportResult.html">View dream analyze result</a></button>
             
             <div className="entryContainer">
                 {fullDreamAry}
             </div>
-
         </main>
     )
 }
@@ -37,7 +32,7 @@ function FullDreamEntry(props) {
     const img = props.img;
     const feeling = props.feeling;
     const dreamType = props.dreamType;
-  
+
     return (
         <div className="entry">
             <img src={props.img} alt={"dream of" + props.title}/> 

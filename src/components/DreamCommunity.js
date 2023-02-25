@@ -56,8 +56,6 @@ export function DreamCommunity(props) {
                     <div className='dreamPosts'>
                         {dreamPosts}
                     </div>
-
-
                 </div>
             </div>
         </main>
@@ -76,7 +74,6 @@ function PostItem(props) {
     const handleLike = (event) => {
         setLike(like + 1);
     }
-
 
     return (
         <div className="post">

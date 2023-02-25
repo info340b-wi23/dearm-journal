@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaMeh, FaSmile, FaSadTear} from "react-icons/fa";
-import { WiMoonFull, WiMoonWaningCrescent1, WiMoonWaningCrescent4 } from "react-icons/wi";
 import { SlHeart, SlShareAlt } from "react-icons/sl";
 
 export function DreamAnalyze(props) {
@@ -21,11 +19,6 @@ export function DreamAnalyze(props) {
                     <p>Nightmare: 40%</p>
                     <p>Lucid: 10%</p>
             </div>
-
-
-
-            
-            
             <div className="report-sharing">
                 <img className="report-image" src="img/writing-amico.png" alt="A woman reading"/>
                 <div className="report-icons">
