@@ -21,10 +21,6 @@ export function DreamAnalyze(props) {
             </div>
             <div className="report-sharing">
                 <img className="report-image" src="img/writing-amico.png" alt="A woman reading"/>
-                <div className="report-icons">
-                    <SlHeart className="material-icons symbol" aria-label="favorite"/>
-                    <SlShareAlt className="material-icons symbol" aria-label="share"/>
-                </div>
             </div>
         
         </div>

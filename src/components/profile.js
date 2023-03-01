@@ -14,9 +14,8 @@ export function Profile(props) {
                 </form>
                 <section className="filter-search">
                     <div>
-                        <button className="tab">Overview</button>
-                        <button className="tab"><a href="dreamcommunity.html">Saved</a></button>
-                        <button className="tab search"><a href="journalView.html">Dream Reports</a></button> 
+                        <button className="tab">Dream Journal</button>
+                        <button className="tab"><a href="dreamcommunity.html">Dream Reports</a></button> 
                     </div>
                 </section>
 
@@ -29,16 +28,6 @@ export function Profile(props) {
                         <button className='profile-but'>Clear</button>
                     </section>
 
-                    <div className='cur-feeling'>
-                        <h2>How are you currently feeling?</h2>
-                        <div className="dream-feeling">
-                            <div className="symbols">
-                                <FaSmile className="material-icons symbol" aria-label="happy"/>
-                                    <FaMeh className="material-icons symbol" aria-label="meh"/>
-                                    <FaSadTear className="material-icons symbol" aria-label="sad"/>
-                            </div>
-                        </div>
-                    </div>
                 </div>   
             </div> 
     </main>

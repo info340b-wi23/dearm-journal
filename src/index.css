@@ -193,7 +193,7 @@ label {
 }
 
   /* body content */
-  button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
+  button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
     font-family: 'Shantell Sans', cursive;
     color: #4C4C47;
     font-size: 1.4rem;
@@ -253,7 +253,7 @@ h2 {
 
 
 /* main content */
-.symbols .material-icons {
+.material-icons {
     font-size: 4.688rem;
     color: wheat;
 }
@@ -288,13 +288,6 @@ h2 {
 }
 
 /* main content */
-.report-icons {
-    padding-top: 1.25rem;
-    align-self: right;
-    display: block;
-}
-
-/* main content */
 .report-image {
     display: none;
     width: 25rem;
@@ -304,11 +297,6 @@ h2 {
 /* profile page */
 .dream-profile-container {
     display: flex;
-}
-
-/* profile feeling */
-.cur-feeling {
-    margin-left: 2.5rem;
 }
 
 /* main content */
@@ -323,14 +311,8 @@ h2 {
 }
  
 /* main content */
-.report-container .symbols {
+.report-container {
     padding-top: 3.75rem;
-}
-
-/* main content */
-.symbols {
-    padding-top: 1.875rem;
-    padding-left: 1.125rem;
 }
 
 /* main content */
@@ -348,11 +330,6 @@ p.description, p.definition {
 /* profile status */
 .profile-but {
     margin-left: 1.25rem;
-}
-
-/* main content */
-.search {
-    margin-right: 18.75rem;
 }
 
 /* main content */
@@ -518,7 +495,7 @@ div img {
     }
 
     /* body content */
-    button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
+    button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
         font-family: 'Shantell Sans', cursive;
         color: #4C4C47;
         font-size: 1rem;
@@ -576,11 +553,6 @@ div img {
         margin-right: 1rem;
     }
 
-    /* dream community search button */
-    .search {
-        margin-right: 1.25rem;
-    }
-
 }
 
 /* tablet size */
@@ -620,7 +592,7 @@ div img {
     }
 
     /* body content */
-    button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
+    button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
         font-family: 'Shantell Sans', cursive;
         color: #4C4C47;
         font-size: 1.1rem;
@@ -710,11 +682,6 @@ div img {
         flex-direction: row-reverse;
     }
 
-    /* dream community search button */
-    .search {
-        margin-right: 1.25rem;
-    }
-
     /* dream community create post */
     .create-post {
         margin-top: 1.5rem;
@@ -728,7 +695,7 @@ div img {
     }
 
     /* body content */
-    button, label, p, .cur-feeling, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
+    button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
         font-family: 'Shantell Sans', cursive;
         color: #4C4C47;
         font-size: 1.1rem;

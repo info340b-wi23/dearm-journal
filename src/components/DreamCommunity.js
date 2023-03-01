@@ -50,7 +50,6 @@ export function DreamCommunity(props) {
                             <button className="tab">Trending</button>
                             <button className="tab">New</button>
                         </div>
-                        <button className="tab search">Search</button>
                     </section>
 
                     <div className='dreamPosts'>
