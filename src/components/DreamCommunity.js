@@ -7,7 +7,8 @@ export function DreamCommunity(props) {
     const [imgAlt, setImgAlt] = useState('a farmer');
     const [img, setImg] = useState('img/post_img_def.jpg'); // will be covered later
     
-   
+    
+    
     const handleContent = (event) => {
         setContent(event.target.value);
     }
@@ -18,7 +19,9 @@ export function DreamCommunity(props) {
         content={post.content}
         img={post.img}
         imgAlt={post.imgAlt}
-        key={post.content}/>
+        like={post.like}
+        key={post.content}
+        howToUpdateLike={props.howToUpdateLike}/>
 
         return postObj;
     });
@@ -27,6 +30,34 @@ export function DreamCommunity(props) {
         setContent('');
         props.howToAddPost(name, content, img, imgAlt);
     }
+    
+    const [post, setPosts] = useState(dreamPosts);
+
+
+    const handleTrending = (event) => {
+
+        // let temp = {};
+        // for (let i=0; i<post.length; i++) {
+        //     for (let j = i+1; j<post.length; j++) {     
+        //         if(post[i].like < post[j].like) {
+        //             temp = post[i];
+        //             console.log(temp);
+        //             post[i] = post[j];    
+        //             post[j] = temp;   
+        //         }
+        //      }     
+        // }
+        // setPosts(post);
+        console.log(post);
+        
+    }
+
+    const handleNew = (event) => {
+
+    }
+
+    
+
 
     
     return (
@@ -47,13 +78,13 @@ export function DreamCommunity(props) {
                 <div className="posts">
                     <section className="filter-search">
                         <div>
-                            <button className="tab">Trending</button>
-                            <button className="tab">New</button>
+                            <button className="tab" onClick={handleTrending}>Trending</button>
+                            <button className="tab" onClick={handleNew}>New</button>
                         </div>
                     </section>
 
                     <div className='dreamPosts'>
-                        {dreamPosts}
+                        {post}
                     </div>
                 </div>
             </div>
@@ -68,10 +99,12 @@ function PostItem(props) {
     const content = props.content;
     const img = props.img;
     const imgAlt = props.imgAlt;
-    const [like, setLike] = useState(0);
+    const [like, setLike] = useState(props.like);
+
 
     const handleLike = (event) => {
         setLike(like + 1);
+        props.howToUpdateLike(content)
     }
 
     return (

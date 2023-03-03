@@ -23,20 +23,33 @@ export default function App(props) {
         }
         const newDreamAry = [...dreamArray, newDream];
         setDreamArray(newDreamAry); 
-      }
+    }
 
-      const [dreamPost, setDreamPost] = useState(DREAM_POST);
+    const [dreamPost, setDreamPost] = useState(DREAM_POST);
 
-      const addPost = (name, content, img, imgAlt) => {
-          const newPost = {
-            "name": name,
-            "content": content,
-            "img": img,
-            "imgAlt": imgAlt
-          }
-          const newDreamPost = [...dreamPost, newPost];
-          setDreamPost(newDreamPost); 
+    const addPost = (name, content, img, imgAlt, like) => {
+        const newPost = {
+        "name": name,
+        "content": content,
+        "img": img,
+        "imgAlt": imgAlt,
+        "like": like
         }
+        const newDreamPost = [...dreamPost, newPost];
+        setDreamPost(newDreamPost); 
+    }
+
+    const updatePostLike = (key) => {
+
+        for(let i=0; i < dreamPost.length; i++) {
+            if (dreamPost[i].content == key) {
+                dreamPost[i].like++;
+            }
+        }
+        setDreamPost(dreamPost);
+    }
+
+    
     return(
         <div>
             <DearMHeader/>
@@ -44,8 +57,8 @@ export default function App(props) {
             <Homepage />
             <JournalView dreamAry={dreamArray}/>
             <JournalWrite howToAddDream={addDream}/>
-            <DreamAnalyze/>
-            <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost}/>
+            <DreamAnalyze dreamAry={dreamArray}/>
+            <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>
         </div>
     )
 
