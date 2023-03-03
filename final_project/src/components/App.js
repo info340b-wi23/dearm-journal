@@ -8,7 +8,7 @@ import DREAM_ENTRYS from '../data/dream_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './profile.js'; 
 import DREAM_POST from '../data/dream-post.json';
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { Routes, Route, NavLink} from 'react-router-dom';
 
 
 export default function App(props) {
@@ -61,11 +61,16 @@ export default function App(props) {
             <Routes>
                 <Route path ="/" element={<Homepage />}></Route>
                 <Route path ="/journal" element={<JournalView dreamAry={dreamArray}/>}></Route>
-                <Route path ="/dream" element={<DreamAnalyze/>}></Route>
-                <Route path ="/dreamCommunity" element={<DreamCommunity/>}></Route>
+                <Route path ="/dream" element={<DreamAnalyze dreamAry={dreamArray}/>}></Route>
+                <Route path ="/dreamCommunity" element={<DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
             </Routes>
            
+
+            {/* <JournalView dreamAry={dreamArray}/>
+            <JournalWrite howToAddDream={addDream}/>
+            <DreamAnalyze dreamAry={dreamArray}/>
+            <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/> */}
     
         </div>
     )
@@ -86,10 +91,10 @@ function DearMHeader(props){
 
               <div className="container-right">
                 <nav>
-                    <a href="/"><VscHome className="material-icons" aria-label="home"/></a>
-                    <a href="/dreamCommunity"><VscCommentDiscussion className="material-icons" aria-label="community"/></a>
-                    <a href="/journal"><VscBook className="material-icons" aria-label="Journal"/></a>
-                    <a href="/profile"><VscAccount className="material-icons" aria-label="account"/></a>
+                    <NavLink to="/"><VscHome className="material-icons" aria-label="home"/></NavLink>
+                    <NavLink to="/dreamCommunity"><VscCommentDiscussion className="material-icons" aria-label="community"/></NavLink>
+                    <NavLink to="/journal"><VscBook className="material-icons" aria-label="Journal"/></NavLink>
+                    <NavLink to="/profile"><VscAccount className="material-icons" aria-label="account"/></NavLink>
                 </nav>
             </div>
         </div>

@@ -1,21 +1,40 @@
 import React, { useState } from 'react';
 import { FaHeart, FaComment, FaShareSquare, FaUserCircle} from "react-icons/fa";
-import "../css/style.css";
-export function DreamCommunity() {
+import _ from 'lodash'; //import external library!
+
+export function DreamCommunity(props) {
+    const[name, setName] = useState('user');
     const [content, setContent] = useState('');
-    // const [img, setImg] = useState('img/dream_pic7.jpg'); // will be covered later
-    // const [isLiked, setIsLiked] = useState(false);
-    const [symbol, setSymbol] = useState('');
+    const [imgAlt, setImgAlt] = useState('a farmer');
+    const [img, setImg] = useState('img/post_img_def.jpg'); // will be covered later
+    const [dreamPosts, setDreamPosts] = useState(makeComp(props.dreamPost, props.howToUpdateLike));
 
     const handleContent = (event) => {
         setContent(event.target.value);
     }
 
-    const handleSymbol = (event) => {
-        setSymbol(event.target.name);
-        console.log(event);
-        console.log("clicked");
+   
+    const handleSubmit = (event) => {
+        setContent('');
+        props.howToAddPost(name, content, img, imgAlt);
+        setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
+        console.log(props.dreamPost);
+    }
+
+    const handleRefresh = (event) => {
+        setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
+        console.log(props.dreamPost);
+    }
+
+    const handleTrending = (event) => {
+        let sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
+        setDreamPosts(makeComp(sortedPosts, props.howToUpdateLike));
         
+    }
+
+    const handleNew = (event) => {
+        let sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
+        setDreamPosts(makeComp(sortedPosts, props.howToUpdateLike));
     }
     
     return (
@@ -24,73 +43,81 @@ export function DreamCommunity() {
                 <div>
                     <h2>Create Post</h2>
                     <form className="create-post">
-                        <label for="Content">Content:</label> 
+                        <label htmlFor="Content">Content:</label> 
                         <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
-                        <label for="Image Upload">Image Upload:</label> 
+                        <label htmlFor="Image Upload">Image Upload:</label> 
                         <input type="image" name="image" className="image-create" alt="image submitted" />
                     </form>
 
-                    <button className="post-btn">Post</button>
+                    <button className="post-btn" onClick={handleSubmit}>Post</button>
                 </div>
 
                 <div className="posts">
                     <section className="filter-search">
                         <div>
-                            <button className="tab">Trending</button>
-                            <button className="tab">New</button>
+                            <button className="tab" onClick={handleRefresh}>Refresh</button>
+                            <button className="tab" onClick={handleTrending}>Trending</button>
+                            <button className="tab" onClick={handleNew}>New</button>
                         </div>
-                        <button className="tab search">Search</button>
                     </section>
 
-                    <div className="post">
-                        <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
-                        <p className="user-name">Emma</p>
-                        <p className="post-text">
-                            I have had this recurring dream of being underwater and this has appeared in many different forms on many nights.
-                        </p>
-        
-                        <div className="post-icon">
-                            <FaComment className="material-icons" aria-label="comment" onClick={handleSymbol} name="comment"/>
-                            <FaShareSquare className="material-icons" aria-label="share" onClick={handleSymbol} name="share"/>
-                            <FaHeart className="material-icons" aria-label="save" onClick={handleSymbol} name="save"/>
-                        </div>
-                    
-                    </div>
-        
-                    <div className="post">
-                        <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
-                        <p className="user-name">Jessica</p>
-                        <p className="post-text">  
-                            Last night I dreamt that the world was coming to an end. I looked this up on various sites and generally it is interpreted as the dreamer being under a great amount of stress. I'm putting this question to you because a) I don't feel under a great amount of stress and b) it wasn't a stressful dream.  
-                        </p>
-        
-                        <div className="post-icon">
-                            <FaComment className="material-icons" aria-label="comment" onClick={handleSymbol} name="comment"/>
-                            <FaShareSquare className="material-icons" aria-label="share" onClick={handleSymbol} name="share"/>
-                            <FaHeart className="material-icons" aria-label="save" onClick={handleSymbol} name="save"/>
-                        </div>
-                    
-                    </div>
-        
-                    <div className="post">
-                        <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
-                        <p className="user-name">Brian</p>
-        
-                        <div className="post-content">
-                            <img src="img/strawberry_cupcake.png" alt="strawberry cupcake"/>
-                            <p className="post-text">
-                                In my dream, my cousins and I were eating strawberry filled cream cupcakes that were about as big as our heads and we ran out. For some reason we were in some kind of mountainous region and we ran out so we had to get more. 
-                            </p>
-                        </div>
-                        
-                        <div className="post-icon">
-                            <FaComment className="material-icons" aria-label="comment" onClick={handleSymbol} name="comment"/>
-                            <FaShareSquare className="material-icons" aria-label="share" onClick={handleSymbol} name="share"/>
-                            <FaHeart className="material-icons" aria-label="save" onClick={handleSymbol} name="save"/>
-                        </div>
+                    <div className='dreamPosts'>
+                        {dreamPosts}
                     </div>
                 </div>
             </div>
         </main>
+    )
+}
+
+function makeComp(array, method) {
+    return (
+        array.map((post) => {
+            const postObj = <PostItem
+            name ={post.name}
+            content={post.content}
+            img={post.img}
+            imgAlt={post.imgAlt}
+            like={post.like}
+            key={post.content}
+            howToUpdateLike={method}/>
+    
+            return postObj;
+        })
+    )
+}
+
+function PostItem(props) {
+
+
+    const name = props.name;
+    const content = props.content;
+    const img = props.img;
+    const imgAlt = props.imgAlt;
+    const [like, setLike] = useState(props.like);
+
+
+    const handleLike = (event) => {
+        setLike(like + 1);
+        props.howToUpdateLike(content)
+    }
+
+    return (
+        <div className="post">
+            <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
+            <p className="user-name">{name}</p>
+
+            <div className="post-content">
+                <img src={img} alt={imgAlt}/>
+                <p className="post-text">{content}</p> 
+            </div>
+
+            <div className="post-icon">
+                <FaComment className="material-icons" aria-label="comment" name="comment"/>
+                <FaShareSquare className="material-icons" aria-label="share"  name="share"/>
+                <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
+                <p className='like'>{like}</p>
+            </div>
+        </div>
     )
 }
