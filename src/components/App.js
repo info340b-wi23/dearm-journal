@@ -27,20 +27,23 @@ export default function App(props) {
 
     const [dreamPost, setDreamPost] = useState(DREAM_POST);
 
+
+
     const addPost = (name, content, img, imgAlt, like) => {
         const newPost = {
         "name": name,
         "content": content,
         "img": img,
         "imgAlt": imgAlt,
-        "like": like
+        "like": 0,
+        "timestamp": Date.now(),
         }
         const newDreamPost = [...dreamPost, newPost];
         setDreamPost(newDreamPost); 
+        console.log(dreamPost);
     }
 
     const updatePostLike = (key) => {
-
         for(let i=0; i < dreamPost.length; i++) {
             if (dreamPost[i].content == key) {
                 dreamPost[i].like++;
@@ -48,6 +51,8 @@ export default function App(props) {
         }
         setDreamPost(dreamPost);
     }
+
+    
 
     
     return(
