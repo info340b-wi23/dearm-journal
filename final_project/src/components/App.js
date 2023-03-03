@@ -8,6 +8,8 @@ import DREAM_ENTRYS from '../data/dream_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './profile.js'; 
 import DREAM_POST from '../data/dream-post.json';
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+
 
 export default function App(props) {
 
@@ -56,12 +58,15 @@ export default function App(props) {
     return(
         <div>
             <DearMHeader/>
-            <Profile/>
-            <Homepage />
-            <JournalView dreamAry={dreamArray}/>
-            <JournalWrite howToAddDream={addDream}/>
-            <DreamAnalyze dreamAry={dreamArray}/>
-            <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>
+            <Routes>
+                <Route path ="/" element={<Homepage />}></Route>
+                <Route path ="/journal" element={<JournalView dreamAry={dreamArray}/>}></Route>
+                <Route path ="/dream" element={<DreamAnalyze/>}></Route>
+                <Route path ="/dreamCommunity" element={<DreamCommunity/>}></Route>
+                <Route path ="/profile" element={<Profile />}></Route>
+            </Routes>
+           
+    
         </div>
     )
 
@@ -79,12 +84,12 @@ function DearMHeader(props){
                 <img className="logo" src="/img/logo.png" aria-hidden="true"/>
             </header>
 
-            <div className="container-right">
+              <div className="container-right">
                 <nav>
-                    <a href="index.html"><VscHome className="material-icons" aria-label="home"/></a>
-                    <a href=""><VscCommentDiscussion className="material-icons" aria-label="community"/></a>
-                    <a href="journalView.html"><VscBook className="material-icons" aria-label="Journal"/></a>
-                    <a href="profile.html"><VscAccount className="material-icons" aria-label="account"/></a>
+                    <a href="/"><VscHome className="material-icons" aria-label="home"/></a>
+                    <a href="/dreamCommunity"><VscCommentDiscussion className="material-icons" aria-label="community"/></a>
+                    <a href="/journal"><VscBook className="material-icons" aria-label="Journal"/></a>
+                    <a href="/profile"><VscAccount className="material-icons" aria-label="account"/></a>
                 </nav>
             </div>
         </div>
