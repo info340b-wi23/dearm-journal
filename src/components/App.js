@@ -29,7 +29,7 @@ export default function App(props) {
 
 
 
-    const addPost = (name, content, img, imgAlt, like) => {
+    const addPost = (name, content, img, imgAlt) => {
         const newPost = {
         "name": name,
         "content": content,
@@ -39,8 +39,8 @@ export default function App(props) {
         "timestamp": Date.now(),
         }
         const newDreamPost = [...dreamPost, newPost];
+        console.log(newDreamPost);
         setDreamPost(newDreamPost); 
-        console.log(dreamPost);
     }
 
     const updatePostLike = (key) => {
@@ -51,8 +51,6 @@ export default function App(props) {
         }
         setDreamPost(dreamPost);
     }
-
-    
 
     
     return(

@@ -17,14 +17,18 @@ export function DreamCommunity(props) {
     const handleSubmit = (event) => {
         setContent('');
         props.howToAddPost(name, content, img, imgAlt);
+        setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
+        console.log(props.dreamPost);
     }
-    
 
+    const handleRefresh = (event) => {
+        setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
+        console.log(props.dreamPost);
+    }
 
     const handleTrending = (event) => {
         let sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
         setDreamPosts(makeComp(sortedPosts, props.howToUpdateLike));
-
         
     }
 
@@ -51,6 +55,7 @@ export function DreamCommunity(props) {
                 <div className="posts">
                     <section className="filter-search">
                         <div>
+                            <button className="tab" onClick={handleRefresh}>Refresh</button>
                             <button className="tab" onClick={handleTrending}>Trending</button>
                             <button className="tab" onClick={handleNew}>New</button>
                         </div>
