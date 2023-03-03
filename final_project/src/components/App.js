@@ -59,14 +59,14 @@ export default function App(props) {
     
     return(
         <div>
-            {/* <DearMHeader/>
+            <DearMHeader/>
             <Routes>
                 <Route path ="/" element={<Homepage />}></Route>
                 <Route path ="/journal" element={<JournalView dreamAry={dreamArray}/>}></Route>
                 <Route path ="/dream" element={<DreamAnalyze/>}></Route>
                 <Route path ="/dreamCommunity" element={<DreamCommunity/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
-            </Routes> */}
+            </Routes>
            
     
         </div>
