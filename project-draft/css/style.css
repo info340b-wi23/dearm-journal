@@ -1,31 +1,37 @@
 /* colors overall background page */
 html {
-    background-color: #F5F3EC;
+    background-color: #fefefe;
 }
 
 /* header */
 header {
-    display: flex;
-    font-size: 10px;
+    display: inline-flex;
+    row-gap: 2.25rem;
+    flex-wrap: nowrap;
 }
 
 /* body header */
 .logo {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 3rem;
+    max-height: 3rem;
 }
 
 
 /* body header */
 h1 {
-    font-size: 25px;
+    font-size: 2.25rem;
     margin: 0;
+    padding-left: 2rem;
 }
 
 /* body header */
 a {
     color: #4C4C47;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    padding: 0rem 2rem 2rem 0rem;
+    align-content: center;
 }
 
 /* body header */
@@ -41,7 +47,6 @@ a {
     justify-content: space-between;
     margin-bottom: 30px;
     align-items: center;
-   
 }
 
 /* body */
@@ -51,7 +56,7 @@ a {
 }
 
  /* navbar  */
-nav, button {
+button {
     margin-top: 15px;
 }
 
@@ -83,11 +88,12 @@ p strong .word-definiton {
 }
 
 /* footer */
-footer .attribute {
+footer p {
     position: fixed;
-    bottom: 17px;
-    right: 0px;
-    font-family: 'Shantell Sans', cursive;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #faf5e7;
 }
 
 /* footer */
@@ -95,7 +101,7 @@ footer .attribute {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Inter', sans-serif;
 }
 
 /* main content */
@@ -179,8 +185,7 @@ label {
 
 /* body content */
 h1, h2, button, label, p {
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Nunito', sans-serif;
     color: #4C4C47
 }
 
@@ -188,9 +193,6 @@ h1, h2, button, label, p {
 .website h1 {
     /* font-family: 'Homemade Apple', cursive; */
     font-size: 30px;
-    line-height: 0.75;
-    margin-top: 7px;
-    margin-left: 6px;
     font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
 }
 
@@ -205,9 +207,28 @@ h1, h2, button, label, p {
 
 /* main content */
 h2 {
-    padding-left: 20px;
+    padding-left: 40px;
     font-size: 20px;
     font-weight: normal;
+}
+
+/* main content */
+h3 {
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #adadad;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* main content */
+h4 {
+    padding-left: 40px;
+    margin-top: 2rem;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* main content */
@@ -428,8 +449,6 @@ section .home-container {
     display: inline-block;
 }
 
-
-
   /* main content */
 .entryContainer {
     margin-top: 30px;
@@ -458,7 +477,21 @@ div img {
     text-align: center;
 }
 
+.navbar {
+    margin: 0rem 1.5rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: space-between;
+}
 
+.nav-links {
+    margin: 0rem 1.5rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
 
 /* smaller phones */
 @media (min-width: 598px) {
