@@ -17,13 +17,10 @@ export function DreamCommunity(props) {
     const handleSubmit = (event) => {
         setContent('');
         props.howToAddPost(name, content, img, imgAlt);
-        setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
-        console.log(props.dreamPost);
     }
 
     const handleRefresh = (event) => {
         setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
-        console.log(props.dreamPost);
     }
 
     const handleTrending = (event) => {

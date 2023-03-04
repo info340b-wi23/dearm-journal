@@ -60,17 +60,12 @@ export default function App(props) {
             <DearMHeader/>
             <Routes>
                 <Route path ="/" element={<Homepage />}></Route>
-                <Route path ="/journal" element={<JournalView dreamAry={dreamArray}/>}></Route>
+                <Route path ="/journal" element={<JournalView dreamAry={dreamArray} howToAddDream={addDream}/>}></Route>
                 <Route path ="/dream" element={<DreamAnalyze dreamAry={dreamArray}/>}></Route>
                 <Route path ="/dreamCommunity" element={<DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
             </Routes>
-           
-
-            {/* <JournalView dreamAry={dreamArray}/>
-            <JournalWrite howToAddDream={addDream}/>
-            <DreamAnalyze dreamAry={dreamArray}/>
-            <DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/> */}
+        
     
         </div>
     )
