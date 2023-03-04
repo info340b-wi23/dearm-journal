@@ -8,7 +8,7 @@
         <title>Dear.M</title>
         <link rel="icon" type="image/x-icon" href="img/logo.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" 
@@ -20,12 +20,12 @@
 
     <body>
         <div class="container-fluid">
-            <header class="navbar navbar-expand-lg navbar-light border-bottom rounded-bottom" style="background-color: #e3f2fd;">
+            <header class="navbar navbar-expand-lg navbar-light border-bottom border-right border-left rounded-bottom" style="background-color: #e3f2fd;">
                 <div class="navbar-brand positive-relative">
-                    <a href="index.html" class="nav-link"><h1>Dear.M</h1></a>
+                    <a href="index.html" class="nav-link"><h1 class="website-title">Dear.M</h1></a>
                 </div>
                 <img class="logo" src="img/logo.png" aria-hidden="true" class="d-inline-block align-top">
-                <nav class="position-absolute top-0 start-100 translate-middle">
+                <nav class="position-relative top-0 start-100 translate-middle">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="dreamcommunity.html" class="nav-link">Community</a>
                     <a href="journalView.html" class="nav-link">Journal</a>
@@ -36,32 +36,34 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-8">
+                <div class="single-journal col-8">
                     <h2>Title of Entry</h2>
                     <h3>Date of Entry</h3>
                     <h4>Dream Text</h4>
-                        
                 </div>
                 <div class="col">
-                    <h2>Feelings</h2>
-                    <button type="button" class="btn btn-light">Happy</button>
-                    <button type="button" class="btn btn-light">Natural</button>
-                    <button type="button" class="btn btn-light">Sad</button>
-                    <button type="button" class="btn btn-light">Angry</button>
-                    <button type="button" class="btn btn-light">Scared</button>
-                    <h2>Type of Dream</h2>
-                    <button type="button" class="btn btn-light">Normal Dream</button>
-                    <button type="button" class="btn btn-light">Daydream</button>
-                    <button type="button" class="btn btn-light">Nightmare</button>
-                    <button type="button" class="btn btn-light">Lucid</button>
-                    <h2>Image</h2>
-                    <img src="img/dream_pic1.jpg" alt="dreamy pond">
+                    <h2 class="single-journal-emotions">Feelings</h2>
+                    <button type="button" class="btn btn-light rounded-pill">Happy</button>
+                    <button type="button" class="btn btn-light rounded-pill">Natural</button>
+                    <button type="button" class="btn btn-light rounded-pill">Sad</button>
+                    <button type="button" class="btn btn-light rounded-pill">Angry</button>
+                    <button type="button" class="btn btn-light rounded-pill">Scared</button>
+                    <br><br>
+                    <h2 class="single-journal-emotions">Type of Dream</h2>
+                    <button type="button" class="btn btn-light rounded-pill">Normal Dream</button>
+                    <button type="button" class="btn btn-light rounded-pill">Daydream</button>
+                    <button type="button" class="btn btn-light rounded-pill">Nightmare</button>
+                    <button type="button" class="btn btn-light rounded-pill">Lucid</button>
+                    <br><br><br>
+                    <img class="object-cover object-center rounded mx-auto d-block" src="img/dream_pic1.jpg" alt="dreamy pond">
+                    <br><br>
                 </div>
             </div>
         </div>
     </body>
 
     <footer class="footer py-5 site-footer bg-dark">
-        <p>&copy; Dear.M 2023</p>
+        <p class="text-white" style="font-size: 1rem; margin-left: 1rem;">&copy; Dear.M 2023</p>
+        <a href="https://storyset.com/people" class="text-white" style="font-size: 1rem; margin-left: 1rem;">People illustrations by Storyset</a>
     </footer>
 </html>
