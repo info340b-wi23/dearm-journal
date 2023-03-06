@@ -295,6 +295,11 @@ h2 {
 }
 
 /* profile page */
+.change-btn {
+    margin-left: 5px;
+}
+
+/* profile page */
 .dream-profile-container {
     display: flex;
 }

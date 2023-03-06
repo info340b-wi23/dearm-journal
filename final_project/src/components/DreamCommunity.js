@@ -12,7 +12,6 @@ export function DreamCommunity(props) {
     const handleContent = (event) => {
         setContent(event.target.value);
     }
-
    
     const handleSubmit = (event) => {
         setContent('');
