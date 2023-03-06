@@ -37,7 +37,7 @@ export function JournalWrite(props) {
         props.howToAddDream(title,content, img, symbol, recognition);
     }
     
-    const handleCancel = (event) => {
+    const handleClear = (event) => {
         setTitle('');
         setContent('');
         setFeeling('');
@@ -70,7 +70,8 @@ export function JournalWrite(props) {
                         <button className="dream-but" onClick={handleType} name='lucid'>Lucid</button>
 
                     <div className="buttons">
-                        <button className="dream-enter-btn" onClick={handleCancel}>Cancel</button>
+                        <button className="dream-enter-btn clear" onClick={handleClear}>Clear</button>
+                        <button className="dream-enter-btn" ><Link to="/journal">Back</Link></button>
                         <button className="dream-enter-btn" onClick={handleSubmit}><Link to="/journal">Submit</Link></button>
                         
                     </div>
