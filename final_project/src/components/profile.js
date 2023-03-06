@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaMeh, FaSmile, FaSadTear} from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export function Profile(props) {
 
@@ -41,8 +42,10 @@ export function Profile(props) {
                 </form>
                 <section className="filter-search">
                     <div>
-                        <button className="tab">Dream Journal</button>
-                        <button className="tab"><a href="dreamcommunity.html">Dream Reports</a></button> 
+                        <button className="tab"><Link to="/journal">Dream Journal</Link></button>
+                        <button className="tab"><Link to="/journal/analyze">Dream Reports</Link></button> 
+
+                        
                     </div>
                 </section>
 

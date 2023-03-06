@@ -17,8 +17,8 @@ export function JournalView(props) {
 
     return(
         <main>
-            <button className="journalButton"><a href="journalWrite.html">Create a new dream entry</a></button>
-            <button className="journalButton"><a href="reportResult.html">View dream analyze result</a></button>
+            <button className="journalButton"><Link to="write">Create a new dream entry</Link></button>
+            <button className="journalButton"><Link to="analyze">View dream analyze result</Link></button>
             
             <div className="entryContainer">
                 {fullDreamAry}

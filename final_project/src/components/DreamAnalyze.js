@@ -56,7 +56,7 @@ export function DreamAnalyze(props) {
                     <p>Lucid: {percentPro(lucid, count)}%</p>
             </div>
             <div className="report-sharing">
-                <img className="report-image" src="img/writing-amico.png" alt="A woman reading"/>
+                <img className="report-image" src="../img/writing-amico.png" alt="A woman reading"/>
             </div>
         
         </div>

@@ -63,9 +63,10 @@ export default function App(props) {
                 <Route path ="/" element={<Homepage />}></Route>
                 <Route path ="/journal">
                     <Route path=":dreamTitle" element={<SingleJournal/>}/>
+                    <Route path="write" element={<JournalWrite/>}/>
+                    <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
                     <Route index element={<JournalView dreamAry={dreamArray} howToAddDream={addDream}/>}/>
                 </Route>
-                <Route path ="/dream" element={<DreamAnalyze dreamAry={dreamArray}/>}></Route>
                 <Route path ="/dreamCommunity" element={<DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
             </Routes>
