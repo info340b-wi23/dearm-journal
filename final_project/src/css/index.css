@@ -293,6 +293,11 @@ h2 {
     justify-content: space-around;
 }
 
+/* single journal */
+.back {
+    display: block;
+}
+
 /* main content */
 .report-image {
     display: none;

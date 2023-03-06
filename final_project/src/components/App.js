@@ -92,8 +92,8 @@ function DearMHeader(props){
               <div className="container-right">
                 <nav>
                     <NavLink to="/"><VscHome className="material-icons" aria-label="home"/></NavLink>
-                    <NavLink to="/dreamCommunity"><VscCommentDiscussion className="material-icons" aria-label="community"/></NavLink>
                     <NavLink to="/journal"><VscBook className="material-icons" aria-label="Journal"/></NavLink>
+                    <NavLink to="/dreamCommunity"><VscCommentDiscussion className="material-icons" aria-label="community"/></NavLink>
                     <NavLink to="/profile"><VscAccount className="material-icons" aria-label="account"/></NavLink>
                 </nav>
             </div>

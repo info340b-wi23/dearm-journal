@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 import DREAM_ENTRYS from '../data/dream_entry.json';
 
@@ -22,6 +23,8 @@ function SingleJournal(props) {
                     <h3 className="single-journal-emotions">Type of Dream: {dream.dreamType}</h3>
              
                     <img className="object-cover object-center rounded mx-auto d-block" src={"../" + dream.img} alt="dreamy pond"/>
+                    <button className="back"><Link to="/journal">Back to Journal</Link></button>
+                    
                
                 </div>
         </div>
