@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export function JournalWrite(props) {
 
@@ -70,7 +71,8 @@ export function JournalWrite(props) {
 
                     <div className="buttons">
                         <button className="dream-enter-btn" onClick={handleCancel}>Cancel</button>
-                        <button className="dream-enter-btn" onClick={handleSubmit}>Submit</button>
+                        <button className="dream-enter-btn" onClick={handleSubmit}><Link to="/journal">Submit</Link></button>
+                        
                     </div>
                 </div>
             </div>

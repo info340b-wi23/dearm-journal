@@ -287,6 +287,12 @@ h2 {
     color: white;
 }
 
+/* single journal */
+.single-journal {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* main content */
 .report-image {
     display: none;

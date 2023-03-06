@@ -11,15 +11,15 @@ function SingleJournal(props) {
     let dream = _.find(DREAM_ENTRYS, {title: dreamTitle});
     console.log(dream.img);
     return(
-        <div className="row">
+        <div className='single-journal'>
                 <div className="single-journal col-8">
                     <h2>{dream.title}</h2>
                     <h4>{dream.content}</h4>
                 </div>
                 <div className="col">
-                    <h2 className="single-journal-emotions">Feelings: {dream.feeling}</h2>
+                    <h3 className="single-journal-emotions">Feelings: {dream.feeling}</h3>
                   
-                    <h2 className="single-journal-emotions">Type of Dream: {dream.dreamType}</h2>
+                    <h3 className="single-journal-emotions">Type of Dream: {dream.dreamType}</h3>
              
                     <img className="object-cover object-center rounded mx-auto d-block" src={"../" + dream.img} alt="dreamy pond"/>
                

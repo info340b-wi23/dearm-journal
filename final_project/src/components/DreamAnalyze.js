@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlHeart, SlShareAlt } from "react-icons/sl";
+import { Link } from 'react-router-dom';
 
 export function DreamAnalyze(props) {
     const dreams = props.dreamAry;
@@ -57,8 +57,10 @@ export function DreamAnalyze(props) {
             </div>
             <div className="report-sharing">
                 <img className="report-image" src="../img/writing-amico.png" alt="A woman reading"/>
-            </div>
+                <button><Link to="/journal">Back to Journal</Link></button>
         
+            </div>
+            
         </div>
     )
 }
