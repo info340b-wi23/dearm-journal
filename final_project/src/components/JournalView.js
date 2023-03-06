@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function JournalView(props) {
 
@@ -28,16 +29,13 @@ export function JournalView(props) {
 
 function FullDreamEntry(props) {
     const title = props.title;
-    const content = props.content;
     const img = props.img;
-    const feeling = props.feeling;
-    const dreamType = props.dreamType;
 
     return (
-        <div className="entry">
-            <img src={props.img} alt={"dream of" + props.title}/> 
+        <Link className="entry" to={title}>
+            <img src={img} alt={"dream of" + title}/> 
             <p>{title}</p>  
-        </div>
+        </Link>
     )
 }
 

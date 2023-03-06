@@ -1,7 +1,7 @@
 [
     {
         "title": "Time Travel",
-        "Content": "",
+        "content": "",
         "img": "img/dream_pic1.jpg",
         "feeling": "Happy",
         "dreamType": "Normal Dream"
@@ -9,7 +9,7 @@
 
     {
         "title": "Teleport to a new world",
-        "Content": "",
+        "content": "",
         "img": "img/dream_pic2.jpg",
         "feeling": "Sad",
         "dreamType": "high"
@@ -17,7 +17,7 @@
 
     {
         "title": "Talk to long lost relatives",
-        "Content": "",
+        "content": "",
         "img": "img/dream_pic3.jpg",
         "feeling": "Sad",
         "dreamType": "high"
@@ -25,7 +25,7 @@
 
     {
         "title": "Became an acrobat",
-        "Content": "",
+        "content": "",
         "img": "img/dream_pic4.jpg",
         "feeling": "Sad",
         "dreamType": "high"
@@ -33,7 +33,7 @@
 
     {
         "title": "Became an animal",
-        "Content": "",
+        "content": "",
         "img": "img/dream_pic5.jpg",
         "feeling": "Sad",
         "dreamType": "high"
@@ -41,7 +41,7 @@
 
     {
         "title": "Living on another planet",
-        "Content": "",
+        "content": "",
         "img": "img/dream_pic6.jpg",
         "feeling": "Sad",
         "dreamType": "high"

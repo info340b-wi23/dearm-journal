@@ -9,6 +9,7 @@ import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './profile.js'; 
 import DREAM_POST from '../data/dream-post.json';
 import { Routes, Route, NavLink} from 'react-router-dom';
+import  SingleJournal  from './singleJournal.js';
 
 
 export default function App(props) {
@@ -60,7 +61,10 @@ export default function App(props) {
             <DearMHeader/>
             <Routes>
                 <Route path ="/" element={<Homepage />}></Route>
-                <Route path ="/journal" element={<JournalView dreamAry={dreamArray} howToAddDream={addDream}/>}></Route>
+                <Route path ="/journal">
+                    <Route path=":dreamTitle" element={<SingleJournal/>}/>
+                    <Route index element={<JournalView dreamAry={dreamArray} howToAddDream={addDream}/>}/>
+                </Route>
                 <Route path ="/dream" element={<DreamAnalyze dreamAry={dreamArray}/>}></Route>
                 <Route path ="/dreamCommunity" element={<DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
