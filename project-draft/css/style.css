@@ -18,10 +18,12 @@ header {
 
 
 /* body header */
-h1 {
-    font-size: 2.25rem;
+h1.website-title {
+    font-size: 3rem;
     margin: 0;
+    padding-top: 1.2rem;
     padding-left: 2rem;
+    font-family: 'Katibeh', cursive;   
 }
 
 /* body header */
@@ -88,13 +90,13 @@ p strong .word-definiton {
 }
 
 /* footer */
-footer p {
+/* footer p {
     position: fixed;
     margin-bottom: 1rem;
     margin-left: 1rem;
     font-family: 'Inter', sans-serif;
     color: #faf5e7;
-}
+} */
 
 /* footer */
 .copyright {
@@ -184,16 +186,9 @@ label {
 }
 
 /* body content */
-h1, h2, button, label, p {
+h2, button, label, p {
     font-family: 'Nunito', sans-serif;
     color: #4C4C47
-}
-
-/* header content */
-.website h1 {
-    /* font-family: 'Homemade Apple', cursive; */
-    font-size: 30px;
-    font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
 }
 
 /* main content */
@@ -207,14 +202,15 @@ h1, h2, button, label, p {
 
 /* main content */
 h2 {
-    padding-left: 40px;
+    padding-left: 5rem;
+    padding-top: 40px;
     font-size: 20px;
     font-weight: normal;
 }
 
 /* main content */
 h3 {
-    padding-left: 40px;
+    padding-left: 6rem;
     font-size: 16px;
     font-weight: normal;
     color: #adadad;
@@ -223,12 +219,28 @@ h3 {
 
 /* main content */
 h4 {
-    padding-left: 40px;
+    padding-left: 5rem;
     margin-top: 2rem;
     font-size: 16px;
     font-weight: normal;
     color: black;
     font-family: 'Nunito', sans-serif;
+}
+
+.single-journal.col-8 {
+    box-sizing: border-box;
+    width: 100%;
+    border-right: solid #e5e5e5 2px;
+    padding: 5px;
+}
+
+.object-cover.object-center.rounded {
+    width: 70%;
+    height: auto;
+}
+
+h2.single-journal-emotions {
+    padding-left: 0.5rem;
 }
 
 /* main content */
@@ -436,6 +448,7 @@ section .home-container {
     justify-content: center;
     flex-direction: row;
 }  
+
 /* profile picture */
 .profile-picture {
     display: inline-block;
