@@ -9,12 +9,12 @@ import { Profile } from './profile.js';
 import { Routes, Route, NavLink, useFetcher} from 'react-router-dom';
 import  SingleJournal  from './singleJournal.js';
 import 'whatwg-fetch';
+import { getDatabase, ref, set as firebaseSet } from 'firebase/database'
 
 export default function App(props) {
     const [dreamArray, setDreamArray] = useState([]);
     const [dreamPost, setDreamPost] = useState([]);
 
-    console.log(dreamPost);
 
     useEffect(() => {
         fetch('/data/dream_entry.json')
@@ -49,8 +49,6 @@ export default function App(props) {
     }
 
 
-
-
     const addPost = (name, content, img, imgAlt) => {
         const newPost = {
         "name": name,
@@ -61,20 +59,20 @@ export default function App(props) {
         "timestamp": Date.now(),
         }
         const newDreamPost = [...dreamPost, newPost];
-        console.log(newDreamPost);
         setDreamPost(newDreamPost); 
     }
-
+    
     const updatePostLike = (key) => {
-        for(let i=0; i < dreamPost.length; i++) {
+        for (let i=0; i < dreamPost.length; i++) {
             if (dreamPost[i].content == key) {
                 dreamPost[i].like++;
             }
         }
+        
         setDreamPost(dreamPost);
+        console.log(dreamPost);
     }
 
-    
     return(
         <div>
             <DearMHeader/>

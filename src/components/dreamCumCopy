@@ -8,8 +8,10 @@ export function DreamCommunity(props) {
     const [imgAlt, setImgAlt] = useState('a farmer');
     const [img, setImg] = useState('img/post_img_def.jpg'); // will be covered later
 
+    const [like, setLike] = useState(0);
+
     const [trending, setTrending] = useState(false);
-    const [sortNew, setSortNew] = useState(true);
+    const [sortNew, setSortNew] = useState(false);
 
     const handleContent = (event) => {
         setContent(event.target.value);
@@ -22,54 +24,30 @@ export function DreamCommunity(props) {
 
     const handleTrending = (event) => {
         setTrending(true);
-        if (trending == true) {
-            setTrending(false);
-        }
     }
 
     const handleNew = (event) => {
-        if (sortNew == true) {
-            setSortNew(false);
-        } else {
-            setSortNew(true);
-        }
+        setSortNew(true);
     }
 
-    let sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
-
-    let buttonsColorN = "#fff2cc";
-    let buttonsColorT = null;
+    let sortedPosts = props.dreamPost;
 
     if (trending == true) {
-        sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
-        buttonsColorT = "#fff2cc";
-        buttonsColorN = "white";
-    } else {
-        buttonsColorT = "white";
-        
+        sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]))
+    }
+    
+    if (sortNew == true) {
+        sortedPosts =  props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp)
     }
 
-    // let sortedPosts = props.dreamPost;
+    console.log();
+    console.log("community:");
+    console.log(props.dreamPost);
 
-    // let buttonsColorN = null;
-    // let buttonsColorT = null;
-
-    // if (trending == true) {
-    //     sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
-    //     buttonsColorT = "#fff2cc";
-    //     buttonsColorN = "white";
-    // } else {
-    //     buttonsColorT = "white";
-        
-    // }
-    
-    // if (sortNew == false) {
-    //     sortedPosts =  props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
-    //     buttonsColorN = "#fff2cc";
-    //     buttonsColorT = "white";
-    // } else {
-    //     buttonsColorN = "white";
-    // }
+    const handleLike = (event) => {
+        // setLike(like + 1);
+        props.howToUpdateLike(content);
+    }
 
     const dreamPosts = sortedPosts.map((post) => {
         const postObj = <PostItem
@@ -79,7 +57,7 @@ export function DreamCommunity(props) {
             imgAlt={post.imgAlt}
             like={post.like}
             key={post.content}
-            howToUpdateLike={props.howToUpdateLike}/>
+            howToUpdateLike={handleLike}/>
 
         return postObj;
     });
@@ -103,8 +81,8 @@ export function DreamCommunity(props) {
                 <div className="posts">
                     <section className="filter-search">
                         <div>
-                            <button className="tab" onClick={handleTrending} style={{backgroundColor: buttonsColorT}}>Trending</button>
-                            <button className="tab new" onClick={handleNew} style={{backgroundColor: buttonsColorN}}>New</button>
+                            <button className="tab" onClick={handleTrending}>Trending</button>
+                            <button className="tab" onClick={handleNew}>New</button>
                         </div>
                     </section>
 
@@ -124,13 +102,11 @@ function PostItem(props) {
     const content = props.content;
     const img = props.img;
     const imgAlt = props.imgAlt;
-    const [like, setLike] = useState(props.like);
+    const like = props.like;
+    // const [like, setLike] = useState(props.like);
 
 
-    const handleLike = (event) => {
-        setLike(like + 1);
-        props.howToUpdateLike(content)
-    }
+    
 
     return (
         <div className="post">
@@ -145,7 +121,7 @@ function PostItem(props) {
             <div className="post-icon">
                 <FaComment className="material-icons" aria-label="comment" name="comment"/>
                 <FaShareSquare className="material-icons" aria-label="share"  name="share"/>
-                <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
+                <FaHeart className="material-icons" aria-label="like" onClick={props.handleLike} name="like"/>
                 <p className='like'>{like}</p>
             </div>
         </div>

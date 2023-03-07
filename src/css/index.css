@@ -342,6 +342,10 @@ button, .entry, input, .analyze img, .post, .post-content img, .create-post, .dr
     border-radius: 0.5rem;
 }
 
+.new {
+    box-shadow: none;
+}
+
 /* homepage main content */
 p.description, p.definition {
     inline-size: 30rem;
