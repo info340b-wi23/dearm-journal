@@ -7,35 +7,50 @@ export function DreamCommunity(props) {
     const [content, setContent] = useState('');
     const [imgAlt, setImgAlt] = useState('a farmer');
     const [img, setImg] = useState('img/post_img_def.jpg'); // will be covered later
-    const [dreamPosts, setDreamPosts] = useState(makeComp(props.dreamPost, props.howToUpdateLike));
+
+    const [trending, setTrending] = useState(false);
+    const [sortNew, setSortNew] = useState(false);
 
     const handleContent = (event) => {
         setContent(event.target.value);
     }
-
    
     const handleSubmit = (event) => {
         setContent('');
         props.howToAddPost(name, content, img, imgAlt);
-        setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
-        console.log(props.dreamPost);
-    }
-
-    const handleRefresh = (event) => {
-        setDreamPosts(makeComp(props.dreamPost, props.howToUpdateLike));
-        console.log(props.dreamPost);
     }
 
     const handleTrending = (event) => {
-        let sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
-        setDreamPosts(makeComp(sortedPosts, props.howToUpdateLike));
-        
+        setTrending(true);
     }
 
     const handleNew = (event) => {
-        let sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
-        setDreamPosts(makeComp(sortedPosts, props.howToUpdateLike));
+        setSortNew(true);
     }
+
+    let sortedPosts = props.dreamPost;
+
+    if (trending == true) {
+        sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]))
+    }
+    
+    if (sortNew == true) {
+        sortedPosts =  props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp)
+    }
+
+    const dreamPosts = sortedPosts.map((post) => {
+        const postObj = <PostItem
+            name ={post.name}
+            content={post.content}
+            img={post.img}
+            imgAlt={post.imgAlt}
+            like={post.like}
+            key={post.content}
+            howToUpdateLike={props.howToUpdateLike}/>
+
+        return postObj;
+    });
+
     
     return (
         <main>
@@ -55,7 +70,6 @@ export function DreamCommunity(props) {
                 <div className="posts">
                     <section className="filter-search">
                         <div>
-                            <button className="tab" onClick={handleRefresh}>Refresh</button>
                             <button className="tab" onClick={handleTrending}>Trending</button>
                             <button className="tab" onClick={handleNew}>New</button>
                         </div>
@@ -67,23 +81,6 @@ export function DreamCommunity(props) {
                 </div>
             </div>
         </main>
-    )
-}
-
-function makeComp(array, method) {
-    return (
-        array.map((post) => {
-            const postObj = <PostItem
-            name ={post.name}
-            content={post.content}
-            img={post.img}
-            imgAlt={post.imgAlt}
-            like={post.like}
-            key={post.content}
-            howToUpdateLike={method}/>
-    
-            return postObj;
-        })
     )
 }
 

@@ -3,14 +3,12 @@ import { useParams } from 'react-router-dom';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
 
-import DREAM_ENTRYS from '../data/dream_entry.json';
-
 function SingleJournal(props) {
     const paramsObj = useParams();
     const dreamTitle = paramsObj.dreamTitle; 
-    
-    let dream = _.find(DREAM_ENTRYS, {title: dreamTitle});
-    console.log(dream.img);
+    const dreamAry = props.dreamList;
+
+    let dream = _.find(dreamAry, {title: dreamTitle});
     return(
         <div className='single-journal'>
                 <div className="single-journal col-8">

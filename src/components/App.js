@@ -1,21 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { VscHome, VscCommentDiscussion, VscBook, VscAccount} from "react-icons/vsc";
 import { Homepage } from './Homepage.js';
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
-import DREAM_ENTRYS from '../data/dream_entry.json';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './profile.js'; 
-import DREAM_POST from '../data/dream-post.json';
-import { Routes, Route, NavLink} from 'react-router-dom';
+import { Routes, Route, NavLink, useFetcher} from 'react-router-dom';
 import  SingleJournal  from './singleJournal.js';
-
+import 'whatwg-fetch';
 
 export default function App(props) {
+    const [dreamArray, setDreamArray] = useState([]);
+    const [dreamPost, setDreamPost] = useState([]);
 
-    const [dreamArray, setDreamArray] = useState(DREAM_ENTRYS);
+    console.log(dreamPost);
 
+    useEffect(() => {
+        fetch('/data/dream_entry.json')
+        .then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            setDreamArray(data);
+        })
+      }, [])
+
+
+
+    useEffect(() => {
+        fetch('/data/dream-post.json')
+        .then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            setDreamPost(data);
+        })
+      }, [])
+    
     const addDream = (title, content, img, feeling, dreamType) => {
         const newDream = {
           "title": title,
@@ -28,7 +48,6 @@ export default function App(props) {
         setDreamArray(newDreamAry); 
     }
 
-    const [dreamPost, setDreamPost] = useState(DREAM_POST);
 
 
 
@@ -62,7 +81,7 @@ export default function App(props) {
             <Routes>
                 <Route path ="/" element={<Homepage />}></Route>
                 <Route path ="/journal">
-                    <Route path=":dreamTitle" element={<SingleJournal/>}/>
+                    <Route path=":dreamTitle" element={<SingleJournal dreamList={dreamArray}/>}/>
                     <Route path="write" element={<JournalWrite howToAddDream={addDream}/>}/>
                     <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
                     <Route index element={<JournalView dreamAry={dreamArray} howToAddDream={addDream}/>}/>
