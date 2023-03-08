@@ -9,7 +9,6 @@ export function DreamCommunity(props) {
     const [img, setImg] = useState('img/post_img_def.jpg'); // will be covered later
 
     const [trending, setTrending] = useState(false);
-    const [sortNew, setSortNew] = useState(true);
 
     const handleContent = (event) => {
         setContent(event.target.value);
@@ -90,8 +89,6 @@ export function DreamCommunity(props) {
 }
 
 function PostItem(props) {
-
-
     const name = props.name;
     const content = props.content;
     const img = props.img;
