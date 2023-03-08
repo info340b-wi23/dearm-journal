@@ -17,7 +17,7 @@ export function DreamAnalyze(props) {
     for (let i=0; i<count; i++) {
         if (dreams[i].feeling == "Happy") {
             happy++; 
-        } else if (dreams[i].feeling == "Natural") {
+        } else if (dreams[i].feeling == "natural") {
             natural++;
         } else if (dreams[i].feeling == "Sad") {
             sad++; 

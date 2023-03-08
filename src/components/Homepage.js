@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function Homepage() {
     return (
@@ -20,7 +21,7 @@ export function Homepage() {
                         <p className="description">
                             A place to journal your dreams, share them with a community, and analyze the emotions felt from them.
                         </p>
-                        <button className="start">What occurred in your dream?</button>
+                        <Link to="/journal"><button className="start">What occurred in your dream?</button></Link>
                     </div>
                 </section>
             </main>
