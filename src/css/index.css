@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
 
 /* colors overall background page */
 html {
@@ -112,11 +113,11 @@ p strong .word-definiton {
 }
 
 /* footer */
-footer .attribute {
+.copyright {
     position: fixed;
-    bottom: 1.063;
-    right: 0;
-    font-family: 'Shantell Sans', cursive;
+    bottom: 0px;
+    left: 0px;
+    font-family: 'Inter', sans-serif;
 }
 
 /* footer */
