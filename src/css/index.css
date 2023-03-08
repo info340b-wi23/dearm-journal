@@ -346,6 +346,10 @@ button, .entry, input, .analyze img, .post, .post-content img, .create-post, .dr
     box-shadow: none;
 }
 
+.new:hover {
+    text-decoration: none;
+}
+
 /* homepage main content */
 p.description, p.definition {
     inline-size: 30rem;
