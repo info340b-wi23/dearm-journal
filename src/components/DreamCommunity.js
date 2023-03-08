@@ -27,15 +27,7 @@ export function DreamCommunity(props) {
         }
     }
 
-    const handleNew = (event) => {
-        if (sortNew == true) {
-            setSortNew(false);
-        } else {
-            setSortNew(true);
-        }
-    }
-
-    let sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
+    let sortedPosts = props.dreamPost;
 
     let buttonsColorN = "#fff2cc";
     let buttonsColorT = null;
@@ -45,32 +37,12 @@ export function DreamCommunity(props) {
         buttonsColorT = "#fff2cc";
         buttonsColorN = "white";
     } else {
+        sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
         buttonsColorT = "white";
         
     }
 
-    // let sortedPosts = props.dreamPost;
-
-    // let buttonsColorN = null;
-    // let buttonsColorT = null;
-
-    // if (trending == true) {
-    //     sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
-    //     buttonsColorT = "#fff2cc";
-    //     buttonsColorN = "white";
-    // } else {
-    //     buttonsColorT = "white";
-        
-    // }
-    
-    // if (sortNew == false) {
-    //     sortedPosts =  props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
-    //     buttonsColorN = "#fff2cc";
-    //     buttonsColorT = "white";
-    // } else {
-    //     buttonsColorN = "white";
-    // }
-
+    console.log(sortedPosts);
     const dreamPosts = sortedPosts.map((post) => {
         const postObj = <PostItem
             name ={post.name}
@@ -104,7 +76,7 @@ export function DreamCommunity(props) {
                     <section className="filter-search">
                         <div>
                             <button className="tab" onClick={handleTrending} style={{backgroundColor: buttonsColorT}}>Trending</button>
-                            <button className="tab new" onClick={handleNew} style={{backgroundColor: buttonsColorN}}>New</button>
+                            <button className="tab new" style={{backgroundColor: buttonsColorN}}>New</button>
                         </div>
                     </section>
 
