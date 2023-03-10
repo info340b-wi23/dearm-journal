@@ -15,7 +15,7 @@ body {
 /* navigation bar brand size and font */
 h1 {
     padding-top: 1.2rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     font-family: 'Katibeh', cursive;   
 }
 
@@ -31,23 +31,31 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+/* homepage subheading pronunciation */
+.home-word-pronunciation {
+    color: #7f7f7f;
+}
+
 /* navigation bar border */
 .navigation-bar {
     border-bottom: solid;
-    border-color: #dadada;
+    border-color: #DADADA;
+    background-color: #E3F2FD;
 }
 
 /* brand logo spacing */
 .dream-logo {
     margin-left: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 /* homepage image */
 .homepage-image {
-    margin-top: 5rem;
-    width: 42.1%;
+    margin-top: 1.6rem;
+    width: 42.5%;
     height: auto;
-    padding-left: 0.625rem;
+    padding-left: 4rem;
 }
 
 /* homepage orientation */
@@ -55,17 +63,22 @@ h2 {
     display: flex;
     flex-direction: row;
     height: 100%;
-}
-
-/* homepage description location */
-.home-container-root {
     position: relative;
     align-items: center;
 }
 
+.container-description {
+    padding-left: 4rem;
+}
+
+/* homepage button */
 .start-button {
-    justify-content: center;
-    align-items: center;
+    background-color: #d7b2e4;
+    color: #292927;
+    border-radius: 25px;
+    box-shadow: 2px 4px 2px #C2C2C2;
+    border-color: #E4D8E9;
+    vertical-align: middle;
 }
 
 /* homepage description and definition */
@@ -76,12 +89,13 @@ p.home-description, p.home-definition {
 /* footer settings */
 footer {
     margin-top: auto;
+    text-align: center;
     padding: 48px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     font-family: 'Inter', sans-serif;
+    background-color: #292927;
+    color: #FEFEFE;
+    margin-bottom: auto;
 }
 
 /* fixes footer to bottom of page */
