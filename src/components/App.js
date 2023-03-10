@@ -8,8 +8,11 @@ import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './profile.js'; 
 import { Routes, Route, NavLink, useFetcher} from 'react-router-dom';
 import  SingleJournal  from './singleJournal.js';
+import { DreamHeader } from './DreamNavbar.js';
+import { DreamFooter } from './DreamFooter.js';
 import 'whatwg-fetch';
 import { getDatabase, ref, set as firebaseSet } from 'firebase/database'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App(props) {
     const [dreamArray, setDreamArray] = useState([]);
@@ -75,7 +78,7 @@ export default function App(props) {
 
     return(
         <div>
-            <DearMHeader/>
+            <DreamHeader/>
             <Routes>
                 <Route path ="/" element={<Homepage />}></Route>
                 <Route path ="/journal">
@@ -87,33 +90,8 @@ export default function App(props) {
                 <Route path ="/dreamCommunity" element={<DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
             </Routes>
-        
-    
+            <DreamFooter/>
         </div>
     )
 
-}
-
-
-function DearMHeader(props){
-    return(
-        <div className="container">
-            <header>
-                <div className="website">
-                    <h1>Dear.M </h1>
-                    <h1>Journal </h1>
-                </div>
-                <img className="logo" src="/img/logo.png" aria-hidden="true"/>
-            </header>
-
-              <div className="container-right">
-                <nav>
-                    <NavLink to="/"><VscHome className="material-icons" aria-label="home"/></NavLink>
-                    <NavLink to="/journal"><VscBook className="material-icons" aria-label="Journal"/></NavLink>
-                    <NavLink to="/dreamCommunity"><VscCommentDiscussion className="material-icons" aria-label="community"/></NavLink>
-                    <NavLink to="/profile"><VscAccount className="material-icons" aria-label="account"/></NavLink>
-                </nav>
-            </div>
-        </div>
-    )
 }
