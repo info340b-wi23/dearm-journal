@@ -3,32 +3,32 @@
         "title": "Time Travel",
         "content": "",
         "img": "img/dream_pic1.jpg",
-        "feeling": "Happy",
-        "dreamType": "Normal Dream"
+        "feeling": "happy",
+        "dreamType": "nightmare"
     },
 
     {
         "title": "Teleport to a new world",
         "content": "",
         "img": "img/dream_pic2.jpg",
-        "feeling": "Sad",
-        "dreamType": "high"
+        "feeling": "sad",
+        "dreamType": "nightmare"
     }, 
 
     {
         "title": "Talk to long lost relatives",
         "content": "",
         "img": "img/dream_pic3.jpg",
-        "feeling": "Sad",
-        "dreamType": "high"
+        "feeling": "sad",
+        "dreamType": "nightmare"
     }, 
 
     {
         "title": "Became an acrobat",
         "content": "",
         "img": "img/dream_pic4.jpg",
-        "feeling": "Sad",
-        "dreamType": "high"
+        "feeling": "sad",
+        "dreamType": "nightmare"
     },
 
     {
@@ -36,15 +36,15 @@
         "content": "",
         "img": "img/dream_pic5.jpg",
         "feeling": "Sad",
-        "dreamType": "high"
+        "dreamType": "nightmare"
     }, 
 
     {
         "title": "Living on another planet",
         "content": "",
         "img": "img/dream_pic6.jpg",
-        "feeling": "Sad",
-        "dreamType": "high"
+        "feeling": "had",
+        "dreamType": "nightmare"
     }
 
 ]

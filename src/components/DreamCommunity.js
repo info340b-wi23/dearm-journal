@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHeart, FaComment, FaShareSquare, FaUserCircle} from "react-icons/fa";
+import { FaHeart, FaUserCircle} from "react-icons/fa";
 import _ from 'lodash'; //import external library!
 
 export function DreamCommunity(props) {
@@ -98,7 +98,7 @@ function PostItem(props) {
 
     const handleLike = (event) => {
         setLike(like + 1);
-        props.howToUpdateLike(content)
+        props.howToUpdateLike(content);
     }
 
     return (
@@ -112,8 +112,6 @@ function PostItem(props) {
             </div>
 
             <div className="post-icon">
-                <FaComment className="material-icons" aria-label="comment" name="comment"/>
-                <FaShareSquare className="material-icons" aria-label="share"  name="share"/>
                 <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
                 <p className='like'>{like}</p>
             </div>

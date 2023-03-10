@@ -43,9 +43,7 @@ export function Profile(props) {
                 <section className="filter-search">
                     <div>
                         <button className="tab"><Link to="/journal">Dream Journal</Link></button>
-                        <button className="tab"><Link to="/journal/analyze">Dream Reports</Link></button> 
-
-                        
+                        <button className="tab"><Link to="/journal/analyze">Dream Reports</Link></button>          
                     </div>
                 </section>
 
