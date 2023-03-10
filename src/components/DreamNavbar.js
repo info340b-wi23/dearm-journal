@@ -7,7 +7,7 @@ export function DreamHeader() {
         <Navbar className="navigation-bar" expand="lg">
             <Container>
                 <Navbar.Brand href="/">
-                     <h1> {/* ask about code quality style */}
+                     <h1 className='brand'> {/* ask about code quality style */}
                         Dear.M
                         <img
                             className="dream-logo"

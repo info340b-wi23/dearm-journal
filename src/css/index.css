@@ -13,16 +13,17 @@ body {
 }
 
 /* navigation bar brand size and font */
-h1 {
+.brand {
     padding-top: 1.2rem;
     /* padding-left: 2rem; */
     font-family: 'Katibeh', cursive;   
+    font-size: 43;
 }
 
 /* subheading size and font */
-h2 {
+.container-description, .profile-bio, .dream-analyze-feelings, .dream-analyze-type {
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: normal;
 }
 
@@ -72,10 +73,10 @@ h2 {
 }
 
 /* homepage button */
-.start-button {
+button, .start-button, .profile-button, .back-button {
     background-color: #d7b2e4;
     color: #292927;
-    border-radius: 25px;
+    border-radius: 14px;
     box-shadow: 2px 4px 2px #C2C2C2;
     border-color: #E4D8E9;
     vertical-align: middle;
@@ -101,6 +102,102 @@ footer {
 /* fixes footer to bottom of page */
 footer > div:first-child {
     margin-bottom: auto;
+}
+
+/* dream journal and dream analyze buttons on profile page */
+.profile-page-tab {
+    margin-left: 2.1rem;
+    margin-top: 2.1rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 25px;
+    box-shadow: 2px 4px 2px #C2C2C2;
+    border-color: #E4D8E9;
+}
+
+/* profile filter */
+.filter-search {
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+}
+
+/* profile picture on profile page */
+.profile-picture {
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+
+/* profile form */
+.enter-profile {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    display: inline-block;
+}
+
+/* profile bio header */
+.profile-bio {
+    margin-top: 3rem;
+    margin-left: 7rem;
+}
+
+/* profile page bio content */
+.dream-profile-container {
+    display: flex;
+    margin-left: 7rem;
+    margin-bottom: 3.1%;
+}
+
+/* profile status buttons */
+.profile-button {
+    margin-left: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* profile status box */
+.status {
+    width: 12.5rem;
+    height: 6.25rem;
+}
+
+/* dream analyze title */
+.dream-analyze-subhead {
+    font-family: 'Inter', sans-serif;
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+
+/* dream analyze spacing for subheaders */
+.dream-analyze-feelings, .dream-analyze-type {
+    margin-top: 2rem;
+    margin-left: 6rem;
+}
+
+/* dream analyze subheader spacing */
+.feeling, .type-dream {
+    font-family: 'Inter', sans-serif;
+    margin-left: 8rem;
+    margin-top: 1.5rem;
+    font-size: 20px;
+}
+
+/* dream analyze image */
+.report-image {
+    display: flex;
+    width: 25rem;
+    height: 25rem;
+}
+
+/* back button on dream analyze page */
+.back-button {
+    margin-left: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
 /* header {
@@ -275,11 +372,6 @@ footer > div:first-child {
     font-size: 1.8rem;
 } */
 
- /* dream stats */
-/* .report-content p {
-    font-size: 1.5rem;
-} */
-
 /* body header */
 /* h1.website-title {
     font-size: 3rem;
@@ -320,15 +412,6 @@ footer > div:first-child {
     font-weight: normal;
     color: black;
     font-family: 'Nunito', sans-serif;
-} */
-
-/* main content */
-/* .report-container h1 {
-    padding-left: 1.25rem;
-    font-size: 1.2rem;
-    font-weight: normal;
-    font-family: 'Nunito', sans-serif;
-    color: #4C4C47;
 } */
 
 /* main content */
@@ -389,37 +472,14 @@ footer > div:first-child {
     display: block;
 } */
 
-/* main content */
-/* .report-image {
-    display: none;
-    width: 25rem;
-    height: 25rem;
-} */
-
 /* profile page */
 /* .change-btn {
     margin-left: 5px;
 } */
 
-/* profile page */
-/* .dream-profile-container {
-    display: flex;
-} */
-
 /* main content */
 /* .dream-but {
     margin-left: 1.25rem;
-} */
-
-/* profile status */
-/* .status {
-    width: 12.5rem;
-    height: 6.25rem;
-} */
- 
-/* main content */
-/* .report-container {
-    padding-top: 3.75rem;
 } */
 
 /* main content */
@@ -434,23 +494,6 @@ footer > div:first-child {
 
 .new:hover {
     text-decoration: none;
-} */
-
-/* profile status */
-/* .profile-but {
-    margin-left: 1.25rem;
-} */
-
-/* main content */
-/* .tab {
-    margin-left: 0.938rem;
-} */
-
-/* main content */
-/* .filter-search {
-    margin-bottom: 1.25rem;
-    display: flex;
-    justify-content: space-between;
 } */
 
 /* main content */
@@ -529,20 +572,6 @@ footer > div:first-child {
     justify-content: center;
     flex-direction: row;
 }   */
-
-/* profile picture */
-/* .profile-picture {
-    display: inline-block;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    object-fit: cover;
-} */
-
-/* profile form */
-/* .enter-profile {
-    display: inline-block;
-} */
 
 /* journal write image -- affects icon needs new class name
 div img {
