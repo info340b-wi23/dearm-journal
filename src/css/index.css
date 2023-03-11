@@ -74,7 +74,7 @@ body {
 
 /* homepage button */
 button, .start-button, .profile-button, .back-button {
-    background-color: #d7b2e4;
+    background-color: #e5d9ff;
     color: #292927;
     border-radius: 14px;
     box-shadow: 2px 4px 2px #C2C2C2;
@@ -114,6 +114,20 @@ footer > div:first-child {
     border-color: #E4D8E9;
 }
 
+
+/* profile img*/
+.profile-img{
+    display: block;
+}
+
+/* profile upload */
+.upload {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
 /* profile filter */
 .filter-search {
     margin-bottom: 1.25rem;
@@ -131,13 +145,6 @@ footer > div:first-child {
     object-fit: cover;
     margin-left: 5rem;
     margin-top: 5rem;
-}
-
-/* profile form */
-.enter-profile {
-    margin-top: 5rem;
-    margin-left: 5rem;
-    display: inline-block;
 }
 
 /* profile bio header */

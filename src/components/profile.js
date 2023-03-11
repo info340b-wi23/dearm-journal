@@ -1,13 +1,41 @@
 import React, { useState } from 'react';
-import { FaMeh, FaSmile, FaSadTear} from "react-icons/fa"; /* can be removed */
 import { Link } from 'react-router-dom';
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { updateProfile } from 'firebase/auth';
 
 export function Profile(props) {
+    const displayName = props.currentUser.userName;
+
+    const [imageFile, setImageFile] = useState(undefined);
+    let initialURL = props.currentUser.userImg;
+    const [imagePreviewLocation, setImagePreviewLocation] = useState(initialURL);
 
     const [bio, setBio] = useState('');
     const [status, setStatus] = useState('');
     const [showStatus, setShowStatus] = useState(true);
-    const [showEdit, setShowEdit] = useState(false)
+    const [showEdit, setShowEdit] = useState(false);
+
+
+    const handleImg = (event) => {
+        if(event.target.files.length > 0 && event.target.files[0]) {
+          const imageFile = event.target.files[0]
+          setImageFile(imageFile);
+          setImagePreviewLocation(URL.createObjectURL(imageFile));
+        }
+    }
+
+    const handleImageUpload = async (event) => {
+        console.log("Uploading", imageFile);
+    
+        const storage = getStorage();
+        const imageRef = storageRef(storage, "userImages/"+props.currentUser.userId+".png");
+    
+        await uploadBytes(imageRef, imageFile)
+        const publicUrl = await getDownloadURL(imageRef)
+    
+        updateProfile(props.currentUser, {photoURL: publicUrl});
+    
+    }
  
     const handleBio = (event) => {
         setBio(event.target.value);
@@ -33,16 +61,18 @@ export function Profile(props) {
     return (
         <main>
             <div className="p-info">
-                <img className="profile-picture" src="img/avatar.png"/>
-                <form className="enter-profile">
-                    <br></br>
-                    <label htmlFor="Name">Name:</label> 
-                    <input type="text" name="name" className="name"/>
-                    <br></br>
-                    <br></br>
-                    <label htmlFor="Username">Username:</label> 
-                    <input type="text" name="username" className="username"/>
-                </form>
+
+                <div className="mb-5 image-upload-form">
+                    <img className="profile-img" src={imagePreviewLocation} alt="profile image"/>
+                    
+                    <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                    <button className="" onClick={handleImageUpload}>Save</button>
+                </div>
+
+
+                <h2>Username: {displayName}</h2>
+
+
                 <section className="filter-search">
                     <div>
                         <button className="profile-page-tab"><Link to="/journal">Dream Journal</Link></button>

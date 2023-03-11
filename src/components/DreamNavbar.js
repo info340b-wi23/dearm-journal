@@ -1,8 +1,14 @@
 import React from 'react';
 import { Nav, Container, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // unsure if needed yet
+import { getAuth, signOut } from 'firebase/auth';
 
 export function DreamHeader() {
+
+    const handleSignOut = (event) => {
+        signOut(getAuth());
+      }
+
     return(
         <Navbar className="navigation-bar" expand="lg">
             <Container>
@@ -12,7 +18,7 @@ export function DreamHeader() {
                         <img
                             className="dream-logo"
                             alt="Dream logo"
-                            src="img/logo.png"
+                            src="../img/logo.png"
                         />
                     </h1>
                 </Navbar.Brand>
@@ -26,7 +32,7 @@ export function DreamHeader() {
                             <NavDropdown title="Account">
                                 <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="/">
+                                <NavDropdown.Item onClick={handleSignOut} href="/">
                                 Sign out
                                 </NavDropdown.Item>
                             </NavDropdown>
