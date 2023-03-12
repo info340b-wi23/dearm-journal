@@ -8,7 +8,7 @@ import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './Profile.js'; 
 import { Routes, Route, NavLink, useFetcher, Outlet, Navigate} from 'react-router-dom';
 import  SingleJournal  from './SingleJournal.js';
-import { DreamHeader } from './DreamNavbar.js';
+import { DreamNavBar } from './DreamNavbar.js';
 import { DreamFooter } from './DreamFooter.js';
 import 'whatwg-fetch';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,42 +17,42 @@ import { getDatabase, ref, set as firebaseSet, push as firebasePush, onValue } f
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 export default function App(props) {
-    const [currentUser, setCurrentUser] = useState({"userId": null, "userName": null, "userImg": ""});
+    const [currentUser, setCurrentUser] = useState({"userId": null, "userName": null, "userImg": null});
     const [dreamArray, setDreamArray] = useState([]);
     const [dreamPost, setDreamPost] = useState([]);
-
 
     useEffect(() => {
     
         onAuthStateChanged(getAuth(), function(firebaseUser) {
-          if(firebaseUser) { //not null, so signed in
-            //local changes
+          if(firebaseUser) { 
             firebaseUser.userId = firebaseUser.uid;
             firebaseUser.userName = firebaseUser.displayName;
-            firebaseUser.userImg = firebaseUser.photoURL || "/img/null.png";
-                 
-          } 
+            firebaseUser.userImg = firebaseUser.photoURL || "img/avatar.png";
+          } else {
+
+          }
           setCurrentUser(firebaseUser);
+          console.log(firebaseUser);
         })
     
-        // //hook up a listener to Firebase
-        // const db = getDatabase();
-        // const allMessagesRef = ref(db, "allMessages");
+        const db = getDatabase();
+        const allPostRef = ref(db, "posts");
     
-        // //fetch message data from firebase
-        // onValue(allMessagesRef, function(snapshot) {
-        //   const allMessagesObj = snapshot.val();
-        //   const objKeys = Object.keys(allMessagesObj);
-        //   const objArray = objKeys.map((keyString) => {
-        //     allMessagesObj[keyString].key = keyString;
-        //     return allMessagesObj[keyString];
+        onValue(allPostRef, function(snapshot) {
+          const allPostObj = snapshot.val();
+          const objKeys = Object.keys(allPostObj);
+          const objArray = objKeys.map((keyString) => {
+            allPostObj[keyString].key = keyString;
+            return allPostObj[keyString];
             
-        //   })
-        //   setMessageObjArray(objArray); //update state & rerender
-        // });
+          })
+          setDreamPost(objArray); 
+        });
     
-      }, []) //array is list of variables that will cause this to rerun if changed
+      }, []) 
 
+
+      console.log(currentUser);
 
     useEffect(() => {
         fetch('/data/dream_entry.json')
@@ -63,16 +63,6 @@ export default function App(props) {
         })
       }, [])
 
-
-
-    useEffect(() => {
-        fetch('/data/dream-post.json')
-        .then(function (response) {
-            return response.json();
-        }).then(function (data) {
-            setDreamPost(data);
-        })
-      }, [])
     
     const addDream = (title, content, img, feeling, dreamType) => {
         const newDream = {
@@ -87,20 +77,25 @@ export default function App(props) {
     }
 
 
-    const addPost = (userObj, content, img, imgAlt) => {
+    const addPost = (userObj, content, img) => {
         const newPost = {
         "userId": userObj.userId,
         "userName": userObj.userName,
         "userImg": userObj.userImg,
         "content": content,
         "img": img,
-        "imgAlt": imgAlt,
         "like": 0,
         "timestamp": Date.now(),
         }
+        
         const newDreamPost = [...dreamPost, newPost];
         setDreamPost(newDreamPost); 
+
+        const db = getDatabase();
+        const allPostRef = ref(db, "posts");
+        firebasePush(allPostRef, newPost);
     }
+
     
     const updatePostLike = (key) => {
         for (let i=0; i < dreamPost.length; i++) {
@@ -110,12 +105,14 @@ export default function App(props) {
         }
         
         setDreamPost(dreamPost);
-        console.log(dreamPost);
+        const db = getDatabase();
+        const allPostRef = ref(db, "posts");
+        firebaseSet(allPostRef, dreamPost);
     }
 
     return(
         <div>
-            <DreamHeader currentUser={currentUser}/>
+            <DreamNavBar currentUser={currentUser}/>
             <Routes>
                 <Route index element={<Homepage />}/>
 
@@ -129,7 +126,7 @@ export default function App(props) {
                         <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
                         <Route index element={<JournalView dreamAry={dreamArray} howToAddDream={addDream}/>}/>
                     </Route>
-                    <Route path ="/dreamCommunity" element={<DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}/>
+                    <Route path ="/dreamCommunity" element={<DreamCommunity currentUser={currentUser} dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}/>
                     <Route path ="/profile" element={<Profile currentUser={currentUser}/>} />
                 </Route>
 

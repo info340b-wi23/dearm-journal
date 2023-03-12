@@ -5,7 +5,7 @@ import { updateProfile } from 'firebase/auth';
 
 export function Profile(props) {
     const displayName = props.currentUser.userName;
-
+    console.log(props.currentUser);
     const [imageFile, setImageFile] = useState(undefined);
     let initialURL = props.currentUser.userImg;
     const [imagePreviewLocation, setImagePreviewLocation] = useState(initialURL);
@@ -25,15 +25,15 @@ export function Profile(props) {
     }
 
     const handleImageUpload = async (event) => {
-        console.log("Uploading", imageFile);
     
         const storage = getStorage();
-        const imageRef = storageRef(storage, "userImages/"+props.currentUser.userId+".png");
+        const imageRef = storageRef(storage, "userImages/"+displayName);
     
         await uploadBytes(imageRef, imageFile)
         const publicUrl = await getDownloadURL(imageRef)
     
         updateProfile(props.currentUser, {photoURL: publicUrl});
+        console.log(publicUrl);
     
     }
  

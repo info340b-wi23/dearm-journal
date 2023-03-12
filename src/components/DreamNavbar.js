@@ -3,7 +3,7 @@ import { Nav, Container, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // unsure if needed yet
 import { getAuth, signOut } from 'firebase/auth';
 
-export function DreamHeader() {
+export function DreamNavBar() {
 
     const handleSignOut = (event) => {
         signOut(getAuth());
