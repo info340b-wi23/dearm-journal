@@ -11,19 +11,23 @@ function SingleJournal(props) {
     let dream = _.find(dreamAry, {title: dreamTitle});
     return(
         <div className='single-journal'>
-                <div className="single-journal col-8">
-                    <h2>{dream.title}</h2>
-                    <h4>{dream.content}</h4>
+                <div className="single-journal-content">
+                    <h2 className="dream-title">{dream.title}</h2>
+                    <h4 className="dream-content">{dream.content}</h4>
                 </div>
-                <div className="col">
-                    <h3 className="single-journal-emotions">Feelings: {dream.feeling}</h3>
-                  
-                    <h3 className="single-journal-emotions">Type of Dream: {dream.dreamType}</h3>
-             
-                    <img className="object-cover object-center rounded mx-auto d-block" src={"../" + dream.img} alt="dreamy pond"/>
+                <div className="single-journal-col">
+                    <h3 className="single-journal-feelings">Feelings: {dream.feeling}</h3>
+                    <br></br>
+                    <h3 className="single-journal-type">Type of Dream: {dream.dreamType}</h3>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <img 
+                        className="dream-image" 
+                        src={"../" + dream.img} 
+                        alt="dreamy pond"
+                    />
                     <button className="back"><Link to="/journal">Back to Journal</Link></button>
-                    
-               
                 </div>
         </div>
     )

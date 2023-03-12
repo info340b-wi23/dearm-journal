@@ -43,31 +43,34 @@ export function JournalWrite(props) {
         setFeeling('');
         setDreamtype('');
     }
-
+    /* ask if <br></br> is acceptable to use */
     return(
         <div className="dream-entry-container">
-                <form className="enter-dream">
+                <form className="enter-dream"> 
                     <label htmlFor="Title">Title:</label> 
                     <input type="text" name="title" className="title" onChange={handleTitile} value={title}/>
+                    <br></br> 
+                    <br></br>
                     <label htmlFor="Content">Content:</label> 
+                    <br></br>
                     <input type="text" name="content" className="content" onChange={handleContent} value={content}/>
                     <label htmlFor="Image Upload">Image Upload:</label> 
                     <input type="image" name="image" className="image" /> 
                 </form>
 
                 <div className="enter-dream-feelings">
-                    <h2>Feelings: {feeling}</h2> 
-                        <button className="dream-but" onClick={handleFeeling} name='happy'>Happy</button>
-                        <button className="dream-but" onClick={handleFeeling} name='natural'>Natural</button>
-                        <button className="dream-but" onClick={handleFeeling} name='sad' >Sad</button>
-                        <button className="dream-but" onClick={handleFeeling} name='angry' >Angry</button>
-                        <button className="dream-but" onClick={handleFeeling} name='scared'>Scared</button>
+                    <h2 className="dream-write-feelings">Feelings: {feeling}</h2> 
+                        <button className="dream-button" onClick={handleFeeling} name='happy'>Happy</button>
+                        <button className="dream-button" onClick={handleFeeling} name='natural'>Natural</button>
+                        <button className="dream-button" onClick={handleFeeling} name='sad' >Sad</button>
+                        <button className="dream-button" onClick={handleFeeling} name='angry' >Angry</button>
+                        <button className="dream-button" onClick={handleFeeling} name='scared'>Scared</button>
 
-                    <h2>Dream Type: {dreamType}</h2>
-                        <button className="dream-but" onClick={handleType} name='normalDream'>Normal Dream</button>
-                        <button className="dream-but" onClick={handleType} name='dayDream'>Daydream</button>
-                        <button className="dream-but" onClick={handleType} name='nightmare'>Nightmare</button>
-                        <button className="dream-but" onClick={handleType} name='lucid'>Lucid</button>
+                    <h2 className="dream-write-type">Dream Type: {dreamType}</h2>
+                        <button className="dream-button" onClick={handleType} name='normalDream'>Normal Dream</button>
+                        <button className="dream-button" onClick={handleType} name='dayDream'>Daydream</button>
+                        <button className="dream-button" onClick={handleType} name='nightmare'>Nightmare</button>
+                        <button className="dream-button" onClick={handleType} name='lucid'>Lucid</button>
 
                     <div className="buttons">
                         <button className="dream-enter-btn clear" onClick={handleClear}>Clear</button>

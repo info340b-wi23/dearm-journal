@@ -15,16 +15,31 @@ body {
 /* navigation bar brand size and font */
 .brand {
     padding-top: 1.2rem;
-    /* padding-left: 2rem; */
     font-family: 'Katibeh', cursive;   
     font-size: 43;
 }
 
-/* subheading size and font */
-.container-description, .profile-bio, .dream-analyze-feelings, .dream-analyze-type {
+/* h2 subheading size and font */
+.container-description, .profile-bio, .dream-analyze-feelings, .dream-analyze-type, .dream-write-feelings, .dream-write-type, .dream-title {
     font-family: 'Nunito', sans-serif;
     font-size: 28px;
     font-weight: normal;
+}
+
+/* h3 subheading size and font */
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #adadad;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* h4 subheading size and font */
+h4 {
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* homepage subheading spacing */
@@ -41,7 +56,7 @@ body {
 .navigation-bar {
     border-bottom: solid;
     border-color: #DADADA;
-    background-color: #E3F2FD;
+    background-color: #F5F3EC;
 }
 
 /* brand logo spacing */
@@ -59,7 +74,7 @@ body {
     padding-left: 4rem;
 }
 
-/* homepage orientation */
+/* homepage layout */
 .home-container-root {
     display: flex;
     flex-direction: row;
@@ -68,23 +83,32 @@ body {
     align-items: center;
 }
 
+/* homepage description */
 .container-description {
     padding-left: 4rem;
 }
 
-/* homepage button */
-button, .start-button, .profile-button, .back-button {
-    background-color: #d7b2e4;
+.start-button {
+    width: max-content;
+    height: auto;
+    font-size: 18px;
+}
+
+/* general button style */
+button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back {
+    background-color: #FDF2D0;
     color: #292927;
-    border-radius: 14px;
+    border-radius: 10px;
     box-shadow: 2px 4px 2px #C2C2C2;
-    border-color: #E4D8E9;
+    border-color: #dfcd98;
     vertical-align: middle;
+    font-family: 'Inter', sans-serif;
 }
 
 /* homepage description and definition */
 p.home-description, p.home-definition {
     font-family: 'Inter', sans-serif;
+    font-size: 18px;
 }
 
 /* footer settings */
@@ -92,16 +116,18 @@ footer {
     margin-top: auto;
     text-align: center;
     padding: 48px;
-    height: 100%;
     font-family: 'Inter', sans-serif;
     background-color: #292927;
-    color: #FEFEFE;
-    margin-bottom: auto;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
 }
 
 /* fixes footer to bottom of page */
 footer > div:first-child {
     margin-bottom: auto;
+    color: #FEFEFE;
 }
 
 /* dream journal and dream analyze buttons on profile page */
@@ -130,7 +156,6 @@ footer > div:first-child {
     border-radius: 50%;
     object-fit: cover;
     margin-left: 5rem;
-    margin-top: 5rem;
 }
 
 /* profile form */
@@ -142,7 +167,7 @@ footer > div:first-child {
 
 /* profile bio header */
 .profile-bio {
-    margin-top: 3rem;
+    margin-top: 4.85rem;
     margin-left: 7rem;
 }
 
@@ -157,6 +182,7 @@ footer > div:first-child {
 .profile-button {
     margin-left: 1.25rem;
     margin-top: 1rem;
+    width: max-content;
 }
 
 /* profile status box */
@@ -199,6 +225,166 @@ footer > div:first-child {
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
+
+/* journal writing layout */
+.dream-entry-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* journal writing input margins */
+.enter-dream {
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+/* journal view button spacing */
+.journal-button {
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+}
+
+/* journal write feelings  */
+.enter-dream-feelings {
+    padding-top: 6.25rem;
+    padding-left: 3.125rem;
+}
+
+/* journal write title input */
+.title {
+    width: 50%;
+    height: 2.188rem;
+}
+
+/* journal write content input */
+.content {
+    width: 150%;
+    height: 28.5rem;
+}
+
+/* journal write image size */
+.image {
+    width: 50%;
+    height: 6.25rem;
+}
+
+/* feelings and type button on journal write */
+.dream-button {
+    margin-left: 0.5rem;
+}
+
+/* dream type spacing */
+.dream-write-type {
+    margin-top: 4rem;
+}
+
+/* journal write content buttons */
+.dream-enter-btn {
+    margin-top: 3rem;
+    width: 4.375rem;
+    margin-left: 0.625rem;
+    font-size: 0.938rem;
+}
+
+/* journal write clear button */
+.clear {
+    margin-right: 40px;
+}
+
+/* single journal layout */
+.single-journal {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* single journal layout */
+.single-journal-content {
+    border-right: solid;
+    border-color: #F5F3EC;
+    width: 60%;
+}
+
+/* single journal title size */
+.dream-title {
+    margin: 5rem 5rem 2rem 5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* single journal content size and space */
+.dream-content {
+    padding-left: 5rem;
+    padding-right: 7rem;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* single journal back button */
+.back {
+    display: block;
+    width: 10rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+/* single journal image */
+.dream-image {
+    display: block;
+    width: 20rem;
+    height: auto;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* single journal feelings layout */
+.single-journal-feelings {
+    margin-top: 2.5rem;
+    margin-left: 0rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* single journal dream type layout */
+.single-journal-type {
+    margin-top: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* journal view card style */
+.dream-entry-style {
+    box-shadow: 2px 4px 2px #C2C2C2;
+    width: 16rem;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* journal entry title text style */
+.card-title.h5 {
+    font-size: 18px;
+}
+
+img.card-img-top {
+    width: 100;
+    height: 15rem;
+}
+
+
+
+
+
+
+
+
+/* main content */
+/* .entry-container {
+    margin-top: 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1.875rem;
+    align-items: center;
+} */
 
 /* header {
     display: flex;
@@ -283,11 +469,6 @@ footer > div:first-child {
     margin-top: 1.875rem;
 } */
 
-/* main content */
-/* .enter-dream-feelings {
-    padding-top: 6.25rem;
-} */
-
 /* footer */
 /* .copyright {
     position: fixed;
@@ -302,13 +483,6 @@ footer > div:first-child {
     border-bottom: .2rem solid #4C4C47;
 } */
 
-/* main content */
-/* .journalButton {
-    font-size: 1.063rem;
-    margin-top: 0.313rem;
-    margin-left: 1.25rem;
-} */
-
 /* div button content */
 /* button:hover{
     text-decoration: underline;
@@ -321,36 +495,6 @@ footer > div:first-child {
     display: block;
     margin-left: 2.5rem;
     margin-bottom: 1.875rem;
-} */
-
-/* main content */
-/* .title {
-    width: 50%;
-    height: 2.188rem;
-} */
-
-/* main content */
-/* .content {
-    width: 80%;
-    height: 28.125rem;
-} */
-
-/* main content */
-/* .image {
-    width: 50%;
-    height: 6.25rem;
-} */
-
-/* main content */
-/* label {
-    margin-left: 2.5rem;
-} */
-
-/* main content */
-/* .dream-enter-btn {
-    width: 4.375rem;
-    margin-left: 0.625rem;
-    font-size: 0.938r em
 } */
 
   /* body content */
@@ -415,13 +559,6 @@ footer > div:first-child {
 } */
 
 /* main content */
-/* .enter-dream-feelings {
-    padding-left: 3.125rem;
-    padding-right: 4.375rem;
-} */
-
-
-/* main content */
 /* .material-icons {
     font-size: 4.688rem;
     color: wheat;
@@ -456,30 +593,9 @@ footer > div:first-child {
     color: white;
 } */
 
-/* single journal */
-/* .single-journal {
-    display: flex;
-    justify-content: space-around;
-} */
-
-/* journal write */
-/* .clear {
-    margin-right: 40px;
-} */
-
-/* single journal */
-/* .back {
-    display: block;
-} */
-
 /* profile page */
 /* .change-btn {
     margin-left: 5px;
-} */
-
-/* main content */
-/* .dream-but {
-    margin-left: 1.25rem;
 } */
 
 /* main content */
@@ -616,15 +732,6 @@ div img {
     /* journal image */
     /* .entry img {
         display: block;
-    } */
-
-    /* main content */
-    /* .entryContainer {
-        margin-top: 1.875rem;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 1.875rem;
-        align-items: center;
     } */
    
     /* dream community post box size */

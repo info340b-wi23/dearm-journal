@@ -12,7 +12,7 @@ export function DreamHeader() {
                         <img
                             className="dream-logo"
                             alt="Dream logo"
-                            src="img/logo.png"
+                            src="/img/logo.png"
                         />
                     </h1>
                 </Navbar.Brand>

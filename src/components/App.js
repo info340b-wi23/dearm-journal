@@ -3,7 +3,7 @@ import { VscHome, VscCommentDiscussion, VscBook, VscAccount} from "react-icons/v
 import { Homepage } from './Homepage.js';
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
-import { JournalView } from './JournalView.js';
+import { DreamCardList } from './JournalView.js';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './Profile.js'; 
 import { Routes, Route, NavLink, useFetcher} from 'react-router-dom';
@@ -85,7 +85,7 @@ export default function App(props) {
                     <Route path=":dreamTitle" element={<SingleJournal dreamList={dreamArray}/>}/>
                     <Route path="write" element={<JournalWrite howToAddDream={addDream}/>}/>
                     <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
-                    <Route index element={<JournalView dreamAry={dreamArray} howToAddDream={addDream}/>}/>
+                    <Route index element={<DreamCardList dreamArray={dreamArray} howToAddDream={addDream}/>}/>
                 </Route>
                 <Route path ="/dreamCommunity" element={<DreamCommunity dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}></Route>
                 <Route path ="/profile" element={<Profile />}></Route>
