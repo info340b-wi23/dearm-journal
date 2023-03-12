@@ -12,11 +12,11 @@ export function DreamCommunity(props) {
     const currentUser = props.currentUser;
 
     const [imageFile, setImageFile] = useState(undefined);
-    const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/post_img_def.jpg');
+    const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/placeholder-img.webp');
     const [trending, setTrending] = useState(false);
     const [sortNew, setSortNew] = useState(false);
 
-    let dreamPost = "../img/post_img_def.jpg";
+    let dreamPost = "img/placeholder-img.webp";
 
     const handleImg = (event) => {
         event.preventDefault();

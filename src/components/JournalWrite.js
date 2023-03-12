@@ -12,8 +12,8 @@ export function JournalWrite(props) {
     const [feeling, setFeeling] = useState('');
     const [dreamType, setDreamtype] = useState('');
     const [imageFile, setImageFile] = useState(undefined);
-    const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/dream_pic7.jpg');
-    const [img, setImgUrl] = useState('../img/dream_pic7.jpg');
+    const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/placeholder-img.webp');
+    const [img, setImgUrl] = useState('../img/placeholder-img.webp');
    
 
 
