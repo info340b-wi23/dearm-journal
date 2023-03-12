@@ -140,6 +140,20 @@ footer > div:first-child {
     border-color: #E4D8E9;
 }
 
+
+/* profile img*/
+.profile-img{
+    display: block;
+}
+
+/* profile upload */
+.upload {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
 /* profile filter */
 .filter-search {
     margin-bottom: 1.25rem;
@@ -156,13 +170,6 @@ footer > div:first-child {
     border-radius: 50%;
     object-fit: cover;
     margin-left: 5rem;
-}
-
-/* profile form */
-.enter-profile {
-    margin-top: 5rem;
-    margin-left: 5rem;
-    display: inline-block;
 }
 
 /* profile bio header */

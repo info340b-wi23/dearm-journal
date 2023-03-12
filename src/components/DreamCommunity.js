@@ -1,14 +1,47 @@
 import React, { useState } from 'react';
 import { FaHeart, FaUserCircle} from "react-icons/fa";
-import _ from 'lodash'; //import external library!
+import _ from 'lodash'; 
+
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 export function DreamCommunity(props) {
-    const[name, setName] = useState('user');
-    const [content, setContent] = useState('');
-    const [imgAlt, setImgAlt] = useState('a farmer');
-    const [img, setImg] = useState('img/post_img_def.jpg'); // will be covered later
 
+    const [content, setContent] = useState('');
+
+    console.log(props.currentUser.userImg);
+    const currentUser = props.currentUser;
+
+    const [imageFile, setImageFile] = useState(undefined);
+    const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/placeholder-img.webp');
     const [trending, setTrending] = useState(false);
+    const [sortNew, setSortNew] = useState(false);
+
+    let dreamPost = "img/placeholder-img.webp";
+
+    const handleImg = (event) => {
+        event.preventDefault();
+        if(event.target.files.length > 0 && event.target.files[0]) {
+          const imageFile = event.target.files[0]
+          setImageFile(imageFile);
+          setImagePreviewLocation(URL.createObjectURL(imageFile));
+        }
+    }
+
+    const handleImageUpload = async (event) => {
+
+        event.preventDefault();
+
+        const storage = getStorage();
+        const imageRef = storageRef(storage, "dreamImg/"+Date.now()+".png");
+    
+        await uploadBytes(imageRef, imageFile)
+        const publicUrl = await getDownloadURL(imageRef);
+        dreamPost = publicUrl;
+        
+
+    }
+
+    
 
     const handleContent = (event) => {
         setContent(event.target.value);
@@ -16,38 +49,43 @@ export function DreamCommunity(props) {
    
     const handleSubmit = (event) => {
         setContent('');
-        props.howToAddPost(name, content, img, imgAlt);
+        props.howToAddPost(currentUser, content, dreamPost);
     }
 
     const handleTrending = (event) => {
         setTrending(true);
-        if (trending == true) {
-            setTrending(false);
-        }
+        setSortNew(false);
+    }
+
+    const handleNew = (event) => {
+        setSortNew(true);
+        setTrending(false);
     }
 
     let sortedPosts = props.dreamPost;
 
-    let buttonsColorN = "#fff2cc";
-    let buttonsColorT = null;
+    let buttonsColorN = "white";
+    let buttonsColorT = "white";
 
     if (trending == true) {
         sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
         buttonsColorT = "#fff2cc";
         buttonsColorN = "white";
-    } else {
+    } 
+
+    if (sortNew == true) {
         sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
+        buttonsColorN = "#fff2cc";
         buttonsColorT = "white";
-        
     }
 
-    console.log(sortedPosts);
+
     const dreamPosts = sortedPosts.map((post) => {
         const postObj = <PostItem
-            name ={post.name}
+            userName = {post.userName}
+            userImg = {post.userImg}
             content={post.content}
             img={post.img}
-            imgAlt={post.imgAlt}
             like={post.like}
             key={post.content}
             howToUpdateLike={props.howToUpdateLike}/>
@@ -65,7 +103,10 @@ export function DreamCommunity(props) {
                         <label htmlFor="Content">Content:</label> 
                         <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
                         <label htmlFor="Image Upload">Image Upload:</label> 
-                        <input type="image" name="image" className="image-create" alt="image submitted" />
+                        <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                        <button onClick={handleImageUpload}>Save</button>
+
+                    <img src={imagePreviewLocation} alt="dream image"/>
                     </form>
 
                     <button className="post-btn" onClick={handleSubmit}>Post</button>
@@ -75,7 +116,7 @@ export function DreamCommunity(props) {
                     <section className="filter-search">
                         <div>
                             <button className="tab" onClick={handleTrending} style={{backgroundColor: buttonsColorT}}>Trending</button>
-                            <button className="tab new" style={{backgroundColor: buttonsColorN}}>New</button>
+                            <button className="tab new" onClick={handleNew} style={{backgroundColor: buttonsColorN}}>New</button>
                         </div>
                     </section>
 
@@ -89,25 +130,24 @@ export function DreamCommunity(props) {
 }
 
 function PostItem(props) {
-    const name = props.name;
+    const userName = props.userName;
+    const userImg = props.userImg;
     const content = props.content;
     const img = props.img;
-    const imgAlt = props.imgAlt;
-    const [like, setLike] = useState(props.like);
+    const like = props.like;
 
-
+    console.log(userImg);
     const handleLike = (event) => {
-        setLike(like + 1);
         props.howToUpdateLike(content);
     }
 
     return (
         <div className="post">
-            <FaUserCircle className="material-icons" aria-label="info" name="account-icon" />
-            <p className="user-name">{name}</p>
+            <img className="material-icons" src={userImg} alt={userName + " avatar"} />
+            <p className="user-name">{userName}</p>
 
             <div className="post-content">
-                <img src={img} alt={imgAlt}/>
+                <img src={img} />
                 <p className="post-text">{content}</p> 
             </div>
 

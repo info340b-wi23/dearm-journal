@@ -25,7 +25,7 @@ export function Homepage() {
                         A place to journal your dreams, share them with a community, and analyze the emotions felt from them.
                     </p>
                     <br></br>
-                    <Link to="/journal">
+                    <Link to="/signIn">
                         <button className="start-button">Become a Dreamer</button>
                     </Link>
                 </div>
