@@ -10,10 +10,12 @@ export function JournalView(props) {
         img={dream.img}
         feeling={dream.feeling}
         dreamType={dream.dreamType}
-        key={dream.title}/>
+        key={dream.content}/>
 
         return dreamObj;
     });
+
+
 
     return(
         <main>

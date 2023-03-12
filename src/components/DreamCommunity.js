@@ -37,6 +37,7 @@ export function DreamCommunity(props) {
         await uploadBytes(imageRef, imageFile)
         const publicUrl = await getDownloadURL(imageRef);
         dreamPost = publicUrl;
+        
 
     }
 

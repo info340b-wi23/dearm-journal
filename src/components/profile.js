@@ -5,7 +5,6 @@ import { updateProfile } from 'firebase/auth';
 
 export function Profile(props) {
     const displayName = props.currentUser.userName;
-    console.log(props.currentUser);
     const [imageFile, setImageFile] = useState(undefined);
     let initialURL = props.currentUser.userImg;
     const [imagePreviewLocation, setImagePreviewLocation] = useState(initialURL);
@@ -33,8 +32,6 @@ export function Profile(props) {
         const publicUrl = await getDownloadURL(imageRef)
     
         updateProfile(props.currentUser, {photoURL: publicUrl});
-        console.log(publicUrl);
-    
     }
  
     const handleBio = (event) => {

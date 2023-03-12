@@ -13,8 +13,8 @@ export function JournalWrite(props) {
     const [dreamType, setDreamtype] = useState('');
     const [imageFile, setImageFile] = useState(undefined);
     const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/dream_pic7.jpg');
-
-    let dreamImage = "../img/dream_pic7.jpg";
+    const [img, setImgUrl] = useState('../img/dream_pic7.jpg');
+   
 
 
     const handleImg = (event) => {
@@ -31,11 +31,12 @@ export function JournalWrite(props) {
         event.preventDefault();
 
         const storage = getStorage();
-        const imageRef = storageRef(storage, "dreamImg");
+        const imageRef = storageRef(storage, "dreamImg/"+Date.now()+".png");
     
         await uploadBytes(imageRef, imageFile)
         const publicUrl = await getDownloadURL(imageRef);
-        dreamImage = publicUrl;
+        console.log(publicUrl);
+        setImgUrl(publicUrl);
 
     }
 
@@ -62,8 +63,8 @@ export function JournalWrite(props) {
         setContent('');
         setFeeling('');
         setDreamtype('');
-        console.log(dreamImage);
-        props.howToAddDream(title, content, dreamImage, symbol, recognition);
+        console.log(img);
+        props.howToAddDream(title, content, img, symbol, recognition);
     }
     
     const handleClear = (event) => {
