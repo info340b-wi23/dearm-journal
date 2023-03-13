@@ -434,6 +434,11 @@ img.card-img-post.journal-entry {
     height: 20rem;
 }
 
+/* main content */
+.journal-entry-card.col {
+    margin-bottom: 8.5rem;
+}
+
 /* underline removed for links */
 a:link {
     text-decoration: none;
