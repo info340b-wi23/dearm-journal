@@ -100,7 +100,7 @@ h4 {
 }
 
 /* general button style */
-button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back, .profile-save, .upload-save, .post-btn, .tab, .tab-new {
+button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back, .profile-save, .upload-save, .post-btn, .tab, .tab-new, .journal-write-save-button {
     background-color: #FDF2D0;
     color: #292927;
     border-radius: 5px;
@@ -236,9 +236,10 @@ footer > div:first-child {
 }
 
 /* journal writing input margins */
-.enter-dream {
-    margin-top: 2rem;
-    margin-left: 1rem;
+.enter-dream{
+    margin-left: 2rem;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 /* journal view button spacing */
@@ -250,25 +251,46 @@ footer > div:first-child {
 
 /* journal write feelings  */
 .enter-dream-feelings {
-    padding-top: 6.25rem;
+    padding-top: 2em;
     padding-right: 7rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
 }
 
 /* journal write title input */
-.title {
+input.title {
     height: 2.188rem;
+    margin-bottom: 1rem;
+    width: 41rem;
+    margin-right: 15rem;
 }
 
+
 /* journal write content input */
-.content {
-    width: 90%;
+.journal-write-content {
+    width: 41rem;
     height: 22rem;
+    margin-bottom: 1rem;
+}
+
+/* main content */
+.journal-write-content-header, .journal-write-upload-label {
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+/* main content */
+.journal-write-title {
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
 }
 
 /* journal write image size */
-.image {
-    width: 50%;
-    height: 6.25rem;
+.journal-write-upload-img {
+    width: 90%;
+    height: auto;
+    margin-left: 1rem;
 }
 
 /* feelings and type button on journal write */
@@ -449,6 +471,7 @@ p.community-content.card-text {
     margin-left: 0.75rem;
     width: 40px;
     height: 40px;
+    border-radius: 25px;
 }
 
 /* main content */
@@ -467,11 +490,19 @@ button a {
 }
 
 /* main content */
-.upload-img {
+.community-upload-img {
     width: 20rem;
     height: 15rem;
     display: block;
     margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+ /* main content */
+ .journal-write-save-button {
+    width: fit-content;
+    margin-left: 20rem;
+    margin-bottom: 2rem;
 }
 
 /* smaller phones */
@@ -542,12 +573,15 @@ button a {
     /* main content */
     label.upload-label {
         margin-top: 1rem;
+        margin-left: 2rem;
     }
     
     /* main content */
     .enter-dream-feelings {
         margin-bottom: 2rem;
         margin-left: 3.5rem;
+        padding-top: 2rem;
+        padding-right: 7rem;
     }
 
     /* main content */
@@ -597,6 +631,42 @@ button a {
         width: fit-content;
         margin-left: 1rem;
         margin-right: 5rem;
+    }
+
+    /* journal write title input */
+    input.title {
+        height: 2.188rem;
+        margin-bottom: 1rem;
+        width: 20rem;
+        margin-left: 2rem;
+    }
+
+    /* journal write content input */
+    .journal-write-content {
+        width: 26rem;
+        height: 22rem;
+        margin-left: 2rem;
+    }
+
+    /* main content */
+    .journal-write-content-header {
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+    /* main content */
+    .journal-write-title {
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+    /* main content */
+    .journal-write-upload-img {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        width: 15rem;
+        height: auto;
     }
 
 }
@@ -679,6 +749,7 @@ button a {
     .enter-dream-feelings {
         margin-bottom: 2rem;
         margin-left: 3.5rem;
+        padding: 3rem;
     }
 
     /* main content */
@@ -713,8 +784,8 @@ button a {
     }
 
     /* main content */
-    .upload-img {
-        margin-right: 2rem;
+    .community-upload-img {
+        margin-right: 4rem;
         margin-left: 1rem;
     }
 
@@ -728,6 +799,40 @@ button a {
         width: fit-content;
         margin-left: 1rem;
         margin-right: 5rem;
+    }
+
+    /* journal write main content */
+    input.title {
+        width: 25rem;
+    }
+
+    /* main content */
+    .journal-write-content-header {
+        margin-left: 0.5rem;
+    }
+
+    /* main content */
+    label.community-upload-label {
+        margin-left: 2rem;
+    }
+    
+    /* main content */
+    .journal-write-upload-img {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        width: 20rem;
+        height: auto;
+    }
+
+    /* main content */
+    .journal-write-upload-label {
+        margin-left: 2rem;
+    }
+
+    /* main content */
+    .journal-write-content {
+        padding-right: 5rem;
     }
 }
 
@@ -811,24 +916,25 @@ button a {
     }
 
     /* main content */
-    .title {
-        width: 31.25rem;
-        height: 2.188rem;
-    } 
-
-    /* main content */
     .enter-dream{
-        margin-left: 5rem;
+        margin-left: 2rem;
+        display: flex;
+        flex-flow: column wrap;
     }
 
     /* main content */
-    .content {
-        width: 42.5rem;
+    .journal-write-content {
+        width: 40rem;
         height: 28.125rem;
+        padding-right: 0rem;
+        margin-left: 1rem;
     }
 
-    img.upload-img {
+    /* main content */
+    .journal-write-upload-img {
         margin-bottom: 1rem;
+        width: 20rem;
+        height: auto;
     }
 
     /* main content */
@@ -842,5 +948,60 @@ button a {
     .create-post {
         margin-top: 1.5rem;
         border-style: line;
+    }
+
+    /* journal write title input */
+    input.title {
+        height: 2.188rem;
+        margin-bottom: 2rem;
+        width: 30rem;
+        margin-left: 3rem;
+    }
+
+    /* main content */
+    .journal-write-content-header {
+        margin-left: 2rem;
+        padding-bottom: 0.5rem;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* main content */
+    .journal-write-title {
+        margin-left: 5rem;
+        margin-right: 1rem;
+        padding-bottom: 0.5rem;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .journal-write-upload-label {
+        padding-bottom: 0.5rem;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* main content */
+    .enter-dream-feelings {
+        margin-bottom: 2rem;
+        margin-left: 0rem;
+        padding-top: 4rem;
+        margin-right: 15rem;
+    }
+
+    /* main content */
+    .community-content-label {
+        margin-right: 1rem;
+    }
+    
+    /* main content */
+    .journal-write-upload-img {
+        margin-bottom: 3rem;
+    }
+
+    /* main content */
+    .journal-write-save-button {
+        width: fit-content;
+        margin-left: 30rem;
+        margin-bottom: 2rem;
     }
 } 
