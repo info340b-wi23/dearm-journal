@@ -164,8 +164,7 @@ export default function App(props) {
                 <DreamFooter/>
             </div>
         </div>
-    )
-
+    );
 }
 function ProtectedPage(props) {
     if(props.currentUser === null) { 
@@ -176,5 +175,5 @@ function ProtectedPage(props) {
     else { 
       return <Outlet/>
     }
-  }
+}
   

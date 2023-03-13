@@ -28,7 +28,6 @@ function SingleJournal(props) {
                     </div>
                 </div>}
         </div>
-        
     )
 }
 export default SingleJournal;
