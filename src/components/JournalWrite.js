@@ -75,7 +75,7 @@ export function JournalWrite(props) {
         setFeeling('');
         setDreamtype('');
     }
-    /* ask if <br></br> is acceptable to use */
+    
     return(
         <div>
             {alertMessage &&
