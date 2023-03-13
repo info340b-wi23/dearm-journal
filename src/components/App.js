@@ -142,6 +142,7 @@ export default function App(props) {
 
                 <Route element={<ProtectedPage currentUser={currentUser} />} >
                     <Route path ="/journal">
+                        
                         <Route path=":dreamTitle" element={<SingleJournal dreamList={dreamArray}/>}/>
                         <Route path="write" element={<JournalWrite howToAddDream={addDream}/>}/>
                         <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
