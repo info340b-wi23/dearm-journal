@@ -475,7 +475,7 @@ button a {
 }
 
 /* smaller phones */
-@media (max-width: 390px) { 
+@media (max-width: 598px) { 
     
     /* navigation bar brand size and font */
     .brand {
