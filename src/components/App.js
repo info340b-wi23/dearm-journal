@@ -10,7 +10,7 @@ import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
 import { DreamCardList } from './JournalView.js';
 import { DreamCommunity } from './DreamCommunity.js';
-import { Profile } from './Profile.js'; 
+import { Profile } from './profile.js'; 
 import  SingleJournal  from './SingleJournal.js';
 import { DreamNavBar } from './DreamNavbar.js';
 import { DreamFooter } from './DreamFooter.js';
