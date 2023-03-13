@@ -19,10 +19,10 @@ export function DreamCommunity(props) {
 
     const handleImg = (event) => {
         event.preventDefault();
-        if(event.target.files.length > 0 && event.target.files[0]) {
-          const imageFile = event.target.files[0]
-          setImageFile(imageFile);
-          setImagePreviewLocation(URL.createObjectURL(imageFile));
+        if (event.target.files.length > 0 && event.target.files[0]) {
+            const imageFile = event.target.files[0]
+            setImageFile(imageFile);
+            setImagePreviewLocation(URL.createObjectURL(imageFile));
         }
     }
 
@@ -128,7 +128,7 @@ export function DreamCommunity(props) {
                 </div>
             </div>
         </main>
-    )
+    );
 }
 
 function PostItem(props) {
@@ -142,7 +142,11 @@ function PostItem(props) {
     }
     return (
         <Card className='dream-post-style'>
-            <img className="profile-img-community" src={userImg} alt={userName + " avatar"} />
+            <img 
+                className="profile-img-community" 
+                src={userImg} 
+                alt={userName + " avatar"} 
+            />
             <Card.Text className="username">{userName}</Card.Text>
             <Card.Img
                 className="community-img-post"
@@ -159,5 +163,5 @@ function PostItem(props) {
                 </div>
             </Card.Body>
         </Card>
-    )
+    );
 }

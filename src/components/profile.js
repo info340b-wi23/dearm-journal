@@ -65,5 +65,4 @@ export function Profile(props) {
             </div> 
     </main>
     )
-    
 }

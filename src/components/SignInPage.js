@@ -17,7 +17,7 @@ const firebaseUIConfig = {
 }
 
 export function SignInPage(props) {
-  return(
+  return (
       <StyledFirebaseAuth className='authentication-page' uiConfig={firebaseUIConfig} firebaseAuth={getAuth()}/>
-  )
+  );
 }

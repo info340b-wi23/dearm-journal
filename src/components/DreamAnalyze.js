@@ -38,7 +38,7 @@ export function DreamAnalyze(props) {
         }
     }
 
-    return(
+    return (
         <div className="report-container">
             <div className="report-content">
                 <h1 className='dream-analyze-subhead'>Here is your current dream stats:</h1>
@@ -60,7 +60,7 @@ export function DreamAnalyze(props) {
                 <button className='back-button'><Link to="/journal">Back to Journal</Link></button>
             </div>
         </div>
-    )
+    );
 }
 
 function percentPro(num, count) {

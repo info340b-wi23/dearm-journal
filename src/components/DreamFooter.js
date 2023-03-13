@@ -12,5 +12,5 @@ export function DreamFooter(props) {
                 </Row>
             </Container>
         </footer>
-    )
+    );
 }

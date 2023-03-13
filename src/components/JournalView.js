@@ -24,7 +24,11 @@ export function JournalView(props) {
                 {dreamArray.length === 0 && 
                 <Col className='journal-entry-card'>
                     <Card className='dream-entry-style sample'>
-                        <Card.Img variant="top" src={'../img/dream_pic1.jpg'} alt="dream image"/>
+                        <Card.Img 
+                            variant="top" 
+                            src={'../img/dream_pic1.jpg'} 
+                            alt="dream image"
+                        />
                         <Card.Body>
                             <Card.Title>Start your dreamy journey</Card.Title>
                         </Card.Body>

@@ -75,7 +75,7 @@ export function JournalWrite(props) {
         setDreamtype('');
     }
     
-    return(
+    return (
         <div>
             {alertMessage &&
                 <Alert variant="danger" dismissible onClose={() => setAlertMessage(null)}>
@@ -118,5 +118,5 @@ export function JournalWrite(props) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
