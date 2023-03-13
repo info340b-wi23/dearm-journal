@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Card, Col, Row, Container, Button } from 'react-bootstrap';
 
 export function DreamCardList(props) {
     const { dreamArray } = props;
+    console.log(dreamArray);
   
     const dreamCards = dreamArray.map((dream) => (
       <DreamCard
@@ -17,11 +18,37 @@ export function DreamCardList(props) {
     ));
 
     return (
-        <Container fluid>
-            <button className="journal-button"><Link to="write">Create a new dream entry</Link></button>
-            <button className="journal-button"><Link to="analyze">View dream analyze result</Link></button>
-            <Row>{dreamCards}</Row>
-        </Container>
+        <div>
+            <Container fluid>
+                <button className="journal-button"><Link to="write">Create a new dream entry</Link></button>
+                <button className="journal-button"><Link to="analyze">View dream analyze result</Link></button>
+                
+                { dreamArray.length == 0 && 
+                <Col>
+                    <Card className='dream-entry-style sample'>
+                        <Card.Img
+                            variant="top" 
+                            src={'../img/dream_pic1.jpg'} 
+                            alt="dream image" 
+                        />
+                        <Card.Body>
+                            <Card.Title>Start your dreamy journey</Card.Title>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                }
+
+                
+                
+                <Row>{dreamCards}</Row>
+
+            </Container>
+            
+            
+        </div>
+        
+
+
       );
 }
 
@@ -45,5 +72,23 @@ function DreamCard(props) {
             </Link>
         </Col>
     );
+}
+
+function SampleCard(props) {
+    return(
+        <Col>
+            <Card className='dream-entry-style'>
+                <Card.Img
+                    variant="top" 
+                    src={'../img/dream_pic1.jpg'} 
+                    alt="dream image" 
+                />
+                <Card.Body>
+                    <Card.Title>Start your dreamy journey</Card.Title>
+                </Card.Body>
+            </Card>
+        </Col>
+    )
+   
 }
 

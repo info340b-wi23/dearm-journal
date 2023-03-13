@@ -52,16 +52,10 @@ export default function App(props) {
             setDreamPost(objArray); 
         });
 
-    }, [])
-
-    useEffect(() => {
-
-        const db = getDatabase();
         if(currentUser == null){
             return;
         }
         const allDreamRef = ref(db, "userData/"+currentUser.userId);
-        firebasePush(allDreamRef, dreamArray);
 
         onValue(allDreamRef, function(snapshot) {
             const allDreamObj = snapshot.val();
@@ -74,12 +68,12 @@ export default function App(props) {
             setDreamArray(objArray); 
             }
             
-            
         });
             
-      
 
     }, [currentUser])
+
+  
 
         
     const addDream = (title, content, img, feeling, dreamType) => {
@@ -89,9 +83,7 @@ export default function App(props) {
           "img": img,
           "feeling": feeling,
           "dreamType": dreamType,
-        }
-        const newDreamArray = [...dreamArray, newDream];
-        setDreamArray(newDreamArray); 
+        } 
         const db = getDatabase();
         const allDreamRef = ref(db, "userData/"+currentUser.userId);
         firebasePush(allDreamRef, newDream);
@@ -108,9 +100,6 @@ export default function App(props) {
         "like": 0,
         "timestamp": Date.now(),
         }
-        
-        const newDreamPost = [...dreamPost, newPost];
-        setDreamPost(newDreamPost); 
 
         const db = getDatabase();
         const allPostRef = ref(db, "posts");
@@ -132,34 +121,36 @@ export default function App(props) {
     }
 
     return(
-        <div>
-            <DreamNavBar currentUser={currentUser}/>
-            <Routes>
-                <Route index element={<Homepage />}/>
-
-                <Route path="/signin" element={<SignInPage/>}/>
-                
-
-                <Route element={<ProtectedPage currentUser={currentUser} />} >
-                    <Route path ="/journal">
-                        
-                        <Route path=":dreamTitle" element={<SingleJournal dreamList={dreamArray}/>}/>
-                        <Route path="write" element={<JournalWrite howToAddDream={addDream}/>}/>
-                        <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
-                        <Route index element={<DreamCardList dreamArray={dreamArray} howToAddDream={addDream}/>}/>
+        
+        <div className="page-content">
+            <div className="page-body">
+                <DreamNavBar currentUser={currentUser}/>
+                <Routes>
+                    <Route index element={<Homepage />}/>
+                    <Route path="/signin" element={<SignInPage/>}/>
+                    <Route element={<ProtectedPage currentUser={currentUser} />} >
+                        <Route path ="/journal">
+                            
+                            <Route path=":dreamTitle" element={<SingleJournal dreamList={dreamArray}/>}/>
+                            <Route path="write" element={<JournalWrite howToAddDream={addDream}/>}/>
+                            <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
+                            <Route index element={<DreamCardList dreamArray={dreamArray} howToAddDream={addDream}/>}/>
+                        </Route>
+                        <Route path ="/dreamCommunity" element={<DreamCommunity currentUser={currentUser} dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}/>
+                        <Route path ="/profile" element={<Profile currentUser={currentUser}/>} />
                     </Route>
-                    <Route path ="/dreamCommunity" element={<DreamCommunity currentUser={currentUser} dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike}/>}/>
-                    <Route path ="/profile" element={<Profile currentUser={currentUser}/>} />
-                </Route>
+                </Routes>
+            </div>
 
-                
-            </Routes>
-            <DreamFooter/>
+            <footer>
+                <DreamFooter/>
+            </footer>
         </div>
+        
+        
     )
 
 }
-
 function ProtectedPage(props) {
     if(props.currentUser == null) { 
       return <Navigate to="/signin"/>
