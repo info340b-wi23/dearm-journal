@@ -102,11 +102,11 @@ export function DreamCommunity(props) {
                 <div>
                     <form className="create-post">
                         <h4 className='community-create-post'>Create Post</h4>
-                        <label htmlFor="Content">Content:</label>
+                        <label className="community-content-label" htmlFor="Content">Content:</label>
                         <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
                         <label className="upload-label" htmlFor="Image Upload">Image Upload</label> 
-                        <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
-                        <img className="upload-img"src={imagePreviewLocation} alt="dream post"/>
+                        <input className="community-upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                        <img className="community-upload-img"src={imagePreviewLocation} alt="dream post"/>
                         {loading && <p>loading...</p>}
                         <button className="upload-save" onClick={handleImageUpload}>Save</button>
                         <button className="post-btn" onClick={handleSubmit}>Post</button>
