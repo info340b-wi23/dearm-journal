@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import { FaHeart, FaUserCircle} from "react-icons/fa";
+import { FaHeart} from "react-icons/fa";
 import _ from 'lodash'; 
-import { Card, Col, Row, Container, Button } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { Alert } from 'react-bootstrap';
 
 export function DreamCommunity(props) {
 
     const [content, setContent] = useState('');
-
     const currentUser = props.currentUser;
-
     const [imageFile, setImageFile] = useState(undefined);
     const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/placeholder-img.webp');
     const [trending, setTrending] = useState(false);
     const [sortNew, setSortNew] = useState(false);
-
+    const [alertMessage, setAlertMessage] = useState(null);
+    const [loading, setLoading] = useState(false);
     let dreamPost = "img/placeholder-img.webp";
 
     const handleImg = (event) => {
@@ -27,14 +27,21 @@ export function DreamCommunity(props) {
     }
 
     const handleImageUpload = async (event) => {
-
         event.preventDefault();
-        const storage = getStorage();
-        const imageRef = storageRef(storage, "dreamImg/"+Date.now()+".png");
-        await uploadBytes(imageRef, imageFile)
-        const publicUrl = await getDownloadURL(imageRef);
-        dreamPost = publicUrl;
+        setLoading(true);
+        try {
+            const storage = getStorage();
+            const imageRef = storageRef(storage, "dreamImg/"+Date.now()+".png");
+            await uploadBytes(imageRef, imageFile)
+            const publicUrl = await getDownloadURL(imageRef);
+            setLoading(false);
+            dreamPost = publicUrl;
+        }
+        catch (error) {
+            setAlertMessage(error.message);
+        }
     }
+
     const handleContent = (event) => {
         setContent(event.target.value);
     }
@@ -56,19 +63,20 @@ export function DreamCommunity(props) {
 
     let sortedPosts = props.dreamPost;
 
-    let buttonsColorN = "white";
-    let buttonsColorT = "white";
+
+    let buttonsColorN = "nonClick";
+    let buttonsColorT = "nonClick";
 
     if (trending == true) {
         sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
-        buttonsColorT = "#fff2cc";
-        buttonsColorN = "white";
+        buttonsColorT = "click";
+        buttonsColorN = "nonClick";
     } 
 
     if (sortNew == true) {
         sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
-        buttonsColorN = "#fff2cc";
-        buttonsColorT = "white";
+        buttonsColorN = "click";
+        buttonsColorT = "nonClick";
     }
 
 
@@ -80,39 +88,42 @@ export function DreamCommunity(props) {
             img={post.img}
             like={post.like}
             key={post.content}
-            howToUpdateLike={props.howToUpdateLike}/>
+            howToUpdateLike={props.howToUpdateLike}
+            loadL={props.loadL}/>
 
         return postObj;
     });
 
+
     
     return (
         <main>
+            {alertMessage &&
+                <Alert variant="danger" dismissible onClose={() => setAlertMessage(null)}>
+                    {alertMessage}
+                </Alert>
+            }
             <div className="overall-community-layout">                
                 <div>
-                        <form className="create-post">
-                            <h4 className='community-create-post'>Create Post</h4>
-                            <label className="community-content-label" htmlFor="Content">Content:</label> 
-                            
-                            <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
-                     
-                            <label className="upload-label" htmlFor="Image Upload">Image Upload</label> 
-                         
-                            
-                            <input className="community-upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
-                            <img className="community-upload-img"src={imagePreviewLocation} alt="dream image"/>
-                            <button className="upload-save" onClick={handleImageUpload}>Save</button>
-                            <button className="post-btn" onClick={handleSubmit}>Post</button>
-                            
-                        </form>
-                        
+                    <form className="create-post">
+                        <h4 className='community-create-post'>Create Post</h4>
+                        <label htmlFor="Content">Content:</label>
+                        <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
+                        <label className="upload-label" htmlFor="Image Upload">Image Upload</label> 
+                        <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                        <img className="upload-img"src={imagePreviewLocation} alt="dream image"/>
+                        {loading && <p>loading...</p>}
+                        <button className="upload-save" onClick={handleImageUpload}>Save</button>
+                        <button className="post-btn" onClick={handleSubmit}>Post</button>
+                        {props.loadP && <p>loading...</p>}
+                    </form>
                 </div>
 
                 <div className="posts">
                     <section className="filter-search">
                         <div>
-                            <button className="tab" onClick={handleTrending} style={{backgroundColor: buttonsColorT}}>Trending</button>
-                            <button className="tab-new" onClick={handleNew} style={{backgroundColor: buttonsColorN}}>New</button>
+                            <button className={"tab " + buttonsColorT} onClick={handleTrending}>Trending</button>
+                            <button className={"tab-new " + buttonsColorN} onClick={handleNew}>New</button>
                         </div>
                     </section>
 
@@ -153,6 +164,7 @@ function PostItem(props) {
                 <div className="like-btn">
                     <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
                     <p className='community-like'>{like}</p>
+                    {props.loadL && <p>loading...</p>}
                 </div>
             </Card.Body>
         </Card>

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { Alert } from 'react-bootstrap';
 
 export function JournalWrite(props) {
-
-
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [symbol, setSymbol] = useState('');
@@ -14,8 +13,8 @@ export function JournalWrite(props) {
     const [imageFile, setImageFile] = useState(undefined);
     const [imagePreviewLocation, setImagePreviewLocation] = useState('../img/placeholder-img.webp');
     const [img, setImgUrl] = useState('../img/placeholder-img.webp');
-   
-
+    const [alertMessage, setAlertMessage] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const handleImg = (event) => {
         event.preventDefault();
@@ -29,15 +28,18 @@ export function JournalWrite(props) {
     const handleImageUpload = async (event) => {
 
         event.preventDefault();
-
-        const storage = getStorage();
-        const imageRef = storageRef(storage, "dreamImg/"+Date.now()+".png");
-    
-        await uploadBytes(imageRef, imageFile)
-        const publicUrl = await getDownloadURL(imageRef);
-        console.log(publicUrl);
-        setImgUrl(publicUrl);
-
+        setLoading(true);
+        try {
+            const storage = getStorage();
+            const imageRef = storageRef(storage, "dreamImg/"+Date.now()+".png");
+            await uploadBytes(imageRef, imageFile);
+            const publicUrl = await getDownloadURL(imageRef);
+            setLoading(false);
+            setImgUrl(publicUrl);
+        }
+        catch (error) {
+            setAlertMessage(error.message);
+        }
     }
 
     const handleTitile = (event) => {
@@ -75,14 +77,22 @@ export function JournalWrite(props) {
     }
     /* ask if <br></br> is acceptable to use */
     return(
-        <div className="dream-entry-container">
+        <div>
+            {alertMessage &&
+                <Alert variant="danger" dismissible onClose={() => setAlertMessage(null)}>
+                    {alertMessage}
+                </Alert>
+            }
+
+            <div className="dream-entry-container">
                 <form className="enter-dream"> 
                     <label className="journal-write-title" htmlFor="Title">Title:</label> 
                     <input type="text" name="title" className="title" onChange={handleTitile} value={title}/>
-                    <label className="journal-write-content-header" htmlFor="Content">Content:</label>    
-                    <input type="text" name="content" className="journal-write-content" onChange={handleContent} value={content}/>
-                    <label className="journal-write-upload-label" htmlFor="Image Upload">Image Upload:</label> 
-                    <img className="journal-write-upload-img" src={imagePreviewLocation} alt="dream image"/>
+                    <label htmlFor="Content">Content:</label> 
+                    <input type="text" name="content" className="content" onChange={handleContent} value={content}/>
+                    <label className="upload-label" htmlFor="Image Upload">Image Upload:</label> 
+                    <img className="upload-img" src={imagePreviewLocation} alt="dream image"/>
+                    {loading && <p>loading...</p>}
                     <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
                     <button className="journal-write-save-button" onClick={handleImageUpload}>Save</button>
                 </form>
@@ -105,9 +115,9 @@ export function JournalWrite(props) {
                         <button className="dream-enter-btn clear" onClick={handleClear}>Clear</button>
                         <button className="dream-enter-btn" ><Link to="/journal">Back</Link></button>
                         <button className="dream-enter-btn" onClick={handleSubmit}><Link to="/journal">Submit</Link></button>
-                        
                     </div>
                 </div>
             </div>
+        </div>
     )
 }

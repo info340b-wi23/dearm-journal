@@ -7,12 +7,20 @@ html {
     background-color: #fefefe;
 }
 
+
+/* button  change */
+.click {
+    text-decoration: underline;
+}
+
+/* managing footer */
 .page-content {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
+/* managing footer */
 .page-body {
    flex-grow: 3;
 }
@@ -93,6 +101,7 @@ h4 {
     padding-left: 4rem;
 }
 
+/* homepage button */
 .start-button {
     width: max-content;
     height: auto;
