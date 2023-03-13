@@ -8,9 +8,7 @@ function SingleJournal(props) {
     const dreamTitle = paramsObj.dreamTitle; 
     const dreamAry = props.dreamList;
     let dream = _.find(dreamAry, {title: dreamTitle});
-    console.log(dreamAry);
     return(
-
         <div>
             { dream.title != null && 
                 <div className='single-journal'>
@@ -28,12 +26,9 @@ function SingleJournal(props) {
                         />
                         <button className="back"><Link to="/journal">Back to Journal</Link></button>
                     </div>
-                </div>
-            }
-
+                </div>}
         </div>
         
     )
 }
-
 export default SingleJournal;
