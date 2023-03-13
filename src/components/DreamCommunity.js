@@ -8,7 +8,6 @@ export function DreamCommunity(props) {
 
     const [content, setContent] = useState('');
 
-    console.log(props.currentUser.userImg);
     const currentUser = props.currentUser;
 
     const [imageFile, setImageFile] = useState(undefined);
@@ -133,7 +132,6 @@ function PostItem(props) {
     const img = props.img;
     const like = props.like;
 
-    console.log(userImg);
     const handleLike = (event) => {
         props.howToUpdateLike(content);
     }

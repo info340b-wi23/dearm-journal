@@ -7,9 +7,14 @@ html {
     background-color: #fefefe;
 }
 
-/* page body size */
-body {
+.page-content {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+}
+
+.page-body {
+   flex-grow: 3;
 }
 
 /* navigation bar brand size and font */
@@ -80,7 +85,6 @@ h4 {
     display: flex;
     flex-direction: row;
     height: 100%;
-    position: relative;
     align-items: center;
 }
 
