@@ -9,10 +9,6 @@ export function Profile(props) {
     let initialURL = props.currentUser.userImg;
     const [imagePreviewLocation, setImagePreviewLocation] = useState(initialURL);
 
-    const [bio, setBio] = useState('');
-    const [status, setStatus] = useState('');
-    const [showStatus, setShowStatus] = useState(true);
-    const [showEdit, setShowEdit] = useState(false);
 
 
     const handleImg = (event) => {
@@ -33,42 +29,21 @@ export function Profile(props) {
     
         updateProfile(props.currentUser, {photoURL: publicUrl});
     }
- 
-    const handleBio = (event) => {
-        setBio(event.target.value);
-    }
-    
-    const handleAdd = (event) => {
-        setBio('');
-        setStatus(bio);
-        setShowStatus(false);
-        setShowEdit(true);
-
-    }
-
-    const handleChange = (evemt) => {
-        setShowStatus(true);
-        setShowEdit(false);
-    }
-
-    const handleClear = (event) => {
-        setBio('');
-    }
 
     return (
         <main>
             <div className="p-info">
-
-                <div className="mb-5 image-upload-form">
-                    <img className="profile-img" src={imagePreviewLocation} alt="profile image"/>
+            
+                <div className='info-handle'>
+                    <img className="profile-picture" src={imagePreviewLocation} alt="profile image"/>
                     
-                    <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
-                    <button className="" onClick={handleImageUpload}>Save</button>
+                    <h2 className="username"> {displayName}</h2>
+                    <div>
+                        <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                        <button onClick={handleImageUpload}>Save</button>
+                    </div>
+                   
                 </div>
-
-
-                <h2>Username: {displayName}</h2>
-
 
                 <section className="filter-search">
                     <div>
@@ -76,23 +51,6 @@ export function Profile(props) {
                         <button className="profile-page-tab"><Link to="/journal/analyze">Dream Reports</Link></button>  
                     </div>
                 </section>
-
-                <h2 className="profile-bio">Bio {status}  
-                { showEdit ? <button className="change-btn" onClick={handleChange}>Edit</button> : null }
-                </h2>
-                
-                { showStatus ? 
-                <div className="dream-profile-container">
-                    <section id="createlist" className="style">
-                        <label htmlFor="Status">Please put your bio below</label> 
-                        <br></br>
-                        <input type="status" name="status" className="status" onChange={handleBio} value={bio}/>
-                        <br></br>
-                        <button className='profile-button' onClick={handleAdd}>Add</button>
-                        <button className='profile-button'onClick={handleClear}>Clear</button>
-                    </section>
-                </div>   
-                : null }     
             </div> 
     </main>
     )

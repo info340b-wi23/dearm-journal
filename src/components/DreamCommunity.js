@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaHeart, FaUserCircle} from "react-icons/fa";
 import _ from 'lodash'; 
-
+import { Card, Col, Row, Container, Button } from 'react-bootstrap';
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 export function DreamCommunity(props) {
@@ -30,19 +30,12 @@ export function DreamCommunity(props) {
     const handleImageUpload = async (event) => {
 
         event.preventDefault();
-
         const storage = getStorage();
         const imageRef = storageRef(storage, "dreamImg/"+Date.now()+".png");
-    
         await uploadBytes(imageRef, imageFile)
         const publicUrl = await getDownloadURL(imageRef);
         dreamPost = publicUrl;
-        
-
     }
-
-    
-
     const handleContent = (event) => {
         setContent(event.target.value);
     }
@@ -98,18 +91,22 @@ export function DreamCommunity(props) {
         <main>
             <div className="view-create">                
                 <div>
-                    <h2>Create Post</h2>
-                    <form className="create-post">
-                        <label htmlFor="Content">Content:</label> 
-                        <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
-                        <label htmlFor="Image Upload">Image Upload:</label> 
-                        <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
-                        <button onClick={handleImageUpload}>Save</button>
-
-                    <img src={imagePreviewLocation} alt="dream image"/>
-                    </form>
-
-                    <button className="post-btn" onClick={handleSubmit}>Post</button>
+                        <form className="create-post">
+                            <h4>Create Post</h4>
+                            <label htmlFor="Content">Content:</label> 
+                            
+                            <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
+                     
+                            <label className="upload-label" htmlFor="Image Upload">Image Upload</label> 
+                         
+                            
+                            <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                            <img className="upload-img"src={imagePreviewLocation} alt="dream image"/>
+                            <button className="upload-save" onClick={handleImageUpload}>Save</button>
+                            <button className="post-btn" onClick={handleSubmit}>Post</button>
+                            
+                        </form>
+                        
                 </div>
 
                 <div className="posts">
@@ -142,19 +139,23 @@ function PostItem(props) {
     }
 
     return (
-        <div className="post">
-            <img className="material-icons" src={userImg} alt={userName + " avatar"} />
-            <p className="user-name">{userName}</p>
-
-            <div className="post-content">
-                <img src={img} />
-                <p className="post-text">{content}</p> 
-            </div>
-
-            <div className="post-icon">
-                <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
-                <p className='like'>{like}</p>
-            </div>
-        </div>
+   
+        <Card className='dream-post-style'>
+            <img className="profile-img" src={userImg} alt={userName + " avatar"} />
+        
+            <Card.Text className="username">{userName}</Card.Text>
+            <Card.Img
+                variant="post" 
+                src={img} 
+                alt="dream image" 
+            />
+            <Card.Body>
+                <Card.Text>{content}</Card.Text>
+                <div className="like-btn">
+                    <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
+                    <p className='like'>{like}</p>
+                </div>
+            </Card.Body>
+        </Card>
     )
 }

@@ -84,11 +84,10 @@ export function JournalWrite(props) {
                     <label htmlFor="Content">Content:</label> 
                     <br></br>
                     <input type="text" name="content" className="content" onChange={handleContent} value={content}/>
-                    <label htmlFor="Image Upload">Image Upload:</label> 
+                    <label className="upload-label" htmlFor="Image Upload">Image Upload:</label> 
+                    <img className="upload-img" src={imagePreviewLocation} alt="dream image"/>
                     <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
                     <button onClick={handleImageUpload}>Save</button>
-
-                    <img src={imagePreviewLocation} alt="dream image"/>
                 </form>
 
                 <div className="enter-dream-feelings">

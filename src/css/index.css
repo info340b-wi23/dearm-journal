@@ -38,7 +38,7 @@ h3 {
 h4 {
     font-size: 16px;
     font-weight: normal;
-    color: black;
+    color: #292927;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -98,7 +98,7 @@ h4 {
 button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back {
     background-color: #FDF2D0;
     color: #292927;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 2px 4px 2px #C2C2C2;
     border-color: #dfcd98;
     vertical-align: middle;
@@ -140,18 +140,27 @@ footer > div:first-child {
     border-color: #E4D8E9;
 }
 
+.link {
+    color: #292927;
+}
 
-/* profile img*/
-.profile-img{
-    display: block;
+.username {
+    margin-left: 10px;
+    display: inline;
 }
 
 /* profile upload */
 .upload {
-    display: block;
+    display: inline;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
+
+.upload-label {
+    display: block;
+}
+
 
 
 /* profile filter */
@@ -165,11 +174,16 @@ footer > div:first-child {
 /* profile picture on profile page */
 .profile-picture {
     display: inline-block;
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 5rem;
+}
+
+
+.profile-img {
+    width: 2rem;
+    height: 2rem;
 }
 
 /* profile bio header */
@@ -233,16 +247,12 @@ footer > div:first-child {
     margin-bottom: 5rem;
 }
 
-/* journal writing layout */
-.dream-entry-container {
-    display: flex;
-    justify-content: space-around;
-}
+
 
 /* journal writing input margins */
 .enter-dream {
     margin-top: 2rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
 }
 
 /* journal view button spacing */
@@ -254,19 +264,18 @@ footer > div:first-child {
 /* journal write feelings  */
 .enter-dream-feelings {
     padding-top: 6.25rem;
-    padding-left: 3.125rem;
+    padding-right: 7rem;
 }
 
 /* journal write title input */
 .title {
-    width: 50%;
     height: 2.188rem;
 }
 
 /* journal write content input */
 .content {
-    width: 150%;
-    height: 28.5rem;
+    width: 90%;
+    height: 22rem;
 }
 
 /* journal write image size */
@@ -278,6 +287,7 @@ footer > div:first-child {
 /* feelings and type button on journal write */
 .dream-button {
     margin-left: 0.5rem;
+    margin-top: 0.3rem;
 }
 
 /* dream type spacing */
@@ -334,7 +344,6 @@ footer > div:first-child {
     margin-bottom: 3rem;
 }
 
-
 /* single journal image */
 .dream-image {
     display: block;
@@ -367,9 +376,16 @@ footer > div:first-child {
     margin-top: 2rem;
 }
 
+
+
 /* journal entry title text style */
 .card-title.h5 {
     font-size: 18px;
+    color:#292927;
+}
+
+.card-body {
+    color: #292927;
 }
 
 img.card-img-top {
@@ -377,6 +393,16 @@ img.card-img-top {
     height: 15rem;
 }
 
+img.card-img-post {
+    width: 30rem;
+    height: 20rem;
+}
+
+/* profile page info handle */
+.info-handle {
+    margin-top: 20px;
+    margin-left: 30px;
+}
 
 
 
@@ -580,22 +606,6 @@ img.card-img-top {
 } */
 
 /* main content */
-/* .analyze-btn {
-    font-size: 1.375rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.25rem;
-    text-align: center;
-    text-decoration: none;
-} */
-
-/* main content */
-/* .analyze-btn:hover {
-    text-decoration: underline;
-} */
-
-/* main content */
 /* .sharing-side .material-icons {
     color: white;
 } */
@@ -606,10 +616,11 @@ img.card-img-top {
 } */
 
 /* main content */
-/* button, .entry, input, .analyze img, .post, .post-content img, .create-post, .dream-feeling {
+/* button, .entry, input, .analyze img, .post, .post-content img, .create-post, */
+/* .create-post {
     box-shadow: 0.063rem 0.188rem rgba(0,0,0,0.16), 0.063rem 0.188rem rgba(0,0,0,0.23);
     border-radius: 0.5rem;
-} */
+}  */
 
 /* .new {
     box-shadow: none;
@@ -788,11 +799,11 @@ div img {
     } */
 
     /* community create post */
-    /* form.create-post {
-        width: 34.5rem;
+    form.create-post {
+        width: fit-content;
         margin-left: 1rem;
-        margin-right: 1rem;
-    } */
+        margin-right: 5rem;
+    }
 
 /* } */
 
@@ -884,25 +895,46 @@ div img {
     } */
 /* } */
 
+button a {
+    color: #292927;
+}
+
+
+    .upload-img {
+        width: 20rem;
+        height: 15rem;
+        display: block;
+    }
 /* desktop size */
-/* @media (min-width: 992px) { */
+@media (min-width: 992px) {
     /* main content */
-    /* .dream-entry-container {
+    .dream-entry-container {
         display: flex;
         justify-content: space-between;
-    } */
+    }
+
+    .posts {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 60%;
+    }
+    
 
     /* main content */
-    /* .title {
+    .title {
         width: 31.25rem;
         height: 2.188rem;
-    } */
+    } 
+
+    .enter-dream{
+        margin-left: 5rem;
+    }
 
     /* main content */
-    /* .content {
+    .content {
         width: 42.5rem;
         height: 28.125rem;
-    } */
+    }
 
     /* main content */
     /* .image {
@@ -915,17 +947,19 @@ div img {
         padding-left: none;
     } */
 
+
+
     /* main content */
-    /* .view-create {
+    .view-create {
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
-    } */
+    }
 
     /* dream community create post */
-    /* .create-post {
+    .create-post {
         margin-top: 1.5rem;
-    } */
+    }
 
     /* body header */
     /* .logo {
@@ -996,4 +1030,4 @@ div img {
     /* .post {
         width: 47rem;
     } */
-/* } */
+} 
