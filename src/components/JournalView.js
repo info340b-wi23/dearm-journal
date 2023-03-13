@@ -29,11 +29,11 @@ function DreamCard(props) {
     const { title, img} = props;
   
     return (
-      
-        <Col>
+        <Col className='overall-card'>
             <Link to={title}>
                     <Card className='dream-entry-style'>
                         <Card.Img
+                            className='journal-entry'
                             variant="top" 
                             src={img} 
                             alt="dream image" 

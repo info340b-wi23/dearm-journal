@@ -45,6 +45,7 @@ h4 {
 /* homepage subheading spacing */
 .homepage-words {
     margin-bottom: 1.5rem;
+    margin-top: 2rem;
 }
 
 /* homepage subheading pronunciation */
@@ -74,8 +75,8 @@ h4 {
     padding-left: 4rem;
 }
 
-/* homepage layout */
-.home-container-root {
+/* homepage and dream analyze layout */
+.home-container-root, .report-container {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -95,7 +96,7 @@ h4 {
 }
 
 /* general button style */
-button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back {
+button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back, .profile-save, .upload-save, .post-btn, .tab, .tab-new {
     background-color: #FDF2D0;
     color: #292927;
     border-radius: 5px;
@@ -111,6 +112,16 @@ p.home-description, p.home-definition {
     font-size: 18px;
 }
 
+/* homepage definition margin */
+p.home-definition {
+    margin-bottom: 6rem;
+}
+
+/* homepage definition margin */
+p.home-description {
+    margin-bottom: 2rem;
+}
+
 /* footer settings */
 footer {
     margin-top: auto;
@@ -121,7 +132,7 @@ footer {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    position: fixed;
+    display: block;
 }
 
 /* fixes footer to bottom of page */
@@ -135,15 +146,18 @@ footer > div:first-child {
     margin-left: 2.1rem;
     margin-top: 2.1rem;
     font-family: 'Inter', sans-serif;
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: 2px 4px 2px #C2C2C2;
     border-color: #E4D8E9;
+    margin-bottom: 22.5rem;
 }
 
+/* color of links */
 .link {
     color: #292927;
 }
 
+/* username layout */
 .username {
     margin-left: 10px;
     display: inline;
@@ -157,11 +171,10 @@ footer > div:first-child {
     margin-left: 10px;
 }
 
+/* profile upload */
 .upload-label {
     display: block;
 }
-
-
 
 /* profile filter */
 .filter-search {
@@ -180,7 +193,7 @@ footer > div:first-child {
     object-fit: cover;
 }
 
-
+/* profile picture */
 .profile-img {
     width: 2rem;
     height: 2rem;
@@ -212,11 +225,17 @@ footer > div:first-child {
     height: 6.25rem;
 }
 
+/* profile page info handle */
+.info-handle {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
 /* dream analyze title */
 .dream-analyze-subhead {
     font-family: 'Inter', sans-serif;
     margin-left: 5rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 /* dream analyze spacing for subheaders */
@@ -231,13 +250,16 @@ footer > div:first-child {
     margin-left: 8rem;
     margin-top: 1.5rem;
     font-size: 20px;
+    margin-bottom: 1.5rem;
 }
 
 /* dream analyze image */
 .report-image {
     display: flex;
-    width: 25rem;
-    height: 25rem;
+    width: 30rem;
+    height: 30rem;
+    margin-left: 6rem;
+    margin-top: 10rem;
 }
 
 /* back button on dream analyze page */
@@ -247,8 +269,6 @@ footer > div:first-child {
     margin-bottom: 5rem;
 }
 
-
-
 /* journal writing input margins */
 .enter-dream {
     margin-top: 2rem;
@@ -257,8 +277,9 @@ footer > div:first-child {
 
 /* journal view button spacing */
 .journal-button {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-left: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 /* journal write feelings  */
@@ -352,12 +373,15 @@ footer > div:first-child {
     border-radius: 5%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5rem;
+    margin-top: 6rem;
 }
 
 /* single journal feelings layout */
 .single-journal-feelings {
-    margin-top: 2.5rem;
+    margin-top: 4rem;
     margin-left: 0rem;
+    margin-bottom: 5rem;
     font-family: 'Inter', sans-serif;
 }
 
@@ -365,6 +389,7 @@ footer > div:first-child {
 .single-journal-type {
     margin-top: 2rem;
     font-family: 'Inter', sans-serif;
+    margin-bottom: 4rem;
 }
 
 /* journal view card style */
@@ -374,9 +399,13 @@ footer > div:first-child {
     font-family: 'Nunito', sans-serif;
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-
+/* journal view white space */
+.overall-card.col {
+    flex-grow: 2;
+}
 
 /* journal entry title text style */
 .card-title.h5 {
@@ -384,359 +413,87 @@ footer > div:first-child {
     color:#292927;
 }
 
+/* journal entry card body */
 .card-body {
     color: #292927;
 }
 
+/* journal entry card image */
 img.card-img-top {
     width: 100;
     height: 15rem;
 }
 
-img.card-img-post {
+/* journal entry card image */
+img.card-img-post.journal-entry {
     width: 30rem;
     height: 20rem;
 }
 
-/* profile page info handle */
-.info-handle {
-    margin-top: 20px;
-    margin-left: 30px;
+/* underline removed for links */
+a:link {
+    text-decoration: none;
 }
 
-
-
-
-
-
-
-/* main content */
-/* .entry-container {
-    margin-top: 1.875rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 1.875rem;
-    align-items: center;
-} */
-
-/* header {
-    display: flex;
-    font-size: 0.625rem;
-} */
-
-/* main content */
-/* .like {
-    display: inline;
-    padding-bottom: 1.25rem;
-    font-size: 1.25rem;
-} */
-
-/* body header */
-/* a {
-    color: #4C4C47;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: 'Nunito', sans-serif;
-    padding: 0rem 2rem 2rem 0rem;
-    align-content: center;
-} */
-
-/* body header */
-/* .material-icons {
-    color: #4C4C47;
-    font-size: 1.875rem;
-    margin-inline: 0.469rem;
-} */
-
-/* body */
-/* .container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.875rem;
-    align-items: center;
-   
-} */
-
-/* main content */
-/* .dreamPosts {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* body */
-/* .container-right {
-    display: flex;
-    flex-grow: 0;
-} */
-
- /* main */
-/* .buttons {
-    margin-top: 1.875rem;
-} */
-
- /* navbar  */
-/* nav, button {
-    margin-top: 0.938rem;
-} */
-
-/* body */
-/* button {
-    background-color: #fff2cc;
-    border: none;
-    border-radius: 0.5rem;
-    height: 1.725rem;
-} */
-
-/* body */
-/* .logout {
-    margin-right: 0.438rem;
-    margin-left: 1.875rem;
-} */
-
-/* main content */
-/* .dream-feeling {
-    background-color: white;
-    height: 9.375rem;
-    width: 18.75rem;
-    font-size: 0.75rem;
-    margin-top: 1.875rem;
-} */
-
-/* footer */
-/* .copyright {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    font-family: 'Inter', sans-serif;
-} */
-
-/* body header */
-/* .material-icons:hover {
-    padding-bottom: 0.063rem;
-    border-bottom: .2rem solid #4C4C47;
-} */
-
-/* div button content */
-/* button:hover{
-    text-decoration: underline;
-    color: #4C4C47;
-    font-size: 0.938; 
-} */
-
-/* main content */
-/* input {
-    display: block;
-    margin-left: 2.5rem;
-    margin-bottom: 1.875rem;
-} */
-
-  /* body content */
-/* button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
-    font-family: 'Shantell Sans', cursive;
-    color: #4C4C47;
-    font-size: 1.4rem;
-} */
-
-/* dream community post icon */
-/* .user-name.material-icons {
-    color: #4C4C47;
-    font-size: 2.8rem;
-    margin-inline: 0.469rem;
-} */
-
-/* dream community post icons */
-/* .post-icon .material-icons {
-    font-size: 1.8rem;
-} */
-
-/* body header */
-/* h1.website-title {
-    font-size: 3rem;
-    margin: 0;
-    padding-top: 1.2rem;
-    padding-left: 2rem;
-    font-family: 'Katibeh', cursive;   
-} */
-
-/* body content */
-/* h2, button, label, p {
-    font-family: 'Nunito', sans-serif;
-    color: #4C4C47
-} */
-
-/* main content */
-/* h2 {
-    padding-left: 5rem;
-    padding-top: 40px;
-    font-size: 20px;
-    font-weight: normal;
-} */
-
-/* main content */
-/* h3 {
-    padding-left: 6rem;
-    font-size: 16px;
-    font-weight: normal;
-    color: #adadad;
-    font-family: 'Nunito', sans-serif;
-} */
-
-/* main content */
-/* h4 {
-    padding-left: 5rem;
-    margin-top: 2rem;
-    font-size: 16px;
-    font-weight: normal;
-    color: black;
-    font-family: 'Nunito', sans-serif;
-} */
-
-/* main content */
-/* .material-icons {
-    font-size: 4.688rem;
-    color: wheat;
-} */
-
-/* main content */
-/* .analyze img {
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* main content */
-/* .sharing-side .material-icons {
-    color: white;
-} */
-
-/* profile page */
-/* .change-btn {
-    margin-left: 5px;
-} */
-
-/* main content */
-/* button, .entry, input, .analyze img, .post, .post-content img, .create-post, */
-/* .create-post {
-    box-shadow: 0.063rem 0.188rem rgba(0,0,0,0.16), 0.063rem 0.188rem rgba(0,0,0,0.23);
-    border-radius: 0.5rem;
-}  */
-
-/* .new {
-    box-shadow: none;
+/* authentication page */
+.authentication-page {
+    margin-top: 7rem;
+    margin-bottom: 29.2rem;
 }
 
-.new:hover {
-    text-decoration: none;
-} */
+/* community card content */
+.dream-post-style.card {
+    margin-bottom: 0.5rem;
+}
 
 /* main content */
-/* .post, .create-post {
-    background-color: white;
-    width: 40rem;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin-bottom: 0.625rem;
-} */
+.community-like {
+    margin-left: 0.15rem;
+}
 
 /* main content */
-/* .post .material-icons {
-    margin-bottom: 1.25rem;
-} */
+img.card-img-post.community-img-post {
+    display: inline-flex;
+    width: 15rem;
+    height: auto;
+    margin-left: 1rem;
+}
 
 /* main content */
-/* .user-name {
-    display: inline;
-    margin-top: none;
-} */
+p.community-content.card-text {
+    display: inline-flex;
+}
 
-/* main content */
-/* .post-text {
-    margin-left: 1.875rem;
-    width: 90%;
-} */
+/* community main content */
+.tab, .tab-new {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+}
 
-/* main content */
-/* .post-icon {
-    margin-left: 70%;
-    margin-right: none;
-} */
-
-/* main content */
-/* .post-content {
-    margin-left: 0.625rem;
-    margin-right: 0.625rem;
-} */
-
-/* main content */
-/* .create-post {
-    width: 28.125rem;
-    height: 28.125rem;
-} */
-
-/* main content */
-/* .content-create {
+/* community main content */
+.content-create {
     width: 81%;
     height: 9.375rem;
-    background-color: #F5F3EC;
-} */
+    margin-bottom: 1rem;
+}
 
 /* main content */
-/* .image-create {
-    width: 60%;
-    background-color: #F5F3EC;
-    height: 6.25rem;
-} */
+.profile-img-community {
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+    width: 40px;
+    height: 40px;
+}
 
 /* main content */
-/* .post-btn {
-    width: 3.125rem;
-    background-color: #F5F3EC;
-    margin-left: 1.25rem;
-    margin-bottom: 1.25rem;
-    font-size: 0.938rem;
-} */
-
-
-/* section .home-container {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-}   */
-
-/* journal write image -- affects icon needs new class name
-div img {
-    height: 15.625rem;
-    width: 15.625rem;
-} */
+.overall-community-layout {
+    margin-top: 2rem;
+}
 
 /* main content */
-/* .entry img {
-    display: none;
-} */
-
-/* main content */
-/* .entry {
-    display: block;
-    background-color: white;
-    margin: .5rem;
-    border-radius: 0.625rem;
-    text-align: center;
-} */
-
-/* main content */
-/* .container-but {
-    background-color: white;
-    box-shadow: none;
-    border-radius: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    height: fit-content;
-    width: fit-content;
-} */
+.community-create-post {
+    margin-bottom: 1rem;
+}
 
 /* smaller phones */
 /* @media (min-width: 598px) { */
@@ -904,6 +661,7 @@ button a {
         width: 20rem;
         height: 15rem;
         display: block;
+        margin-bottom: 3rem;
     }
 /* desktop size */
 @media (min-width: 992px) {
@@ -950,7 +708,7 @@ button a {
 
 
     /* main content */
-    .view-create {
+    .overall-community-layout {
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
@@ -959,6 +717,7 @@ button a {
     /* dream community create post */
     .create-post {
         margin-top: 1.5rem;
+        border-style: line;
     }
 
     /* body header */

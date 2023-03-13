@@ -89,10 +89,10 @@ export function DreamCommunity(props) {
     
     return (
         <main>
-            <div className="view-create">                
+            <div className="overall-community-layout">                
                 <div>
                         <form className="create-post">
-                            <h4>Create Post</h4>
+                            <h4 className='community-create-post'>Create Post</h4>
                             <label htmlFor="Content">Content:</label> 
                             
                             <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
@@ -113,7 +113,7 @@ export function DreamCommunity(props) {
                     <section className="filter-search">
                         <div>
                             <button className="tab" onClick={handleTrending} style={{backgroundColor: buttonsColorT}}>Trending</button>
-                            <button className="tab new" onClick={handleNew} style={{backgroundColor: buttonsColorN}}>New</button>
+                            <button className="tab-new" onClick={handleNew} style={{backgroundColor: buttonsColorN}}>New</button>
                         </div>
                     </section>
 
@@ -141,19 +141,20 @@ function PostItem(props) {
     return (
    
         <Card className='dream-post-style'>
-            <img className="profile-img" src={userImg} alt={userName + " avatar"} />
+            <img className="profile-img-community" src={userImg} alt={userName + " avatar"} />
         
             <Card.Text className="username">{userName}</Card.Text>
             <Card.Img
+                className="community-img-post"
                 variant="post" 
                 src={img} 
                 alt="dream image" 
             />
             <Card.Body>
-                <Card.Text>{content}</Card.Text>
+                <Card.Text className="community-content">{content}</Card.Text>
                 <div className="like-btn">
                     <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
-                    <p className='like'>{like}</p>
+                    <p className='community-like'>{like}</p>
                 </div>
             </Card.Body>
         </Card>
