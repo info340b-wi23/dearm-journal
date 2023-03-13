@@ -64,5 +64,5 @@ export function Profile(props) {
                 </section>
             </div> 
     </main>
-    )
+    );
 }
