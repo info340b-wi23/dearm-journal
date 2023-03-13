@@ -8,7 +8,7 @@ function SingleJournal(props) {
     const dreamTitle = paramsObj.dreamTitle; 
     const dreamAry = props.dreamList;
     let dream = _.find(dreamAry, {title: dreamTitle});
-    return(
+    return (
         <div>
             { dream.title != null && 
                 <div className='single-journal'>
@@ -28,6 +28,6 @@ function SingleJournal(props) {
                     </div>
                 </div>}
         </div>
-    )
+    );
 }
 export default SingleJournal;

@@ -13,7 +13,7 @@ export function DreamNavBar(props) {
         })  
     }
     
-    return(
+    return (
         <div>
             <Navbar className="navigation-bar" expand="lg">
                 <Container>
@@ -58,5 +58,5 @@ export function DreamNavBar(props) {
             </Alert>
         }
     </div>
-    )
+    );
 }
