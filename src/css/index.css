@@ -21,7 +21,7 @@ html {
 .brand {
     padding-top: 1.2rem;
     font-family: 'Katibeh', cursive;   
-    font-size: 43;
+    font-size: 43px;
 }
 
 /* h2 subheading size and font */
@@ -50,6 +50,7 @@ h4 {
 /* homepage subheading spacing */
 .homepage-words {
     margin-bottom: 1.5rem;
+    margin-top: 2rem;
 }
 
 /* homepage subheading pronunciation */
@@ -79,8 +80,8 @@ h4 {
     padding-left: 4rem;
 }
 
-/* homepage layout */
-.home-container-root {
+/* homepage and dream analyze layout */
+.home-container-root, .report-container {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -99,7 +100,7 @@ h4 {
 }
 
 /* general button style */
-button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back {
+button, .start-button, .profile-button, .back-button, .journal-button, .dream-button, .dream-enter-btn, .back, .profile-save, .upload-save, .post-btn, .tab, .tab-new {
     background-color: #FDF2D0;
     color: #292927;
     border-radius: 5px;
@@ -115,16 +116,27 @@ p.home-description, p.home-definition {
     font-size: 18px;
 }
 
+/* homepage definition margin */
+p.home-definition {
+    margin-bottom: 6rem;
+}
+
+/* homepage definition margin */
+p.home-description {
+    margin-bottom: 2rem;
+}
+
 /* footer settings */
 footer {
     margin-top: auto;
     text-align: center;
-    padding: 48px;
+    padding: 28px;
     font-family: 'Inter', sans-serif;
     background-color: #292927;
     bottom: 0px;
     left: 0px;
     right: 0px;
+    display: block;
 }
 
 /* fixes footer to bottom of page */
@@ -138,15 +150,18 @@ footer > div:first-child {
     margin-left: 2.1rem;
     margin-top: 2.1rem;
     font-family: 'Inter', sans-serif;
-    border-radius: 25px;
+    border-radius: 5px;
     box-shadow: 2px 4px 2px #C2C2C2;
     border-color: #E4D8E9;
+    margin-bottom: 22.5rem;
 }
 
+/* color of links */
 .link {
     color: #292927;
 }
 
+/* username layout */
 .username {
     margin-left: 10px;
     display: inline;
@@ -160,11 +175,10 @@ footer > div:first-child {
     margin-left: 10px;
 }
 
+/* profile upload */
 .upload-label {
     display: block;
 }
-
-
 
 /* profile filter */
 .filter-search {
@@ -183,7 +197,7 @@ footer > div:first-child {
     object-fit: cover;
 }
 
-
+/* profile picture */
 .profile-img {
     width: 2rem;
     height: 2rem;
@@ -215,42 +229,11 @@ footer > div:first-child {
     height: 6.25rem;
 }
 
-/* dream analyze title */
-.dream-analyze-subhead {
-    font-family: 'Inter', sans-serif;
-    margin-left: 5rem;
-    margin-top: 5rem;
+/* profile page info handle */
+.info-handle {
+    margin-top: 20px;
+    margin-left: 30px;
 }
-
-/* dream analyze spacing for subheaders */
-.dream-analyze-feelings, .dream-analyze-type {
-    margin-top: 2rem;
-    margin-left: 6rem;
-}
-
-/* dream analyze subheader spacing */
-.feeling, .type-dream {
-    font-family: 'Inter', sans-serif;
-    margin-left: 8rem;
-    margin-top: 1.5rem;
-    font-size: 20px;
-}
-
-/* dream analyze image */
-.report-image {
-    display: flex;
-    width: 25rem;
-    height: 25rem;
-}
-
-/* back button on dream analyze page */
-.back-button {
-    margin-left: 7rem;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-}
-
-
 
 /* journal writing input margins */
 .enter-dream {
@@ -260,8 +243,9 @@ footer > div:first-child {
 
 /* journal view button spacing */
 .journal-button {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-left: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 /* journal write feelings  */
@@ -355,12 +339,15 @@ footer > div:first-child {
     border-radius: 5%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5rem;
+    margin-top: 6rem;
 }
 
 /* single journal feelings layout */
 .single-journal-feelings {
-    margin-top: 2.5rem;
+    margin-top: 4rem;
     margin-left: 0rem;
+    margin-bottom: 5rem;
     font-family: 'Inter', sans-serif;
 }
 
@@ -368,6 +355,7 @@ footer > div:first-child {
 .single-journal-type {
     margin-top: 2rem;
     font-family: 'Inter', sans-serif;
+    margin-bottom: 4rem;
 }
 
 /* journal view card style */
@@ -377,9 +365,13 @@ footer > div:first-child {
     font-family: 'Nunito', sans-serif;
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-
+/* journal view white space */
+.overall-card.col {
+    flex-grow: 2;
+}
 
 /* journal entry title text style */
 .card-title.h5 {
@@ -387,419 +379,218 @@ footer > div:first-child {
     color:#292927;
 }
 
+/* journal entry card body */
 .card-body {
     color: #292927;
 }
 
+/* journal entry card image */
 img.card-img-top {
     width: 100;
     height: 15rem;
 }
 
-img.card-img-post {
+/* journal entry card image */
+img.card-img-post.journal-entry {
     width: 30rem;
     height: 20rem;
 }
 
-/* profile page info handle */
-.info-handle {
-    margin-top: 20px;
-    margin-left: 30px;
+/* underline removed for links */
+a:link {
+    text-decoration: none;
 }
 
-
-
-
-
-
-
-/* main content */
-/* .entry-container {
-    margin-top: 1.875rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 1.875rem;
-    align-items: center;
-} */
-
-/* header {
-    display: flex;
-    font-size: 0.625rem;
-} */
-
-/* main content */
-/* .like {
-    display: inline;
-    padding-bottom: 1.25rem;
-    font-size: 1.25rem;
-} */
-
-/* body header */
-/* a {
-    color: #4C4C47;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: 'Nunito', sans-serif;
-    padding: 0rem 2rem 2rem 0rem;
-    align-content: center;
-} */
-
-/* body header */
-/* .material-icons {
-    color: #4C4C47;
-    font-size: 1.875rem;
-    margin-inline: 0.469rem;
-} */
-
-/* body */
-/* .container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.875rem;
-    align-items: center;
-   
-} */
-
-/* main content */
-/* .dreamPosts {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-/* body */
-/* .container-right {
-    display: flex;
-    flex-grow: 0;
-} */
-
- /* main */
-/* .buttons {
-    margin-top: 1.875rem;
-} */
-
- /* navbar  */
-/* nav, button {
-    margin-top: 0.938rem;
-} */
-
-/* body */
-/* button {
-    background-color: #fff2cc;
-    border: none;
-    border-radius: 0.5rem;
-    height: 1.725rem;
-} */
-
-/* body */
-/* .logout {
-    margin-right: 0.438rem;
-    margin-left: 1.875rem;
-} */
-
-/* main content */
-/* .dream-feeling {
-    background-color: white;
-    height: 9.375rem;
-    width: 18.75rem;
-    font-size: 0.75rem;
-    margin-top: 1.875rem;
-} */
-
-/* footer */
-/* .copyright {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    font-family: 'Inter', sans-serif;
-} */
-
-/* body header */
-/* .material-icons:hover {
-    padding-bottom: 0.063rem;
-    border-bottom: .2rem solid #4C4C47;
-} */
-
-/* div button content */
-/* button:hover{
-    text-decoration: underline;
-    color: #4C4C47;
-    font-size: 0.938; 
-} */
-
-/* main content */
-/* input {
-    display: block;
-    margin-left: 2.5rem;
-    margin-bottom: 1.875rem;
-} */
-
-  /* body content */
-/* button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
-    font-family: 'Shantell Sans', cursive;
-    color: #4C4C47;
-    font-size: 1.4rem;
-} */
-
-/* dream community post icon */
-/* .user-name.material-icons {
-    color: #4C4C47;
-    font-size: 2.8rem;
-    margin-inline: 0.469rem;
-} */
-
-/* dream community post icons */
-/* .post-icon .material-icons {
-    font-size: 1.8rem;
-} */
-
-/* body header */
-/* h1.website-title {
-    font-size: 3rem;
-    margin: 0;
-    padding-top: 1.2rem;
-    padding-left: 2rem;
-    font-family: 'Katibeh', cursive;   
-} */
-
-/* body content */
-/* h2, button, label, p {
-    font-family: 'Nunito', sans-serif;
-    color: #4C4C47
-} */
-
-/* main content */
-/* h2 {
-    padding-left: 5rem;
-    padding-top: 40px;
-    font-size: 20px;
-    font-weight: normal;
-} */
-
-/* main content */
-/* h3 {
-    padding-left: 6rem;
-    font-size: 16px;
-    font-weight: normal;
-    color: #adadad;
-    font-family: 'Nunito', sans-serif;
-} */
-
-/* main content */
-/* h4 {
-    padding-left: 5rem;
-    margin-top: 2rem;
-    font-size: 16px;
-    font-weight: normal;
-    color: black;
-    font-family: 'Nunito', sans-serif;
-} */
-
-/* main content */
-/* .material-icons {
-    font-size: 4.688rem;
-    color: wheat;
-} */
-
-/* main content */
-/* .analyze img {
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* main content */
-/* .sharing-side .material-icons {
-    color: white;
-} */
-
-/* profile page */
-/* .change-btn {
-    margin-left: 5px;
-} */
-
-/* main content */
-/* button, .entry, input, .analyze img, .post, .post-content img, .create-post, */
-/* .create-post {
-    box-shadow: 0.063rem 0.188rem rgba(0,0,0,0.16), 0.063rem 0.188rem rgba(0,0,0,0.23);
-    border-radius: 0.5rem;
-}  */
-
-/* .new {
-    box-shadow: none;
+/* authentication page */
+.authentication-page {
+    margin-top: 7rem;
+    margin-bottom: 29.2rem;
 }
 
-.new:hover {
-    text-decoration: none;
-} */
+/* community card content */
+.dream-post-style.card {
+    margin-bottom: 0.5rem;
+}
 
 /* main content */
-/* .post, .create-post {
-    background-color: white;
-    width: 40rem;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin-bottom: 0.625rem;
-} */
+.community-like {
+    margin-left: 0.15rem;
+}
 
 /* main content */
-/* .post .material-icons {
-    margin-bottom: 1.25rem;
-} */
+img.card-img-post.community-img-post {
+    display: inline-flex;
+    width: 15rem;
+    height: auto;
+    margin-left: 1rem;
+}
 
 /* main content */
-/* .user-name {
-    display: inline;
-    margin-top: none;
-} */
+p.community-content.card-text {
+    display: inline-flex;
+}
 
-/* main content */
-/* .post-text {
-    margin-left: 1.875rem;
-    width: 90%;
-} */
+/* community main content */
+.tab, .tab-new {
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+}
 
-/* main content */
-/* .post-icon {
-    margin-left: 70%;
-    margin-right: none;
-} */
-
-/* main content */
-/* .post-content {
-    margin-left: 0.625rem;
-    margin-right: 0.625rem;
-} */
-
-/* main content */
-/* .create-post {
-    width: 28.125rem;
-    height: 28.125rem;
-} */
-
-/* main content */
-/* .content-create {
+/* community main content */
+.content-create {
     width: 81%;
     height: 9.375rem;
-    background-color: #F5F3EC;
-} */
+    margin-bottom: 1rem;
+}
 
 /* main content */
-/* .image-create {
-    width: 60%;
-    background-color: #F5F3EC;
-    height: 6.25rem;
-} */
+.profile-img-community {
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+    width: 40px;
+    height: 40px;
+}
 
 /* main content */
-/* .post-btn {
-    width: 3.125rem;
-    background-color: #F5F3EC;
-    margin-left: 1.25rem;
-    margin-bottom: 1.25rem;
-    font-size: 0.938rem;
-} */
-
-
-/* section .home-container {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-}   */
-
-/* journal write image -- affects icon needs new class name
-div img {
-    height: 15.625rem;
-    width: 15.625rem;
-} */
+.overall-community-layout {
+    margin-top: 2rem;
+}
 
 /* main content */
-/* .entry img {
-    display: none;
-} */
+.community-create-post {
+    margin-bottom: 1rem;
+}
 
 /* main content */
-/* .entry {
+button a {
+    color: #292927;
+}
+
+/* main content */
+.upload-img {
+    width: 20rem;
+    height: 15rem;
     display: block;
-    background-color: white;
-    margin: .5rem;
-    border-radius: 0.625rem;
-    text-align: center;
-} */
-
-/* main content */
-/* .container-but {
-    background-color: white;
-    box-shadow: none;
-    border-radius: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    height: fit-content;
-    width: fit-content;
-} */
+    margin-bottom: 3rem;
+}
 
 /* smaller phones */
-/* @media (min-width: 598px) { */
-    /* body header */
-    /* .logo {
-        max-width: 3.5rem;
-        max-height: 3.5rem;
-        padding-left: 0.188rem;
-    } */
-
-    /* journal image */
-    /* .entry img {
-        display: block;
-    } */
-   
-    /* dream community post box size */
-    /* .post {
-        width: 44.625rem;
-    } */
-
-    /* body content */
-    /* button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
-        font-family: 'Shantell Sans', cursive;
-        color: #4C4C47;
-        font-size: 1rem;
-    } */
+@media (max-width: 598px) { 
+    
+    /* navigation bar brand size and font */
+    .brand {
+        padding-top: 1.2rem;
+        font-family: 'Katibeh', cursive;   
+        font-size: 43px;
+        margin-left: 1rem;
+    }
 
     /* main content */
-    /* h2 {
-        padding-left: 5rem;
-        padding-top: 40px;
-        font-size: 20px;
-        font-weight: normal;
-    } */
+    .home-container-root, .report-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
 
     /* main content */
-    /* .report-container h1 {
-        padding-left: 1.25rem;
-        font-size: 1.2rem;
-        font-weight: normal;
-        font-family: 'Shantell Sans', cursive;
-        color: #4C4C47;
-    } */
+    .homepage-image {
+        margin-top: 2rem;
+        width: 70%;
+        height: auto;
+        padding-left: 0rem;
+    }
+    
+    /* main content */
+    p.home-definition {
+        margin-bottom: 2rem;
+    }
 
-    /* dream community post icon */
-    /* .user-name.material-icons {
-        color: #4C4C47;
-        font-size: 2.1rem;
-        margin-inline: 0.469rem;
-    } */
+    /* homepage main content */
+    .start-button {
+        width: max-content;
+        height: auto;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
 
-    /* dream community post icons */
-    /* .post-icon .material-icons {
-        font-size: 1.4rem;
-    } */
+    /* homepage main content */
+    .container-description {
+        padding-left: 1rem;
+    }
 
-    /* dream stats */
-    /* .report-content p {
-        font-size: 1rem;
-    } */
+    /* main content */
+    p.home-description, p.home-definition {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+    }
+
+    /* main content */
+    .journal-button {
+        margin-top: 2rem;
+        margin-left: 4.6rem;
+        margin-bottom: 1rem;
+        align-content: center;
+    }
+    
+    /* main content */
+    .journal-entry-card.col {
+        margin-left: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* main content */
+    label.upload-label {
+        margin-top: 1rem;
+    }
+    
+    /* main content */
+    .enter-dream-feelings {
+        margin-bottom: 2rem;
+        margin-left: 3.5rem;
+    }
+
+    /* main content */
+    .dream-post-style.card {
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    /* main content */
+    .dream-enter-btn {
+        margin-top: 2rem;
+        width: 4.375rem;
+        margin-left: 0.625rem;
+        font-size: 0.938rem;
+    }
+
+    /* main content */
+    .dream-analyze-subhead {
+        font-family: 'Inter', sans-serif;
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+
+    /* main content */
+    .report-image {
+        display: flex;
+        width: 80%;
+        height: auto;
+        margin-left: 2rem;
+        margin-top: 0rem;
+    }
+
+    /* main content */
+    .upload-img {
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
+
+    /* main content */
+    .post-btn {
+        margin-left: 1rem;
+    }
 
     /* community create post */
     form.create-post {
@@ -808,120 +599,216 @@ div img {
         margin-right: 5rem;
     }
 
-/* } */
-
-/* tablet size */
-/* @media (min-width: 768px) { */
-
-    /* body content */
-    /* div.home-container section {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }   */
-    
-    /* main content */
-    /* .report-container {
-        margin-top: 3%;
-        display: flex;
-        justify-content: space-around;
-    } */
-
-     /* main content */
-     /* .report-image {
-        display: block;
-    } */
-    
-    /* dream community post box size */
-    /* .post {
-        width: 44.625rem;
-    } */
-
-     /* body header */
-     /* .logo {
-        max-width: 4.375rem;
-        max-height: 4.375rem;
-        padding-left: 0.188rem;
-    } */
-
-    /* body content */
-    /* button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
-        font-family: 'Shantell Sans', cursive;
-        color: #4C4C47;
-        font-size: 1.1rem;
-    } */
-
-    /* header content */
-    /* .website h1 {
-        font-size: 2.75rem;
-        margin-top: 0.438rem;
-        margin-left: 0.375rem;
-        font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
-        line-height: 2.2rem;
-        color: #4C4C47;
-    } */
-
-    /* main content */
-    /* h2 {
-        padding-left: 5rem;
-        padding-top: 40px;
-        font-size: 20px;
-        font-weight: normal;
-    } */
-
-    /* main content */
-    /* .report-container h1 {
-        padding-left: 1.25rem;
-        font-size: 1.5rem;
-        font-weight: normal;
-        font-family: 'Shantell Sans', cursive;
-        color: #4C4C47;
-    } */
-
-    /* dream community post icon */
-    /* .user-name.material-icons {
-        color: #4C4C47;
-        font-size: 2.1rem;
-        margin-inline: 0.469rem;
-    } */
-
-    /* dream community post icons */
-    /* .post-icon .material-icons {
-        font-size: 1.5rem;
-    } */
-
-    /* dream stats */
-    /* .report-content p {
-        font-size: 1.1rem;
-    } */
-/* } */
-
-button a {
-    color: #292927;
 }
 
+/* tablet size */
+@media (min-width: 768px) {
 
-    .upload-img {
-        width: 20rem;
-        height: 15rem;
-        display: block;
+   /* navigation bar brand size and font */
+   .brand {
+    padding-top: 1.2rem;
+    font-family: 'Katibeh', cursive;   
+    font-size: 40px;
     }
+
+    /* main content */
+    .home-container-root, .report-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+
+    /* main content */
+    .home-container-root {
+        margin-bottom: 0rem;
+    }
+
+    /* main content */
+    .homepage-image {
+        margin-top: 2rem;
+        width: 42.5%;
+        height: auto;
+        padding-left: 0rem;
+    }
+
+    /* main content */
+    p.home-definition {
+        margin-bottom: 2rem;
+    }
+
+    /* homepage main content */
+    .start-button {
+        width: max-content;
+        height: auto;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+
+    /* homepage main content */
+    .container-description {
+        padding-left: 1rem;
+    }
+
+    /* main content */
+    p.home-description, p.home-definition {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+    }
+
+    /* main content */
+    .journal-button {
+        margin-top: 2rem;
+        margin-left: 4.6rem;
+        margin-bottom: 1rem;
+        align-content: center;
+    }
+
+    /* main content */
+    .journal-entry-card.col {
+        margin-left: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* main content */
+    label.upload-label {
+        margin-top: 1rem;
+    }
+
+    /* main content */
+    .enter-dream-feelings {
+        margin-bottom: 2rem;
+        margin-left: 3.5rem;
+    }
+
+    /* main content */
+    .dream-post-style.card {
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    /* main content */
+    .dream-enter-btn {
+        margin-top: 2rem;
+        width: 4.375rem;
+        margin-left: 0.625rem;
+        font-size: 0.938rem;
+    }
+
+    /* main content */
+    .dream-analyze-subhead {
+        font-family: 'Inter', sans-serif;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    /* main content */
+    .report-image {
+        display: flex;
+        width: 80%;
+        height: auto;
+        margin-left: 5rem;
+        margin-top: 0rem;
+    }
+
+    /* main content */
+    .upload-img {
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
+
+    /* main content */
+    .post-btn {
+        margin-left: 1rem;
+    }
+
+    /* community create post */
+    form.create-post {
+        width: fit-content;
+        margin-left: 1rem;
+        margin-right: 5rem;
+    }
+}
+
 /* desktop size */
 @media (min-width: 992px) {
+    /* main content */
+    .home-container-root, .report-container {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+    }
+
+    /* main content */
+    .homepage-image {
+        margin-top: 2rem;
+        width: 37.2%;
+        height: auto;
+        padding-left: 0rem;
+    }
+
+    /* main content */
+    .journal-entry-card.col {
+        margin-bottom: 15.3rem;
+    }
+
+    /* dream analyze title */
+    .dream-analyze-subhead {
+        font-family: 'Inter', sans-serif;
+        margin-left: 5rem;
+        margin-top: 1rem;
+        font-size: 30px;
+    }
+
+    .report-container {
+        margin-left: 10rem;
+    }
+
+    /* dream analyze spacing for subheaders */
+    .dream-analyze-feelings, .dream-analyze-type {
+        margin-top: 2rem;
+        margin-left: 10rem;
+    }
+
+    /* dream analyze subheader spacing */
+    .feeling, .type-dream {
+        font-family: 'Inter', sans-serif;
+        margin-left: 8rem;
+        margin-top: 1.5rem;
+        font-size: 20px;
+        margin-bottom: 1.5rem;
+    }
+
+    /* dream analyze image */
+    .report-image {
+        display: flex;
+        width: 30rem;
+        height: 30rem;
+        margin-left: 10rem;
+        margin-top: 7rem;
+    }
+
+    /* back button on dream analyze page */
+    .back-button {
+        margin-left: 20rem;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
     /* main content */
     .dream-entry-container {
         display: flex;
         justify-content: space-between;
     }
 
+    /* main content */
     .posts {
         margin-top: 10px;
         margin-left: 10px;
         width: 60%;
     }
-    
 
     /* main content */
     .title {
@@ -929,6 +816,7 @@ button a {
         height: 2.188rem;
     } 
 
+    /* main content */
     .enter-dream{
         margin-left: 5rem;
     }
@@ -939,21 +827,12 @@ button a {
         height: 28.125rem;
     }
 
-    /* main content */
-    /* .image {
-        width: 21.875rem;
-        height: 6.25rem;
-    } */
-    
-    /* main content */
-    /* .enter-dream-feelings {
-        padding-left: none;
-    } */
-
-
+    img.upload-img {
+        margin-bottom: 1rem;
+    }
 
     /* main content */
-    .view-create {
+    .overall-community-layout {
         display: flex;
         justify-content: space-around;
         flex-direction: row-reverse;
@@ -962,75 +841,6 @@ button a {
     /* dream community create post */
     .create-post {
         margin-top: 1.5rem;
+        border-style: line;
     }
-
-    /* body header */
-    /* .logo {
-        max-width: 5.625rem;
-        max-height: 5.625rem;
-        padding-left: 0.313rem;
-    } */
-
-    /* body content */
-    /* button, label, p, .enter-dream-feelings, .user-name, .post-text, .dream-enter-btn, .post-btn {
-        font-family: 'Shantell Sans', cursive;
-        color: #4C4C47;
-        font-size: 1.1rem;
-    } */
-
-    /* header content */
-    /* .website h1 {
-        font-size: 3rem;
-        margin-top: 0.438rem;
-        margin-left: 0.375rem;
-        font-family: 'Rubik Puddles', 'Raleway', sans-serif, cursive;
-        line-height: 2.4rem;
-        color: #4C4C47;
-    } */
-
-    /* main content */
-    /* h2 {
-        padding-left: 5rem;
-        padding-top: 40px;
-        font-size: 20px;
-        font-weight: normal;
-    } */
-
-    /* main content */
-    /* .report-container h1 {
-        padding-left: 1.25rem;
-        font-size: 2.1rem;
-        font-weight: normal;
-        font-family: 'Shantell Sans', cursive;
-        color: #4C4C47;
-    } */
-
-     /* body header */
-     /* .material-icons {
-        color: #4C4C47;
-        font-size: 2.5rem;
-        margin-inline: 0.469rem;
-    } */
-
-    /* dream community post icons */
-    /* .post-icon .material-icons {
-        font-size: 1.9rem;
-    } */
-
-    /* dream stats */
-    /* .report-content p {
-        font-size: 1.2rem;
-    } */
-
-    /* community create post */
-    /* form.create-post {
-        width: 30rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    } */
-    
-    /* community posts */
-    /* .post {
-        width: 47rem;
-    } */
 } 

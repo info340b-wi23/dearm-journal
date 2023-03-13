@@ -24,7 +24,7 @@ export function DreamCardList(props) {
                 <button className="journal-button"><Link to="analyze">View dream analyze result</Link></button>
                 
                 { dreamArray.length == 0 && 
-                <Col>
+                <Col className='journal-entry-card'>
                     <Card className='dream-entry-style sample'>
                         <Card.Img
                             variant="top" 
@@ -56,11 +56,11 @@ function DreamCard(props) {
     const { title, img} = props;
   
     return (
-      
-        <Col>
+        <Col className='overall-card'>
             <Link to={title}>
                     <Card className='dream-entry-style'>
                         <Card.Img
+                            className='journal-entry'
                             variant="top" 
                             src={img} 
                             alt="dream image" 

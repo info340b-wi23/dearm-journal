@@ -40,7 +40,7 @@ export function Profile(props) {
                     <h2 className="username"> {displayName}</h2>
                     <div>
                         <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
-                        <button onClick={handleImageUpload}>Save</button>
+                        <button className="profile-save" onClick={handleImageUpload}>Save</button>
                     </div>
                    
                 </div>

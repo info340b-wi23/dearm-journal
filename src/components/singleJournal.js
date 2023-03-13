@@ -20,11 +20,7 @@ function SingleJournal(props) {
                     </div>
                     <div className="single-journal-col">
                         <h3 className="single-journal-feelings">Feelings: {dream.feeling}</h3>
-                        <br></br>
                         <h3 className="single-journal-type">Type of Dream: {dream.dreamType}</h3>
-                        <br></br>
-                        <br></br>
-                        <br></br>
                         <img 
                             className="dream-image" 
                             src={dream.img} 

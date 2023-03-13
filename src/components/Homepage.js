@@ -18,13 +18,9 @@ export function Homepage() {
                     <p className="home-definition">
                         "a series of thoughts, images, and sensations occurring in a person's mind during sleep."
                     </p>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                     <p className="home-description">
                         A place to journal your dreams, share them with a community, and analyze the emotions felt from them.
                     </p>
-                    <br></br>
                     <Link to="/signIn">
                         <button className="start-button">Become a Dreamer</button>
                     </Link>
