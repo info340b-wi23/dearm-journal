@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { getDatabase, ref, set as firebaseSet, push as firebasePush, onValue } from 'firebase/database';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { Routes, Route, Outlet, Navigate} from 'react-router-dom';
-import 'whatwg-fetch';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Homepage } from './Homepage.js';
 import { JournalWrite } from './JournalWrite.js';
 import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
 import { DreamCommunity } from './DreamCommunity.js';
-import { Profile } from './profile.js'; 
+import { Profile } from './Profile.js'; 
 import  SingleJournal  from './singleJournal.js';
 import { DreamNavBar } from './DreamNavbar.js';
 import { DreamFooter } from './DreamFooter.js';
@@ -150,7 +148,6 @@ export default function App(props) {
                     <Route path="/signin" element={<SignInPage/>}/>
                     <Route element={<ProtectedPage currentUser={currentUser} />} >
                         <Route path ="/journal">
-                            
                             <Route path=":dreamTitle" element={<SingleJournal dreamList={dreamArray}/>}/>
                             <Route path="write" element={<JournalWrite howToAddDream={addDream}/>}/>
                             <Route path="analyze" element={<DreamAnalyze dreamAry={dreamArray}/>}/>
@@ -159,6 +156,7 @@ export default function App(props) {
                         <Route path ="/dreamCommunity" element={<DreamCommunity currentUser={currentUser} dreamPost={dreamPost} howToAddPost={addPost} howToUpdateLike={updatePostLike} loadP={loadAddPost} loadL={loadLike}/>}/>
                         <Route path ="/profile" element={<Profile currentUser={currentUser}/>} />
                     </Route>
+                    <Route path="*" element={<Homepage/>}/>
                 </Routes>
             </div>
 

@@ -43,24 +43,22 @@ export function DreamAnalyze(props) {
             <div className="report-content">
                 <h1 className='dream-analyze-subhead'>Here is your current dream stats:</h1>
                 <h2 className='dream-analyze-feelings'>Feelings</h2>
-                    <p className='feeling'>Happy: {percentPro(happy, count)}%</p>
-                    <p className='feeling'>Natural: {percentPro(natural, count)}%</p>
-                    <p className='feeling'>Sad: {percentPro(sad, count)}%</p>
-                    <p className='feeling'>Angry: {percentPro(angry, count)}%</p>
-                    <p className='feeling'>Scared: {percentPro(scared, count)}%</p>
+                <p className='feeling'>Happy: {percentPro(happy, count)}%</p>
+                <p className='feeling'>Natural: {percentPro(natural, count)}%</p>
+                <p className='feeling'>Sad: {percentPro(sad, count)}%</p>
+                <p className='feeling'>Angry: {percentPro(angry, count)}%</p>
+                <p className='feeling'>Scared: {percentPro(scared, count)}%</p>
 
                 <h2 className='dream-analyze-type'>Dream Type</h2>
-                    <p className='type-dream'>Normal Dream: {percentPro(normalDream, count)}%</p>
-                    <p className='type-dream'>Daydream: {percentPro(dayDream, count)}%</p>
-                    <p className='type-dream'>Nightmare: {percentPro(nightmare, count)}%</p>
-                    <p className='type-dream'>Lucid: {percentPro(lucid, count)}%</p>
+                <p className='type-dream'>Normal Dream: {percentPro(normalDream, count)}%</p>
+                <p className='type-dream'>Daydream: {percentPro(dayDream, count)}%</p>
+                <p className='type-dream'>Nightmare: {percentPro(nightmare, count)}%</p>
+                <p className='type-dream'>Lucid: {percentPro(lucid, count)}%</p>
             </div>
             <div className="report-sharing">
                 <img className="report-image" src="../img/writing-amico.png" alt="A woman reading"/>
                 <button className='back-button'><Link to="/journal">Back to Journal</Link></button>
-        
             </div>
-            
         </div>
     )
 }

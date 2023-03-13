@@ -50,7 +50,7 @@ export function Profile(props) {
                     {loading && <p>loading...</p>}
                     <h2 className="username"> {displayName}</h2>
                     <div>
-                        <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                        <input className="upload" type="file" name="image" onChange={handleImg}/>
                         <button className="profile-save" onClick={handleImageUpload}>Save</button>
                     </div>
                    

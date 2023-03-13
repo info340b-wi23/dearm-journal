@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FaHeart} from "react-icons/fa";
-import _ from 'lodash'; 
 import { Card} from 'react-bootstrap';
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { Alert } from 'react-bootstrap';
+import _ from 'lodash'; 
 
 export function DreamCommunity(props) {
 
@@ -105,7 +105,7 @@ export function DreamCommunity(props) {
                         <label className="community-content-label" htmlFor="Content">Content:</label>
                         <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
                         <label className="upload-label" htmlFor="Image Upload">Image Upload</label> 
-                        <input className="community-upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                        <input className="community-upload" type="file" name="image" onChange={handleImg}/>
                         <img className="community-upload-img"src={imagePreviewLocation} alt="dream post"/>
                         {loading && <p>loading...</p>}
                         <button className="upload-save" onClick={handleImageUpload}>Save</button>
@@ -152,9 +152,9 @@ function PostItem(props) {
             />
             <Card.Body>
                 <Card.Text className="community-content">{content}</Card.Text>
-                <div className="like-btn">
-                    <FaHeart className="material-icons" aria-label="like" onClick={handleLike} name="like"/>
-                    <p className='community-like'>{like}</p>
+                <div>
+                    <FaHeart onClick={handleLike} name="like"/>
+                    <p className="community-like">{like}</p>
                     {props.loadL && <p>loading...</p>}
                 </div>
             </Card.Body>

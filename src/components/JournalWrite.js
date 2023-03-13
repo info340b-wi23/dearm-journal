@@ -93,23 +93,23 @@ export function JournalWrite(props) {
                     <label className="journal-write-upload-label" htmlFor="Image Upload">Image Upload:</label> 
                     <img className="journal-write-upload-img" src={imagePreviewLocation} alt="dream image"/>
                     {loading && <p>loading...</p>}
-                    <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
+                    <input className="upload" type="file" name="image" onChange={handleImg}/>
                     <button className="journal-write-save-button" onClick={handleImageUpload}>Save</button>
                 </form>
 
                 <div className="enter-dream-feelings">
                     <h2 className="dream-write-feelings">Feelings: {feeling}</h2> 
-                        <button className="dream-button" onClick={handleFeeling} name='happy'>Happy</button>
-                        <button className="dream-button" onClick={handleFeeling} name='natural'>Natural</button>
-                        <button className="dream-button" onClick={handleFeeling} name='sad' >Sad</button>
-                        <button className="dream-button" onClick={handleFeeling} name='angry' >Angry</button>
-                        <button className="dream-button" onClick={handleFeeling} name='scared'>Scared</button>
+                    <button className="dream-button" onClick={handleFeeling} name='happy'>Happy</button>
+                    <button className="dream-button" onClick={handleFeeling} name='natural'>Natural</button>
+                    <button className="dream-button" onClick={handleFeeling} name='sad' >Sad</button>
+                    <button className="dream-button" onClick={handleFeeling} name='angry' >Angry</button>
+                    <button className="dream-button" onClick={handleFeeling} name='scared'>Scared</button>
 
                     <h2 className="dream-write-type">Dream Type: {dreamType}</h2>
-                        <button className="dream-button" onClick={handleType} name='normalDream'>Normal Dream</button>
-                        <button className="dream-button" onClick={handleType} name='dayDream'>Daydream</button>
-                        <button className="dream-button" onClick={handleType} name='nightmare'>Nightmare</button>
-                        <button className="dream-button" onClick={handleType} name='lucid'>Lucid</button>
+                    <button className="dream-button" onClick={handleType} name='normalDream'>Normal Dream</button>
+                    <button className="dream-button" onClick={handleType} name='dayDream'>Daydream</button>
+                    <button className="dream-button" onClick={handleType} name='nightmare'>Nightmare</button>
+                    <button className="dream-button" onClick={handleType} name='lucid'>Lucid</button>
 
                     <div className="buttons">
                         <button className="dream-enter-btn clear" onClick={handleClear}>Clear</button>
