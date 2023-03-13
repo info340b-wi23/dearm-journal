@@ -142,9 +142,9 @@ export default function App(props) {
                 </Routes>
             </div>
 
-            <footer>
+            <div>
                 <DreamFooter/>
-            </footer>
+            </div>
         </div>
         
         
