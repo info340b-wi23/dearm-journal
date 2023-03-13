@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 
 
-export function DreamFooter() {
+export function DreamFooter(props) {
     return (
         <footer>
             <Container> 
@@ -12,4 +12,5 @@ export function DreamFooter() {
                 </Row>
             </Container>
         </footer>
-    );}
+    )
+}

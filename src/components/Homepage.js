@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function Homepage() {
+export function Homepage(props) {
     return (
         <main>
             <section className="home-container-root">

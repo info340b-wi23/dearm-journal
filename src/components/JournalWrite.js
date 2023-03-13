@@ -65,7 +65,6 @@ export function JournalWrite(props) {
         setContent('');
         setFeeling('');
         setDreamtype('');
-        console.log(img);
         props.howToAddDream(title, content, img, symbol, recognition);
     }
     
@@ -91,7 +90,7 @@ export function JournalWrite(props) {
                     <label className="journal-write-content-header" htmlFor="Content">Content:</label> 
                     <input type="text" name="content" className="journal-write-content" onChange={handleContent} value={content}/>
                     <label className="journal-write-upload-label" htmlFor="Image Upload">Image Upload:</label> 
-                    <img className="journal-write-upload-img" src={imagePreviewLocation} alt="dream image"/>
+                    <img className="journal-write-upload-img" src={imagePreviewLocation} alt="dream entry"/>
                     {loading && <p>loading...</p>}
                     <input className="upload" type="file" name="image" onChange={handleImg}/>
                     <button className="journal-write-save-button" onClick={handleImageUpload}>Save</button>

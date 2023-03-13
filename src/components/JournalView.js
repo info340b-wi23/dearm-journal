@@ -37,7 +37,7 @@ export function JournalView(props) {
 }
 
 function DreamCard(props) {
-    const { title, img} = props;
+    const {title, img} = props;
     return (
         <Col className='overall-card'>
             <Link to={title}>
