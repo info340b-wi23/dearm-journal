@@ -113,7 +113,7 @@ export default function App(props) {
     }
     const updatePostLike = (key) => {
         for (let i=0; i < dreamPost.length; i++) {
-            if (dreamPost[i].content == key) {
+            if (dreamPost[i].content === key) {
                 dreamPost[i].like++;
             }
         }
@@ -170,7 +170,7 @@ export default function App(props) {
 
 }
 function ProtectedPage(props) {
-    if(props.currentUser == null) { 
+    if(props.currentUser === null) { 
       return <Navigate to="/signin"/>
     } else if(props.currentUser.userId === null){ 
         return <p>Loading...</p>

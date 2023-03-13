@@ -21,7 +21,7 @@ export function JournalView(props) {
                 <button className="journal-button"><Link to="write">Create a new dream entry</Link></button>
                 <button className="journal-button"><Link to="analyze">View dream analyze result</Link></button>   
                 {props.load && <p>loading...</p>}
-                { dreamArray.length == 0 && 
+                {dreamArray.length === 0 && 
                 <Col className='journal-entry-card'>
                     <Card className='dream-entry-style sample'>
                         <Card.Img variant="top" src={'../img/dream_pic1.jpg'} alt="dream image"/>

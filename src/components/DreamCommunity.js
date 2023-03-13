@@ -63,22 +63,19 @@ export function DreamCommunity(props) {
 
     let sortedPosts = props.dreamPost;
 
-
     let buttonsColorN = "nonClick";
     let buttonsColorT = "nonClick";
-
-    if (trending == true) {
+    if (trending === true) {
         sortedPosts =  _.reverse(_.sortBy(props.dreamPost, [function(o) { return o.like; }]));
         buttonsColorT = "click";
         buttonsColorN = "nonClick";
     } 
 
-    if (sortNew == true) {
+    if (sortNew === true) {
         sortedPosts = props.dreamPost.sort((m1, m2) => m2.timestamp - m1.timestamp);
         buttonsColorN = "click";
         buttonsColorT = "nonClick";
     }
-
 
     const dreamPosts = sortedPosts.map((post) => {
         const postObj = <PostItem
@@ -94,8 +91,6 @@ export function DreamCommunity(props) {
         return postObj;
     });
 
-
-    
     return (
         <main>
             {alertMessage &&
@@ -111,7 +106,7 @@ export function DreamCommunity(props) {
                         <input type="text" name="content" className="content-create" onChange={handleContent} value={content} />
                         <label className="upload-label" htmlFor="Image Upload">Image Upload</label> 
                         <input className="upload" type="file" name="image" id="imageUploadInput" onChange={handleImg}/>
-                        <img className="upload-img"src={imagePreviewLocation} alt="dream image"/>
+                        <img className="upload-img"src={imagePreviewLocation} alt="dream post"/>
                         {loading && <p>loading...</p>}
                         <button className="upload-save" onClick={handleImageUpload}>Save</button>
                         <button className="post-btn" onClick={handleSubmit}>Post</button>
@@ -142,16 +137,12 @@ function PostItem(props) {
     const content = props.content;
     const img = props.img;
     const like = props.like;
-
     const handleLike = (event) => {
         props.howToUpdateLike(content);
     }
-
     return (
-   
         <Card className='dream-post-style'>
             <img className="profile-img-community" src={userImg} alt={userName + " avatar"} />
-        
             <Card.Text className="username">{userName}</Card.Text>
             <Card.Img
                 className="community-img-post"
