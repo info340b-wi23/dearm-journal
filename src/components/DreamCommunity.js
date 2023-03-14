@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { FaHeart} from "react-icons/fa";
 import { Card} from 'react-bootstrap';
+import _ from 'lodash'; 
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { Alert } from 'react-bootstrap';
-import _ from 'lodash'; 
+
 
 export function DreamCommunity(props) {
 
@@ -15,7 +16,7 @@ export function DreamCommunity(props) {
     const [sortNew, setSortNew] = useState(false);
     const [alertMessage, setAlertMessage] = useState(null);
     const [loading, setLoading] = useState(false);
-    let dreamPost = "img/placeholder-img.webp";
+    const [img, setImgUrl] = useState('../img/placeholder-img.webp');
 
     const handleImg = (event) => {
         event.preventDefault();
@@ -35,7 +36,7 @@ export function DreamCommunity(props) {
             await uploadBytes(imageRef, imageFile)
             const publicUrl = await getDownloadURL(imageRef);
             setLoading(false);
-            dreamPost = publicUrl;
+            setImgUrl(publicUrl);
         }
         catch (error) {
             setAlertMessage(error.message);
@@ -48,7 +49,7 @@ export function DreamCommunity(props) {
    
     const handleSubmit = (event) => {
         setContent('');
-        props.howToAddPost(currentUser, content, dreamPost);
+        props.howToAddPost(currentUser, content, img);
     }
 
     const handleTrending = (event) => {
@@ -87,7 +88,6 @@ export function DreamCommunity(props) {
             key={post.content}
             howToUpdateLike={props.howToUpdateLike}
             loadL={props.loadL}/>
-
         return postObj;
     });
 

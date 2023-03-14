@@ -28,7 +28,7 @@ export function DreamNavBar(props) {
                         </h1>
                     </Navbar.Brand>
 
-                    {props.currentUser == null &&
+                    {props.currentUser === null &&
                         <Nav.Link href="/signin">Sign In</Nav.Link>
                     }
 

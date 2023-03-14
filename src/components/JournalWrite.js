@@ -26,7 +26,6 @@ export function JournalWrite(props) {
     }
 
     const handleImageUpload = async (event) => {
-
         event.preventDefault();
         setLoading(true);
         try {

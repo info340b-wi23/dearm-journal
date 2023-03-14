@@ -15,25 +15,25 @@ export function DreamAnalyze(props) {
     let lucid = 0;
 
     for (let i=0; i<count; i++) {
-        if (dreams[i].feeling == "happy") {
+        if (dreams[i].feeling === "happy") {
             happy++; 
-        } else if (dreams[i].feeling == "natural") {
+        } else if (dreams[i].feeling === "natural") {
             natural++;
-        } else if (dreams[i].feeling == "sad") {
+        } else if (dreams[i].feeling === "sad") {
             sad++; 
-        } else if (dreams[i].feeling == "angry") {
+        } else if (dreams[i].feeling === "angry") {
             angry++;
-        } else if (dreams[i].feeling == "scared"){
+        } else if (dreams[i].feeling === "scared"){
             scared++;
         }
 
-        if (dreams[i].dreamType == "normalDream") {
+        if (dreams[i].dreamType === "normalDream") {
             normalDream++;
-        } else if (dreams[i].dreamType == "dayDream") {
+        } else if (dreams[i].dreamType === "dayDream") {
             dayDream++;
-        } else if (dreams[i].dreamType == "nightmare") {
+        } else if (dreams[i].dreamType === "nightmare") {
             nightmare++;
-        } else if (dreams[i].dreamType == "lucid") {
+        } else if (dreams[i].dreamType === "lucid") {
             lucid++;
         }
     }

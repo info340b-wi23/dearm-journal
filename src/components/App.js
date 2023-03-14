@@ -8,7 +8,7 @@ import { DreamAnalyze } from './DreamAnalyze.js';
 import { JournalView } from './JournalView.js';
 import { DreamCommunity } from './DreamCommunity.js';
 import { Profile } from './Profile.js'; 
-import  SingleJournal  from './singleJournal.js';
+import  SingleJournal  from './SingleJournal.js';
 import { DreamNavBar } from './DreamNavbar.js';
 import { DreamFooter } from './DreamFooter.js';
 import { SignInPage } from './SignInPage.js';
@@ -49,7 +49,7 @@ export default function App(props) {
             setDreamPost(objArray); 
         });
 
-        if(currentUser == null){
+        if(currentUser === null){
             return;
         }
         const allDreamRef = ref(db, "userData/"+currentUser.userId);

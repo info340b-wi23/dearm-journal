@@ -46,7 +46,7 @@ export function Profile(props) {
             }
             <div className="p-info">
                 <div className='info-handle'>
-                    <img className="profile-picture" src={imagePreviewLocation} alt="profile image"/>
+                    <img className="profile-picture" src={imagePreviewLocation} alt="profile"/>
                     {loading && <p>loading...</p>}
                     <h2 className="username"> {displayName}</h2>
                     <div>
